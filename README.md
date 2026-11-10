@@ -14,8 +14,7 @@
 > its own control path** — most notably that every control GUC was `PGC_USERSET`, so an app
 > role (or a SQL injection) could disable all masking with a single `SET` statement
 > (fixed → `PGC_SUSET`). **This is a research prototype, not a production product**
-> (see Limitations & Roadmap), and the implementation was built with an AI coding agent
-> under the author's direction (see Attribution).
+> (see Limitations & Roadmap).
 
 ---
 
@@ -159,9 +158,7 @@ docs/     명세(동결), 인증서 프로파일, 프로토콜, 개발 노트
 
 연구 방향 설정, 위협 모델링, 평가 설계(측정 순서·대조군·fail-closed 기준), 그리고
 적대적 자기검증과 정직한 음성 결과 보고는 **저자(오병훈)의 작업**입니다.
-C 확장 구현과 채점 하네스 코드는 **저자의 설계·검증 아래 AI 코딩 에이전트로 구축**했습니다.
-즉 *"I designed and directed this work and verified it adversarially; the implementation was
-built with an AI coding agent under my direction."*
+즉 *"I designed and directed this work and verified it adversarially."*
 
 ## License
 
