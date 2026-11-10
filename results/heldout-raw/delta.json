@@ -1,0 +1,5538 @@
+{
+ "HO0001/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0001/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0001/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0001/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0002/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0002/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0002/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0002/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0003/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0003/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0003/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0003/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0004/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0004/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0004/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0004/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0005/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0005/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0005/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0005/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0006/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0006/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0006/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0006/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0007/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0007/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0007/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0007/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0008/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0008/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0008/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0008/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0009/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0009/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0009/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0009/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0010/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0010/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0010/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0010/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0011/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0011/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0011/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0011/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0012/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0012/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0012/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0012/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0013/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0013/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0013/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0013/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0014/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0014/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0014/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0014/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0015/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0015/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0015/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0015/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0016/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0016/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0016/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0016/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0017/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0017/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0017/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0017/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0018/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0018/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0018/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0018/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0019/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0019/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0019/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0019/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0020/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0020/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0020/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0020/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0021/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0021/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0021/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0021/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0022/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0022/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0022/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0022/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0023/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0023/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0023/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0023/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0024/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0024/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0024/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0024/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0025/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0025/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0025/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0025/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0026/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0026/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0026/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0026/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0027/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0027/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0027/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0027/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0028/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0028/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0028/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0028/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0029/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0029/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0029/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0029/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0030/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0030/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0030/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0030/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0031/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0031/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0031/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0031/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0032/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0032/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0032/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0032/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0033/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0033/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0033/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0033/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0034/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0034/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0034/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0034/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0035/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0035/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0035/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0035/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0036/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0036/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0036/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0036/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0037/eq_split": {
+  "delta_equivalent": false
+ },
+ "HO0037/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0037/null_structure": {
+  "delta_equivalent": false
+ },
+ "HO0037/ord_permutation": {
+  "delta_equivalent": false
+ },
+ "HO0038/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0038/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0038/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0038/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0039/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0039/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0039/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0039/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0040/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0040/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0040/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0040/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0041/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0041/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0041/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0041/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0042/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0042/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0042/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0042/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0043/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0043/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0043/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0043/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0044/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0044/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0044/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0044/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0045/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0045/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0045/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0045/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0046/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0046/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0046/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0046/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0047/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0047/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0047/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0047/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0048/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0048/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0048/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0048/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0049/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0049/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0049/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0049/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0050/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0050/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0050/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0050/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0051/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0051/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0051/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0051/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0052/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0052/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0052/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0052/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0053/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0053/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0053/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0053/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0054/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0054/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0054/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0054/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0055/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0055/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0055/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0055/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0056/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0056/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0056/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0056/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0057/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0057/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0057/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0057/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0058/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0058/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0058/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0058/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0059/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0059/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0059/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0059/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0060/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0060/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0060/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0060/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0061/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0061/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0061/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0061/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0062/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0062/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0062/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0062/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0063/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0063/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0063/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0063/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0064/eq_split": {
+  "delta_equivalent": false
+ },
+ "HO0064/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0064/null_structure": {
+  "delta_equivalent": false
+ },
+ "HO0064/ord_permutation": {
+  "delta_equivalent": false
+ },
+ "HO0065/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0065/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0065/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0065/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0066/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0066/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0066/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0066/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0067/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0067/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0067/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0067/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0068/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0068/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0068/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0068/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0069/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0069/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0069/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0069/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0070/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0070/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0070/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0070/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0071/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0071/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0071/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0071/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0072/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0072/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0072/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0072/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0073/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0073/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0073/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0073/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0074/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0074/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0074/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0074/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0075/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0075/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0075/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0075/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0076/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0076/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0076/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0076/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0077/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0077/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0077/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0077/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0078/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0078/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0078/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0078/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0079/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0079/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0079/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0079/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0080/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0080/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0080/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0080/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0081/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0081/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0081/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0081/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0082/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0082/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0082/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0082/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0083/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0083/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0083/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0083/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0084/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0084/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0084/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0084/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0085/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0085/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0085/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0085/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0086/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0086/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0086/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0086/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0087/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0087/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0087/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0087/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0088/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0088/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0088/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0088/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0089/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0089/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0089/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0089/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0090/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0090/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0090/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0090/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0091/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0091/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0091/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0091/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0092/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0092/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0092/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0092/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0093/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0093/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0093/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0093/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0094/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0094/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0094/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0094/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0095/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0095/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0095/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0095/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0096/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0096/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0096/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0096/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0097/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0097/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0097/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0097/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0098/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0098/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0098/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0098/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0099/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0099/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0099/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0099/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0100/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0100/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0100/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0100/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0101/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0101/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0101/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0101/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0102/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0102/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0102/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0102/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0103/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0103/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0103/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0103/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0104/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0104/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0104/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0104/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0105/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0105/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0105/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0105/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0106/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0106/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0106/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0106/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0107/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0107/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0107/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0107/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0108/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0108/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0108/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0108/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0109/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0109/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0109/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0109/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0110/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0110/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0110/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0110/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0111/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0111/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0111/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0111/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0112/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0112/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0112/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0112/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0113/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0113/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0113/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0113/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0114/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0114/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0114/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0114/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0115/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0115/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0115/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0115/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0116/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0116/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0116/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0116/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0117/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0117/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0117/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0117/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0118/eq_split": {
+  "delta_equivalent": false
+ },
+ "HO0118/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0118/null_structure": {
+  "delta_equivalent": false
+ },
+ "HO0118/ord_permutation": {
+  "delta_equivalent": false
+ },
+ "HO0119/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0119/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0119/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0119/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0120/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0120/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0120/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0120/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0121/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0121/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0121/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0121/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0122/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0122/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0122/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0122/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0123/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0123/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0123/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0123/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0124/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0124/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0124/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0124/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0125/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0125/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0125/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0125/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0126/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0126/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0126/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0126/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0127/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0127/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0127/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0127/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0128/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0128/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0128/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0128/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0129/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0129/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0129/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0129/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0130/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0130/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0130/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0130/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0131/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0131/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0131/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0131/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0132/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0132/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0132/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0132/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0133/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0133/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0133/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0133/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0134/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0134/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0134/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0134/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0135/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0135/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0135/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0135/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0136/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0136/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0136/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0136/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0137/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0137/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0137/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0137/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0138/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0138/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0138/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0138/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0139/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0139/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0139/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0139/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0140/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0140/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0140/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0140/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0141/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0141/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0141/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0141/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0142/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0142/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0142/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0142/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0143/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0143/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0143/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0143/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0144/eq_split": {
+  "delta_equivalent": false
+ },
+ "HO0144/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0144/null_structure": {
+  "delta_equivalent": false
+ },
+ "HO0144/ord_permutation": {
+  "delta_equivalent": false
+ },
+ "HO0145/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0145/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0145/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0145/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0146/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0146/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0146/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0146/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0147/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0147/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0147/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0147/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0148/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0148/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0148/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0148/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0149/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0149/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0149/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0149/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0150/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0150/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0150/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0150/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0151/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0151/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0151/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0151/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0152/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0152/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0152/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0152/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0153/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0153/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0153/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0153/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0154/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0154/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0154/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0154/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0155/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0155/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0155/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0155/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0156/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0156/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0156/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0156/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0157/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0157/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0157/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0157/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0158/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0158/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0158/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0158/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0159/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0159/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0159/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0159/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0160/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0160/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0160/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0160/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0161/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0161/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0161/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0161/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0162/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0162/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0162/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0162/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0163/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0163/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0163/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0163/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0164/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0164/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0164/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0164/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0165/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0165/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0165/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0165/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0166/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0166/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0166/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0166/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0167/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0167/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0167/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0167/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0168/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0168/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0168/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0168/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0169/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0169/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0169/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0169/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0170/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0170/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0170/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0170/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0171/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0171/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0171/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0171/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0172/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0172/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0172/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0172/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0173/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0173/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0173/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0173/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0174/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0174/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0174/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0174/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0175/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0175/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0175/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0175/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0176/eq_split": {
+  "delta_equivalent": false
+ },
+ "HO0176/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0176/null_structure": {
+  "delta_equivalent": false
+ },
+ "HO0176/ord_permutation": {
+  "delta_equivalent": false
+ },
+ "HO0177/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0177/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0177/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0177/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0178/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0178/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0178/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0178/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0179/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0179/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0179/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0179/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0180/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0180/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0180/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0180/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0181/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0181/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0181/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0181/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0182/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0182/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0182/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0182/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0183/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0183/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0183/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0183/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0184/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0184/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0184/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0184/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0185/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0185/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0185/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0185/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0186/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0186/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0186/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0186/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0187/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0187/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0187/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0187/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0188/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0188/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0188/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0188/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0189/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0189/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0189/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0189/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0190/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0190/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0190/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0190/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0191/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0191/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0191/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0191/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0192/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0192/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0192/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0192/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0193/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0193/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0193/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0193/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0194/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0194/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0194/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0194/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0195/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0195/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0195/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0195/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0196/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0196/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0196/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0196/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0197/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0197/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0197/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0197/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0198/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0198/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0198/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0198/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0199/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0199/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0199/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0199/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0200/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0200/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0200/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0200/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0201/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0201/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0201/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0201/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0202/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0202/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0202/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0202/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0203/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0203/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0203/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0203/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0204/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0204/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0204/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0204/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0205/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0205/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0205/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0205/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0206/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0206/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0206/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0206/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0207/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0207/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0207/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0207/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0208/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0208/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0208/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0208/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0209/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0209/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0209/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0209/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0210/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0210/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0210/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0210/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0211/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0211/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0211/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0211/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0212/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0212/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0212/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0212/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0213/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0213/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0213/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0213/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0214/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0214/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0214/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0214/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0215/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0215/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0215/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0215/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0216/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0216/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0216/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0216/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0217/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0217/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0217/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0217/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0218/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0218/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0218/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0218/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0219/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0219/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0219/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0219/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0220/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0220/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0220/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0220/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0221/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0221/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0221/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0221/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0222/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0222/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0222/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0222/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0223/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0223/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0223/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0223/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0224/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0224/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0224/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0224/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0225/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0225/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0225/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0225/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0226/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0226/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0226/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0226/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0227/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0227/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0227/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0227/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0228/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0228/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0228/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0228/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0229/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0229/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0229/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0229/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0230/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0230/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0230/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0230/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0231/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0231/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0231/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0231/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0232/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0232/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0232/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0232/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0233/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0233/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0233/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0233/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0234/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0234/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0234/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0234/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0235/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0235/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0235/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0235/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0236/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0236/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0236/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0236/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0237/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0237/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0237/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0237/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0238/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0238/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0238/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0238/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0239/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0239/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0239/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0239/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0240/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0240/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0240/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0240/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0241/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0241/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0241/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0241/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0242/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0242/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0242/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0242/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0243/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0243/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0243/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0243/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0244/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0244/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0244/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0244/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0245/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0245/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0245/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0245/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0246/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0246/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0246/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0246/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0247/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0247/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0247/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0247/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0248/eq_split": {
+  "delta_equivalent": false
+ },
+ "HO0248/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0248/null_structure": {
+  "delta_equivalent": false
+ },
+ "HO0248/ord_permutation": {
+  "delta_equivalent": false
+ },
+ "HO0249/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0249/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0249/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0249/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0250/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0250/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0250/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0250/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0251/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0251/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0251/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0251/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0252/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0252/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0252/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0252/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0253/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0253/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0253/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0253/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0254/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0254/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0254/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0254/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0255/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0255/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0255/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0255/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0256/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0256/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0256/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0256/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0257/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0257/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0257/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0257/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0258/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0258/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0258/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0258/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0259/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0259/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0259/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0259/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0260/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0260/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0260/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0260/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0261/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0261/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0261/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0261/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0262/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0262/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0262/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0262/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0263/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0263/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0263/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0263/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0264/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0264/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0264/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0264/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0265/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0265/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0265/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0265/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0266/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0266/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0266/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0266/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0267/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0267/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0267/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0267/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0268/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0268/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0268/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0268/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0269/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0269/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0269/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0269/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0270/eq_split": {
+  "delta_equivalent": false
+ },
+ "HO0270/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0270/null_structure": {
+  "delta_equivalent": false
+ },
+ "HO0270/ord_permutation": {
+  "delta_equivalent": false
+ },
+ "HO0271/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0271/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0271/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0271/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0272/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0272/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0272/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0272/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0273/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0273/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0273/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0273/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0274/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0274/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0274/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0274/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0275/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0275/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0275/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0275/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0276/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0276/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0276/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0276/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0277/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0277/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0277/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0277/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0278/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0278/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0278/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0278/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0279/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0279/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0279/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0279/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0280/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0280/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0280/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0280/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0281/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0281/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0281/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0281/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0282/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0282/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0282/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0282/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0283/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0283/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0283/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0283/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0284/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0284/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0284/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0284/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0285/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0285/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0285/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0285/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0286/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0286/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0286/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0286/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0287/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0287/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0287/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0287/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0288/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0288/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0288/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0288/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0289/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0289/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0289/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0289/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0290/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0290/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0290/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0290/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0291/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0291/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0291/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0291/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0292/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0292/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0292/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0292/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0293/eq_split": {
+  "delta_equivalent": false
+ },
+ "HO0293/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0293/null_structure": {
+  "delta_equivalent": false
+ },
+ "HO0293/ord_permutation": {
+  "delta_equivalent": false
+ },
+ "HO0294/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0294/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0294/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0294/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0295/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0295/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0295/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0295/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0296/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0296/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0296/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0296/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0297/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0297/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0297/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0297/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0298/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0298/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0298/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0298/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0299/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0299/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0299/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0299/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0300/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0300/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0300/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0300/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0301/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0301/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0301/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0301/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0302/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0302/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0302/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0302/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0303/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0303/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0303/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0303/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0304/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0304/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0304/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0304/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0305/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0305/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0305/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0305/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0306/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0306/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0306/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0306/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0307/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0307/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0307/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0307/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0308/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0308/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0308/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0308/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0309/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0309/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0309/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0309/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0310/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0310/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0310/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0310/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0311/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0311/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0311/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0311/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0312/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0312/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0312/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0312/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0313/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0313/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0313/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0313/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0314/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0314/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0314/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0314/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0315/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0315/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0315/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0315/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0316/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0316/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0316/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0316/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0317/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0317/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0317/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0317/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0318/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0318/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0318/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0318/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0319/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0319/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0319/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0319/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0320/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0320/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0320/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0320/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0321/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0321/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0321/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0321/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0322/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0322/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0322/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0322/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0323/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0323/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0323/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0323/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0324/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0324/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0324/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0324/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0325/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0325/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0325/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0325/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0326/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0326/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0326/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0326/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0327/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0327/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0327/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0327/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0328/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0328/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0328/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0328/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0329/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0329/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0329/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0329/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0330/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0330/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0330/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0330/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0331/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0331/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0331/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0331/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0332/eq_split": {
+  "delta_equivalent": false
+ },
+ "HO0332/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0332/null_structure": {
+  "delta_equivalent": false
+ },
+ "HO0332/ord_permutation": {
+  "delta_equivalent": false
+ },
+ "HO0333/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0333/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0333/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0333/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0334/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0334/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0334/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0334/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0335/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0335/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0335/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0335/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0336/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0336/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0336/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0336/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0337/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0337/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0337/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0337/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0338/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0338/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0338/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0338/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0339/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0339/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0339/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0339/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0340/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0340/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0340/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0340/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0341/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0341/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0341/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0341/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0342/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0342/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0342/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0342/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0343/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0343/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0343/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0343/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0344/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0344/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0344/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0344/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0345/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0345/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0345/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0345/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0346/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0346/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0346/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0346/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0347/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0347/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0347/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0347/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0348/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0348/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0348/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0348/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0349/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0349/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0349/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0349/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0350/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0350/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0350/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0350/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0351/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0351/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0351/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0351/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0352/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0352/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0352/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0352/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0353/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0353/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0353/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0353/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0354/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0354/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0354/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0354/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0355/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0355/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0355/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0355/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0356/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0356/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0356/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0356/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0357/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0357/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0357/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0357/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0358/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0358/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0358/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0358/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0359/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0359/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0359/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0359/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0360/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0360/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0360/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0360/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0361/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0361/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0361/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0361/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0362/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0362/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0362/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0362/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0363/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0363/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0363/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0363/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0364/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0364/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0364/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0364/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0365/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0365/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0365/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0365/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0366/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0366/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0366/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0366/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0367/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0367/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0367/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0367/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0368/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0368/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0368/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0368/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0369/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0369/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0369/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0369/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0370/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0370/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0370/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0370/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0371/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0371/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0371/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0371/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0372/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0372/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0372/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0372/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0373/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0373/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0373/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0373/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0374/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0374/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0374/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0374/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0375/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0375/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0375/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0375/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0376/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0376/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0376/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0376/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0377/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0377/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0377/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0377/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0378/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0378/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0378/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0378/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0379/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0379/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0379/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0379/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0380/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0380/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0380/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0380/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0381/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0381/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0381/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0381/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0382/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0382/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0382/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0382/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0383/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0383/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0383/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0383/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0384/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0384/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0384/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0384/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0385/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0385/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0385/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0385/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0386/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0386/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0386/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0386/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0387/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0387/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0387/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0387/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0388/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0388/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0388/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0388/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0389/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0389/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0389/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0389/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0390/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0390/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0390/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0390/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0391/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0391/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0391/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0391/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0392/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0392/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0392/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0392/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0393/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0393/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0393/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0393/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0394/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0394/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0394/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0394/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0395/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0395/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0395/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0395/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0396/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0396/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0396/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0396/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0397/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0397/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0397/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0397/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0398/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0398/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0398/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0398/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0399/eq_split": {
+  "delta_equivalent": true
+ },
+ "HO0399/multiplicity": {
+  "delta_equivalent": true
+ },
+ "HO0399/null_structure": {
+  "delta_equivalent": true
+ },
+ "HO0399/ord_permutation": {
+  "delta_equivalent": true
+ },
+ "HO0400/eq_split": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0400/multiplicity": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0400/null_structure": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ },
+ "HO0400/ord_permutation": {
+  "delta_equivalent": true,
+  "reason": "술어 없음/파라미터"
+ }
+}

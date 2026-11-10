@@ -1,0 +1,42 @@
+================================================================================================
+적대적 시험 3R — 의미 발산 판정식 / nullify 센티널
+================================================================================================
+ID    class       기대       판정       비고
+------------------------------------------------------------------------------------------------
+  X01 R1-우회       refuse   OK       
+  X02 R1-우회       refuse   OK       
+  X03 R1-우회       refuse   OK       
+  X04 R1-우회       refuse   OK       
+  X05 R1-우회       refuse   OK       
+  X06 R1-우회       refuse   OK       
+  X07 R1-우회       refuse   OK       
+  X08 R2-우회       pass     OK       
+  X09 R2-우회       refuse   OK       
+  X10 R2-우회       refuse   OK       
+  X11 R2-우회       refuse   OK       
+  X12 R2-우회       refuse   OK       
+  X13 R2-우회       refuse   OK       
+  X14 R3-우회       refuse   OK       
+  X15 R3-우회       refuse   OK       
+  X16 R3-우회       refuse   OK       
+  X17 R3-우회       refuse   OK       
+  X18 R3-우회       refuse   OK       
+  X19 nullify     mask     OK       
+  X20 nullify     pass     OK       
+  X21 nullify     pass     OK       
+  X22 nullify     mask     OK       
+  X23 대조군         pass     OK       
+  X24 대조군         pass     OK       
+  X25 대조군         pass     OK       
+  X26 누출-회귀       mask     OK       
+  X27 누출-회귀       mask     OK       
+  X28 누출-회귀       mask     OK       
+  X29 누출-회귀       refuse   OK       
+  X30 대조군         mask     OK       
+
+================================================================================================
+공격 30건
+  방어    : 30
+  ★ 우회  : 0   ← 거부해야 할 것이 통과했다
+  과거부/과마스킹: 0   ← 정상 쿼리를 막았다
+  측정 불가: 0

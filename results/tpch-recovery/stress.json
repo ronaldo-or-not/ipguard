@@ -1,0 +1,684 @@
+[
+ {
+  "fragment": "",
+  "gate": "reject",
+  "gate_code": "MISSING_CERTIFICATE",
+  "gate_detail": " MISSING_CERTIFICATE: CARD(WHERE/JOIN predicate) -> CELL : CARD 는 factor-through 로 해소되지 않는다, 인증서 없음",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "EQ",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "VAL|CELL|aggregate",
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "agg_arg",
+   "group_by",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q1",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "scalar subquery",
+  "gate": "reject",
+  "gate_code": "OUTSIDE_CERTIFIED_FRAGMENT",
+  "gate_detail": " OUTSIDE_CERTIFIED_FRAGMENT: scalar subquery",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "ORD|MEMBERSHIP|ORDER BY key vector",
+   "ORD|MULTIPLICITY|ORDER BY key vector",
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "agg_arg",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q2",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "",
+  "gate": "reject",
+  "gate_code": "MISSING_CERTIFICATE",
+  "gate_detail": " MISSING_CERTIFICATE: CARD(WHERE/JOIN predicate) -> CELL : CARD 는 factor-through 로 해소되지 않는다, 인증서 없음",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "EQ",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "ORD|MEMBERSHIP|ORDER BY key vector",
+   "ORD|MULTIPLICITY|ORDER BY key vector",
+   "VAL|CELL|aggregate",
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "agg_arg",
+   "group_by",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q3",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "",
+  "gate": "reject",
+  "gate_code": "MISSING_CERTIFICATE",
+  "gate_detail": " MISSING_CERTIFICATE: CARD(WHERE/JOIN predicate) -> CELL : CARD 는 factor-through 로 해소되지 않는다, 인증서 없음",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "EQ",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "group_by",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q4",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "",
+  "gate": "reject",
+  "gate_code": "MISSING_CERTIFICATE",
+  "gate_detail": " MISSING_CERTIFICATE: CARD(WHERE/JOIN predicate) -> CELL : CARD 는 factor-through 로 해소되지 않는다, 인증서 없음",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "EQ",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "VAL|CELL|aggregate",
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "agg_arg",
+   "group_by",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q5",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "",
+  "gate": "reject",
+  "gate_code": "MISSING_CERTIFICATE",
+  "gate_detail": " MISSING_CERTIFICATE: CARD(WHERE/JOIN predicate) -> CELL : CARD 는 factor-through 로 해소되지 않는다, 인증서 없음",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "VAL|CELL|aggregate"
+  ],
+  "positions": [
+   "agg_arg",
+   "target",
+   "where"
+  ],
+  "qid": "Q6",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "",
+  "gate": "reject",
+  "gate_code": "MISSING_CERTIFICATE",
+  "gate_detail": " MISSING_CERTIFICATE: CARD(WHERE/JOIN predicate) -> ROW_COUNT : CARD 는 factor-through 로 해소되지 않는다, 인증서 없음",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "EQ",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "VAL|CELL|aggregate",
+   "VAL|CELL|subquery output"
+  ],
+  "positions": [
+   "agg_arg",
+   "group_by",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q7",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "",
+  "gate": "reject",
+  "gate_code": "MISSING_CERTIFICATE",
+  "gate_detail": " MISSING_CERTIFICATE: CARD(WHERE/JOIN predicate) -> ROW_COUNT : CARD 는 factor-through 로 해소되지 않는다, 인증서 없음",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "EQ",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "VAL|CELL|operator",
+   "VAL|CELL|subquery output"
+  ],
+  "positions": [
+   "agg_arg",
+   "group_by",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q8",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "",
+  "gate": "reject",
+  "gate_code": "MISSING_CERTIFICATE",
+  "gate_detail": " MISSING_CERTIFICATE: CARD(WHERE/JOIN predicate) -> ROW_COUNT : CARD 는 factor-through 로 해소되지 않는다, 인증서 없음",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "EQ",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "VAL|CELL|aggregate",
+   "VAL|CELL|subquery output"
+  ],
+  "positions": [
+   "agg_arg",
+   "group_by",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q9",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "",
+  "gate": "reject",
+  "gate_code": "MISSING_CERTIFICATE",
+  "gate_detail": " MISSING_CERTIFICATE: CARD(WHERE/JOIN predicate) -> CELL : CARD 는 factor-through 로 해소되지 않는다, 인증서 없음",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "EQ",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "ORD|MEMBERSHIP|ORDER BY key vector",
+   "ORD|MULTIPLICITY|ORDER BY key vector",
+   "VAL|CELL|aggregate",
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "agg_arg",
+   "group_by",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q10",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "scalar subquery",
+  "gate": "reject",
+  "gate_code": "OUTSIDE_CERTIFIED_FRAGMENT",
+  "gate_detail": " OUTSIDE_CERTIFIED_FRAGMENT: scalar subquery",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|HAVING predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|HAVING predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|HAVING predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "VAL|CELL|aggregate"
+  ],
+  "positions": [
+   "agg_arg",
+   "having",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q11",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "",
+  "gate": "reject",
+  "gate_code": "UNMODELED_EXPR",
+  "gate_detail": " UNMODELED_EXPR: UNMODELED_EXPR",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "EQ",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "VAL|CELL|aggregate",
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "agg_arg",
+   "group_by",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q12",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "outer join",
+  "gate": "reject",
+  "gate_code": "OUTSIDE_CERTIFIED_FRAGMENT",
+  "gate_detail": " OUTSIDE_CERTIFIED_FRAGMENT: outer join",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate"
+  ],
+  "positions": [
+   "where"
+  ],
+  "qid": "Q13",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "",
+  "gate": "reject",
+  "gate_code": "MISSING_CERTIFICATE",
+  "gate_detail": " MISSING_CERTIFICATE: CARD(WHERE/JOIN predicate) -> CELL : CARD 는 factor-through 로 해소되지 않는다, 인증서 없음",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "VAL|CELL|operator"
+  ],
+  "positions": [
+   "agg_arg",
+   "target",
+   "where"
+  ],
+  "qid": "Q14",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "scalar subquery",
+  "gate": "reject",
+  "gate_code": "OUTSIDE_CERTIFIED_FRAGMENT",
+  "gate_detail": " OUTSIDE_CERTIFIED_FRAGMENT: scalar subquery",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "VAL|CELL|column",
+   "VAL|CELL|subquery output"
+  ],
+  "positions": [
+   "agg_arg",
+   "target",
+   "where"
+  ],
+  "qid": "Q15",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "NOT IN / <> ALL",
+  "gate": "reject",
+  "gate_code": "OUTSIDE_CERTIFIED_FRAGMENT",
+  "gate_detail": " OUTSIDE_CERTIFIED_FRAGMENT: NOT IN / <> ALL",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "EQ",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "group_by",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q16",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "scalar subquery",
+  "gate": "reject",
+  "gate_code": "OUTSIDE_CERTIFIED_FRAGMENT",
+  "gate_detail": " OUTSIDE_CERTIFIED_FRAGMENT: scalar subquery",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "VAL|CELL|operator"
+  ],
+  "positions": [
+   "agg_arg",
+   "target",
+   "where"
+  ],
+  "qid": "Q17",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "",
+  "gate": "reject",
+  "gate_code": "MISSING_CERTIFICATE",
+  "gate_detail": " MISSING_CERTIFICATE: CARD(WHERE/JOIN predicate) -> CELL : CARD 는 factor-through 로 해소되지 않는다, 인증서 없음",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "EQ",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "ORD|MEMBERSHIP|ORDER BY key vector",
+   "ORD|MULTIPLICITY|ORDER BY key vector",
+   "VAL|CELL|aggregate",
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "agg_arg",
+   "group_by",
+   "having",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q18",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "",
+  "gate": "reject",
+  "gate_code": "MISSING_CERTIFICATE",
+  "gate_detail": " MISSING_CERTIFICATE: CARD(WHERE/JOIN predicate) -> CELL : CARD 는 factor-through 로 해소되지 않는다, 인증서 없음",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "VAL|CELL|aggregate"
+  ],
+  "positions": [
+   "agg_arg",
+   "target",
+   "where"
+  ],
+  "qid": "Q19",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "scalar subquery",
+  "gate": "reject",
+  "gate_code": "OUTSIDE_CERTIFIED_FRAGMENT",
+  "gate_detail": " OUTSIDE_CERTIFIED_FRAGMENT: scalar subquery",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "agg_arg",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q20",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "NOT EXISTS",
+  "gate": "reject",
+  "gate_code": "OUTSIDE_CERTIFIED_FRAGMENT",
+  "gate_detail": " OUTSIDE_CERTIFIED_FRAGMENT: NOT EXISTS",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "EQ",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "ORD|MEMBERSHIP|ORDER BY key vector",
+   "ORD|MULTIPLICITY|ORDER BY key vector",
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "group_by",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q21",
+  "tag": "stress",
+  "touches_label": true
+ },
+ {
+  "fragment": "scalar subquery, NOT EXISTS",
+  "gate": "reject",
+  "gate_code": "OUTSIDE_CERTIFIED_FRAGMENT",
+  "gate_detail": " OUTSIDE_CERTIFIED_FRAGMENT: scalar subquery, NOT EXISTS",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "EQ",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "VAL|CELL|aggregate",
+   "VAL|CELL|subquery output"
+  ],
+  "positions": [
+   "agg_arg",
+   "group_by",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q22",
+  "tag": "stress",
+  "touches_label": true
+ }
+]

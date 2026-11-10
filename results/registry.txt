@@ -1,0 +1,89 @@
+==============================================================================
+레지스트리 단독 회귀 — effect 분석과 연결하기 **전**
+==============================================================================
+
+A. 상수 마스크 — 무엇을 만족하고 무엇을 **못** 하는가
+   ipguard_mask() 는 타입별 상수를 돌려준다. 모든 값이 같은 마스크로
+   가므로 동치·순서가 뭉개진다. 그것을 fails 로 **적극 기록**한다.
+  ✓ 우리 모듈 C 함수는 c-provider (complete 아님)           c-provider/false (기대 c-provider/false)
+  ✓ ★ c-provider 에 proved_builtin 은 거부             rejected       (기대 rejected)
+  ✓ src 기반 UDF 에 trusted_provider 도 거부             rejected       (기대 rejected)
+  ✓ ipguard_mask.determinism                       holds          (기대 holds)
+  ✓ ipguard_mask.null_equivalence                  holds          (기대 holds)
+  ✓ ipguard_mask.equality_factor                   fails          (기대 fails)
+  ✓ ipguard_mask.order_factor                      fails          (기대 fails)
+  ✓ ipguard_mask.total                             holds          (기대 holds)
+  ✓ ★ 한 마스크에 holds/fails/unknown 이 공존한다            fails,holds,unknown (기대 fails,holds,unknown)
+
+B. 미등록 UDF — 기본값이 unknown 이어야 한다
+   어떤 규칙도 unknown 에 의존할 수 없다. 등록 안 한 것이 조용히
+   '안전' 으로 읽히면 레지스트리가 있으나 마나다.
+  ✓ 미등록 UDF.determinism                            unknown        (기대 unknown)
+  ✓ 미등록 UDF.null_equivalence                       unknown        (기대 unknown)
+  ✓ 미등록 UDF.equality_factor                        unknown        (기대 unknown)
+  ✓ 미등록 UDF.order_factor                           unknown        (기대 unknown)
+  ✓ 미등록 UDF.total                                  unknown        (기대 unknown)
+  ✓ 아예 없는 mask_id                                  unknown        (기대 unknown)
+
+C. CREATE OR REPLACE — 같은 OID 인데 구현이 바뀐다
+   ★ 이게 impl_version 을 관리자 문자열로 두면 안 되는 이유다.
+   OID·인자·타입·collation 이 전부 그대로라 키로는 구별되지 않는다.
+  ✓ 교체 전 claim                                     holds          (기대 holds)
+  ✓ OID 는 그대로다 (그래서 키로 못 잡는다)                      same           (기대 same)
+  ✓ 교체 후 claim (지문 불일치 -> 무효)                      unknown        (기대 unknown)
+  ✓ 감사에 잡히는가                                       1              (기대 1)
+  ✓ 지문 재등록 후 claim 복구                              holds          (기대 holds)
+  ✓ 본문 그대로, IMMUTABLE->VOLATILE 만 바꿔도 무효           unknown        (기대 unknown)
+  ✓ 지문 불완전(src)에 proved_builtin 은 거부               rejected       (기대 rejected)
+
+D. 인증서 철회 — 이미 만든 generic plan 까지 닿는가
+   ★ Y07 과 같은 구멍이다. 철회해도 캐시된 계획이 살아 있으면
+   커넥션 풀에서 몇 시간씩 옛 판정으로 돈다.
+  ✓ 레지스트리 쓰기가 epoch 를 올린다                          bumped         (기대 bumped)
+  ✓ 철회 전 EXECUTE 는 재계획하지 않는다 (generic plan)        +0             (기대 +0)
+  ✓ ★ 철회 후 EXECUTE 는 재계획한다                         +1             (기대 +1)
+     ↑ 게이트가 레지스트리를 **읽도록** 연결하는 것은 §11-4 다.
+       여기서 확인한 것은 '철회가 캐시된 계획까지 닿는다' 는 기전이고,
+       '그래서 거부된다' 는 아직 주장하지 않는다.
+
+E. 호환성 — 등록된 **조합**만 holds
+   arg_signature 를 키에 넣지 않으면 substr(x,1,2) 의 인증서가
+   substr(x,1,3) 으로 번진다. 검증 안 된 인자로 번지는 것이 위험하다.
+  ✓ 등록된 조합 (args=1,2 / redact / 기본 collation)      holds          (기대 holds)
+  ✓ 다른 인자 (1,3)                                    unknown        (기대 unknown)
+  ✓ 다른 redactor                                    unknown        (기대 unknown)
+  ✓ 다른 collation (C)                               unknown        (기대 unknown)
+  ✓ 미등록 함수 (upper)                                 unknown        (기대 unknown)
+  ✓ ★ redactor 를 바꾸면 조합 인증서도 무효                    unknown        (기대 unknown)
+  ✓ count(x) — null_equivalence=holds 인 상수 마스크     holds          (기대 holds)
+  ✓ ★ count(DISTINCT x): EQ 가 fails 라 fails (unknown 아님) fails          (기대 fails)
+
+   ── 음성 대조군: 잘못 등록된 인증서가 의무를 우회하는가 ──
+  ✓ ★ nullify 마스크: count(x) 는 fails (등록은 holds 인데도) fails          (기대 fails)
+  ✓    전제 자체는 fails 로 조회된다                         fails          (기대 fails)
+  ✓ ★ nullify + DISTINCT: EQ 도 fails 라 fails       fails          (기대 fails)
+  ✓ count(*) 는 시그니처가 다르다 (인자 없음) -> 조회 불가          unknown        (기대 unknown)
+  ✓ ★ EQ 인증이 없는 마스크로 count(DISTINCT x) -> unknown  unknown        (기대 unknown)
+
+F. ★ cross-backend — 다른 세션의 철회가 내 generic plan 까지 닿는가
+   D 는 같은 세션이라 local invalidation 만 확인한 것이다. 커넥션
+   풀에서 실제로 일어나는 일은 A 가 계획을 들고 있는 동안 B 가
+   철회하는 것이고, 그건 프로세스 간 방송이 닿아야 잡힌다.
+  ✓ B 가 ROLLBACK 하면 A 는 재계획하지 않는다                  +0             (기대 +0)
+  ✓    ROLLBACK 후 인증서는 계속 유효                       holds          (기대 holds)
+  ✓ ★ B 의 COMMIT 이 A1 의 generic plan 을 무효화한다       +1             (기대 +1)
+  ✓ ★ B 의 COMMIT 이 A2 의 generic plan 을 무효화한다       +1             (기대 +1)
+  ✓ ★ B 의 COMMIT 이 A3 의 generic plan 을 무효화한다       +1             (기대 +1)
+  ✓ 교체 전 A 가 보는 claim                              holds          (기대 holds)
+  ✓ ★ 다른 세션의 CREATE OR REPLACE 를 A 가 본다            unknown        (기대 unknown)
+  ✓ provider 지문이 어긋나면 A 도 unknown                  unknown        (기대 unknown)
+
+==============================================================================
+  A: 9/9
+  B: 6/6
+  C: 7/7
+  D: 3/3
+  E: 13/13
+  F: 8/8
+------------------------------------------------------------------------------
+  합계 46/46

@@ -1,0 +1,183 @@
+{
+ "version": 1,
+ "purpose": "마스킹 집행이 쿼리 *결과*를 바꾸는지 측정한다. 누출이 아니라 정합성 문제이며, 운영에서는 조용한 오답이라 누출보다 발견이 어렵다.",
+ "schema": [
+  "corpus/schema.sql"
+ ],
+ "classes": {
+  "refuse": "마스킹이 결과를 바꾸므로 반드시 거부되어야 하는 쿼리. 조용한 오답 대신 명시적 에러.",
+  "refuse_over": "술어가 마스킹된 서브쿼리 출력을 참조하지만 결과는 실제로 보존되던 것(NULL 여부/길이). 감지기는 구분할 수 없어 함께 거부한다 -- 과잉 거부 비용을 여기서 잰다.",
+  "intrinsic": "마스킹이면 어떤 설계든 불가피한 변경(DISTINCT/GROUP BY/집계). 거부 대상이 아니다.",
+  "scoped": "PII를 출력하지 않아 마스킹이 발동조차 하지 않아야 하는 쿼리.",
+  "none": "영향이 없어야 하는 대조군. 변경도 거부도 없어야 한다. (PII 출력이 있으면 값은 마스킹되지만 행 수는 유지되어야 한다.)",
+  "masked_ok": "PII를 출력하므로 값은 마스킹되어야 하고, 동시에 필터가 살아 행 수는 보존되어야 하는 쿼리. none(값까지 동일)과 구분해야 한다."
+ },
+ "field_semantics": {
+  "expect": "refuse | refuse_over | intrinsic | scoped | none | masked_ok",
+  "note": "무엇을 노리는지"
+ },
+ "entries": [
+  {
+   "id": "A01",
+   "expect": "refuse",
+   "sql": "SELECT t.id, t.ssn FROM (SELECT id, ssn FROM cust) t WHERE t.ssn = '800102-1000001'",
+   "note": "★ 진짜 위험. PII를 출력하므로 마스킹이 발동하고, 그 마스킹된 서브쿼리 출력이 바깥 술어에 쓰인다."
+  },
+  {
+   "id": "A02",
+   "expect": "refuse",
+   "sql": "SELECT t.s FROM (SELECT id, ssn AS s FROM cust) t WHERE t.s LIKE '8001%'",
+   "note": "별칭 + LIKE. 출력도 PII."
+  },
+  {
+   "id": "A03",
+   "expect": "refuse",
+   "sql": "WITH t AS (SELECT id, ssn FROM cust) SELECT ssn FROM t WHERE ssn = '800102-1000001'",
+   "note": "CTE 버전."
+  },
+  {
+   "id": "A04",
+   "expect": "refuse",
+   "sql": "SELECT count(*), max(a.ssn) FROM (SELECT id, ssn FROM cust LIMIT 50) a JOIN (SELECT id, ssn FROM cust LIMIT 50) b ON a.ssn = b.ssn",
+   "note": "★ 마스킹된 값끼리 조인. 전부 일치해 행이 폭증하는 방향(필터 완화)이라 더 위험하다."
+  },
+  {
+   "id": "A05",
+   "expect": "refuse_over",
+   "sql": "SELECT t.ssn FROM (SELECT ssn FROM cust) t WHERE t.ssn IS NOT NULL",
+   "note": "[재분류] 술어가 마스킹된 서브쿼리 출력을 참조하지만 결과는 보존됐다(NULL 보존 / 문자 수 보존). 감지기는 이를 구분할 수 없어 함께 거부한다 -- 과잉 거부 비용의 실측 대상. NULL 여부 보존 확인. 마스킹은 NULL 을 NULL 로 둔다."
+  },
+  {
+   "id": "A06",
+   "expect": "refuse_over",
+   "sql": "SELECT t.ssn FROM (SELECT id, ssn FROM cust) t WHERE length(t.ssn) = 14",
+   "note": "[재분류] 술어가 마스킹된 서브쿼리 출력을 참조하지만 결과는 보존됐다(NULL 보존 / 문자 수 보존). 감지기는 이를 구분할 수 없어 함께 거부한다 -- 과잉 거부 비용의 실측 대상. 길이 보존 확인. 문자 수를 보존하므로 유지되어야 한다."
+  },
+  {
+   "id": "A07",
+   "expect": "intrinsic",
+   "sql": "SELECT t.ssn FROM (SELECT ssn FROM cust) t GROUP BY t.ssn",
+   "note": "[재분류] GROUP BY 는 술어가 아니다. 서브쿼리가 없어도 `SELECT ssn FROM cust GROUP BY ssn` 이 똑같이 붕괴하므로 설계 탓이 아니라 마스킹 본질이다."
+  },
+  {
+   "id": "A08",
+   "expect": "masked_ok",
+   "sql": "SELECT c.ssn FROM cust c WHERE c.id IN (SELECT id FROM (SELECT id, ssn FROM cust) x WHERE x.ssn = '800102-1000001')",
+   "note": "[재분류 2026-08-08] 출력 경로 추종 변이기로 바꾼 뒤 이 쿼리는 안전해졌다. 내부 서브쿼리의 ssn 은 술어에만 쓰이므로 이제 마스킹되지 않고, 따라서 필터가 살아 1행이 유지되며 출력 c.ssn 만 마스킹된다(실측 확인). 이전에는 서브쿼리 targetList 의 PII 를 무조건 마스킹해 거부됐다 -- 거부가 맞아서가 아니라 과잉 마스킹의 부작용이었다."
+  },
+  {
+   "id": "S01",
+   "expect": "scoped",
+   "sql": "SELECT id FROM (SELECT id, ssn FROM cust) t WHERE t.ssn = '800102-1000001'",
+   "note": "[재분류] PII 미출력이라 마스킹 미발동. 원래 artifact 를 재려던 항목이었으나 위험을 재지 못했다 -> ★ 대표 케이스. 서브쿼리 출력 ssn 이 마스킹되면 바깥 술어가 못 맞춘다."
+  },
+  {
+   "id": "S02",
+   "expect": "scoped",
+   "sql": "SELECT id FROM (SELECT id, ssn AS s FROM cust) t WHERE t.s LIKE '8001%'",
+   "note": "[재분류] PII 미출력이라 마스킹 미발동. 원래 artifact 를 재려던 항목이었으나 위험을 재지 못했다 -> 별칭 + LIKE."
+  },
+  {
+   "id": "S03",
+   "expect": "scoped",
+   "sql": "WITH t AS (SELECT id, ssn FROM cust) SELECT id FROM t WHERE ssn = '800102-1000001'",
+   "note": "[재분류] PII 미출력이라 마스킹 미발동. 원래 artifact 를 재려던 항목이었으나 위험을 재지 못했다 -> CTE 버전."
+  },
+  {
+   "id": "S04",
+   "expect": "scoped",
+   "sql": "SELECT count(*) FROM (SELECT id, ssn FROM cust LIMIT 50) a JOIN (SELECT id, ssn FROM cust LIMIT 50) b ON a.ssn = b.ssn",
+   "note": "[재분류] PII 미출력이라 마스킹 미발동. 원래 artifact 를 재려던 항목이었으나 위험을 재지 못했다 -> ★ 마스킹된 값끼리 조인하면 전부 일치해 행이 폭증한다. 필터 완화 방향의 변경이라 더 위험하다."
+  },
+  {
+   "id": "S05",
+   "expect": "scoped",
+   "sql": "SELECT count(*) FROM (SELECT ssn FROM cust) t WHERE t.ssn IS NOT NULL",
+   "note": "[재분류] PII 미출력이라 마스킹 미발동. 원래 artifact 를 재려던 항목이었으나 위험을 재지 못했다 -> NULL 여부는 마스킹이 보존해야 한다(ipguard_mask 는 NULL 입력에 NULL 반환). 변하면 안 됨."
+  },
+  {
+   "id": "S06",
+   "expect": "scoped",
+   "sql": "SELECT count(*) FROM (SELECT id, ssn FROM cust) t WHERE length(t.ssn) = 14",
+   "note": "[재분류] PII 미출력이라 마스킹 미발동. 원래 artifact 를 재려던 항목이었으나 위험을 재지 못했다 -> 길이 보존 여부. 문자 수를 보존하므로 유지되어야 한다."
+  },
+  {
+   "id": "I01",
+   "expect": "intrinsic",
+   "sql": "SELECT DISTINCT ssn FROM cust",
+   "note": "★ 모든 값이 같아지므로 10000행 -> 1행. 어떤 마스킹 설계든 동일하다."
+  },
+  {
+   "id": "I02",
+   "expect": "intrinsic",
+   "sql": "SELECT ssn, count(*) FROM cust GROUP BY ssn",
+   "note": "그룹이 하나로 붕괴."
+  },
+  {
+   "id": "I03",
+   "expect": "intrinsic",
+   "sql": "SELECT count(DISTINCT ssn) FROM cust",
+   "note": "카디널리티 소실. 통계·리포트가 조용히 틀어진다."
+  },
+  {
+   "id": "I04",
+   "expect": "intrinsic",
+   "sql": "SELECT id FROM cust ORDER BY ssn, id LIMIT 5",
+   "note": "정렬 키가 상수가 되어 순서가 바뀐다."
+  },
+  {
+   "id": "I05",
+   "expect": "intrinsic",
+   "sql": "SELECT ssn FROM cust UNION SELECT ssn FROM cust",
+   "note": "UNION 중복 제거가 붕괴."
+  },
+  {
+   "id": "I06",
+   "expect": "intrinsic",
+   "sql": "SELECT max(ssn), min(ssn) FROM cust",
+   "note": "집계 결과가 마스크값."
+  },
+  {
+   "id": "N01",
+   "expect": "none",
+   "sql": "SELECT id FROM cust WHERE ssn = '800102-1000001'",
+   "note": "★★ 가장 중요한 대조군. 술어의 base-relation Var 는 마스킹하지 않으므로 필터가 계속 동작해야 한다. 여기서 행이 줄면 설계가 무너진 것."
+  },
+  {
+   "id": "N02",
+   "expect": "none",
+   "sql": "SELECT count(*) FROM cust WHERE ci = repeat('A',88)",
+   "note": "CI 로 필터링. 파라미터 결속의 전제."
+  },
+  {
+   "id": "N03",
+   "expect": "none",
+   "sql": "SELECT id FROM cust WHERE substr(ssn,1,6) = '800102'",
+   "note": "술어 안의 표현식. 마스킹 대상 아님."
+  },
+  {
+   "id": "N04",
+   "expect": "none",
+   "sql": "SELECT count(*) FROM cust WHERE id BETWEEN 1 AND 100",
+   "note": "PII 무관 필터."
+  },
+  {
+   "id": "N05",
+   "expect": "none",
+   "sql": "SELECT id, grade FROM cust ORDER BY id LIMIT 5",
+   "note": "PII 미참조."
+  },
+  {
+   "id": "N06",
+   "expect": "none",
+   "sql": "SELECT count(*) FROM cust c JOIN tx t ON t.cust_id = c.id WHERE c.id = 1",
+   "note": "조인 키가 PII 아님."
+  },
+  {
+   "id": "N07",
+   "expect": "none",
+   "sql": "SELECT count(*) FROM cust WHERE ssn LIKE '8001%'",
+   "note": "부채널 쿼리. 마스킹으로 막히지 않는다는 것도 여기서 확인된다(별개 통제 필요)."
+  }
+ ]
+}

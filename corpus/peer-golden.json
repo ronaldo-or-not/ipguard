@@ -1,0 +1,344 @@
+{
+  "note": [
+    "peer-group golden — 사람이 계산한 **의미론적 허용 결과**.",
+    "",
+    "★ 실행기가 실제로 낸 한 sequence 를 정답으로 저장하면 안 된다. 그건",
+    "  '지금 이 계획이 낸 순서' 일 뿐이고, 계획이 바뀌면 정답이 바뀐다.",
+    "  peer = 모든 ORDER BY 키와 SQL comparator·NULL 규칙이 같은 행들의 집합.",
+    "  블록 **내부만** 순열을 허용한다.",
+    "",
+    "생성 절차(각 항목의 allowed 는 이 순서로 손으로 계산했다):",
+    "  1. raw-key peer block 구성",
+    "  2. 블록별 허용 순열 생성",
+    "  3. output projection/redaction 적용",
+    "  4. 중복되는 observable sequence 합치기",
+    "",
+    "4단계가 중요하다. projection 이후 행이 같아지면 **블록 경계 자체가",
+    "관찰되지 않는다** -- raw key 에 여러 블록이 있어도 observable 은 하나다.",
+    "",
+    "이 파일은 release 결과를 **보기 전에** 동결한다(docs/heldout-protocol.md).",
+    "",
+    "`projection` 은 행 id -> 관찰되는 출력 셀. 독립 enumerator 가 3단계",
+    "(projection/redaction)를 SQL 을 돌리지 않고 수행하기 위해 명시한다.",
+    "",
+    "★ `allowed` 의 **완전성**은 tools/enumerate_peer_golden.py 가 검증한다:",
+    "  raw_peer_blocks 에서 블록 내부 순열을 전부 열거 -> projection -> 중복 제거",
+    "  -> allowed 와 **집합으로 일치**해야 한다. 손계산 오류를 잡는다.",
+    "  (블록 구성 자체(1단계)는 여전히 손계산이다 -- 그건 SQL 의미론 판단이다.)"
+  ],
+  "schema": [
+    "DROP TABLE IF EXISTS h5.pg_t;",
+    "CREATE TABLE h5.pg_t (id int PRIMARY KEY, secret text, grade text);",
+    "INSERT INTO h5.pg_t VALUES (1,'a','B'),(2,'b','A'),(3,'c','B'),(4,NULL,'A'),(5,NULL,'C');",
+    "DELETE FROM h5.pii_label WHERE relname='pg_t';",
+    "INSERT INTO h5.pii_label VALUES ('pg_t','secret','pgsec');"
+  ],
+  "teardown": [
+    "DROP TABLE IF EXISTS h5.pg_t;",
+    "DELETE FROM h5.pii_label WHERE relname='pg_t';"
+  ],
+  "entries": [
+    {
+      "id": "PG01",
+      "class": "공개 id 가 있어 peer 내부 순열이 관찰된다",
+      "sql": "SELECT id FROM h5.pg_t ORDER BY grade",
+      "raw_peer_blocks": [
+        {
+          "key": "grade='A'",
+          "rows": [
+            2,
+            4
+          ]
+        },
+        {
+          "key": "grade='B'",
+          "rows": [
+            1,
+            3
+          ]
+        },
+        {
+          "key": "grade='C'",
+          "rows": [
+            5
+          ]
+        }
+      ],
+      "reasoning": [
+        "grade 오름차순. A 블록에 id 2,4 / B 블록에 1,3 / C 블록에 5.",
+        "출력이 id 라 블록 내부 순열이 **관찰된다** -- 4개 sequence 전부 허용.",
+        "블록 **사이** 순서는 고정이다: A 다음 B 다음 C."
+      ],
+      "allowed": [
+        "2|4|1|3|5",
+        "4|2|1|3|5",
+        "2|4|3|1|5",
+        "4|2|3|1|5"
+      ],
+      "forbidden_example": "1|3|2|4|5",
+      "forbidden_why": "B 블록이 A 블록보다 앞이다 -- 블록 사이 순서를 어겼다",
+      "projection": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5"
+      }
+    },
+    {
+      "id": "PG02",
+      "class": "모든 출력이 같아 order sink 가 소거된다",
+      "sql": "SELECT 'x' FROM h5.pg_t ORDER BY secret",
+      "raw_peer_blocks": [
+        {
+          "key": "secret='a'",
+          "rows": [
+            1
+          ]
+        },
+        {
+          "key": "secret='b'",
+          "rows": [
+            2
+          ]
+        },
+        {
+          "key": "secret='c'",
+          "rows": [
+            3
+          ]
+        },
+        {
+          "key": "secret IS NULL (NULLS LAST 기본)",
+          "rows": [
+            4,
+            5
+          ]
+        }
+      ],
+      "reasoning": [
+        "raw key 로는 블록이 4개고 마지막 블록은 크기 2다.",
+        "그런데 투영이 모든 행을 'x' 로 만든다 -- 3단계(projection) 적용 후",
+        "4단계에서 **모든 순열이 같은 observable 로 합쳐진다.**",
+        "따라서 허용 sequence 는 **하나뿐**이고, 그 하나는 어떤 순서로",
+        "실행해도 나온다. 즉 order sink 가 소거됐다."
+      ],
+      "allowed": [
+        "x|x|x|x|x"
+      ],
+      "forbidden_example": "x|x|x|x",
+      "forbidden_why": "행 수가 다르다 -- 행 수는 redaction 대상이 아니다",
+      "projection": {
+        "1": "x",
+        "2": "x",
+        "3": "x",
+        "4": "x",
+        "5": "x"
+      }
+    },
+    {
+      "id": "PG03",
+      "class": "NULL peer + NULLS FIRST",
+      "sql": "SELECT id FROM h5.pg_t ORDER BY secret NULLS FIRST",
+      "raw_peer_blocks": [
+        {
+          "key": "secret IS NULL",
+          "rows": [
+            4,
+            5
+          ]
+        },
+        {
+          "key": "secret='a'",
+          "rows": [
+            1
+          ]
+        },
+        {
+          "key": "secret='b'",
+          "rows": [
+            2
+          ]
+        },
+        {
+          "key": "secret='c'",
+          "rows": [
+            3
+          ]
+        }
+      ],
+      "reasoning": [
+        "NULL 은 cmp 로 놓이지 않는다 -- NULLS FIRST 가 맨 앞에 놓는다.",
+        "NULL 행 둘(4,5)이 **하나의 peer block** 이다: SQL 정렬에서 NULL 끼리는",
+        "순서가 정해지지 않는다.",
+        "출력이 id 라 그 블록 내부 순열이 관찰된다 -- 2개 sequence 허용."
+      ],
+      "allowed": [
+        "4|5|1|2|3",
+        "5|4|1|2|3"
+      ],
+      "forbidden_example": "1|2|3|4|5",
+      "forbidden_why": "NULLS FIRST 인데 NULL 블록이 뒤에 있다",
+      "projection": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5"
+      }
+    },
+    {
+      "id": "PG04",
+      "class": "NULL peer + NULLS LAST (기본)",
+      "sql": "SELECT id FROM h5.pg_t ORDER BY secret NULLS LAST",
+      "raw_peer_blocks": [
+        {
+          "key": "secret='a'",
+          "rows": [
+            1
+          ]
+        },
+        {
+          "key": "secret='b'",
+          "rows": [
+            2
+          ]
+        },
+        {
+          "key": "secret='c'",
+          "rows": [
+            3
+          ]
+        },
+        {
+          "key": "secret IS NULL",
+          "rows": [
+            4,
+            5
+          ]
+        }
+      ],
+      "reasoning": [
+        "PG03 과 같은 데이터, NULL 위치만 반대.",
+        "PG03/PG04 를 나란히 두는 이유: 마스크가 non-NULL 을 NULL 로 바꾸면",
+        "그 행이 **블록 사이를 이동**한다. order_factor 로는 못 잡고",
+        "null_equivalence 가 필요하다는 것을 의미론 수준에서 고정한다."
+      ],
+      "allowed": [
+        "1|2|3|4|5",
+        "1|2|3|5|4"
+      ],
+      "forbidden_example": "4|5|1|2|3",
+      "forbidden_why": "NULLS LAST 인데 NULL 블록이 앞에 있다",
+      "projection": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5"
+      }
+    },
+    {
+      "id": "PG05",
+      "class": "DESC — 블록 사이 순서만 뒤집힌다",
+      "sql": "SELECT id FROM h5.pg_t ORDER BY grade DESC",
+      "raw_peer_blocks": [
+        {
+          "key": "grade='C'",
+          "rows": [
+            5
+          ]
+        },
+        {
+          "key": "grade='B'",
+          "rows": [
+            1,
+            3
+          ]
+        },
+        {
+          "key": "grade='A'",
+          "rows": [
+            2,
+            4
+          ]
+        }
+      ],
+      "reasoning": [
+        "DESC 는 **블록 사이** 순서를 뒤집는다. 블록 **내부**는 여전히",
+        "순서가 없다 -- DESC 가 동률을 깨지 않는다.",
+        "PG01 과 같은 4개 순열이 허용되고 블록 순서만 반대다."
+      ],
+      "allowed": [
+        "5|1|3|2|4",
+        "5|3|1|2|4",
+        "5|1|3|4|2",
+        "5|3|1|4|2"
+      ],
+      "forbidden_example": "2|4|1|3|5",
+      "forbidden_why": "ASC 순서다 -- DESC 를 무시했다",
+      "projection": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5"
+      }
+    },
+    {
+      "id": "PG06",
+      "class": "전순서 — 허용 sequence 가 하나뿐이다",
+      "sql": "SELECT id FROM h5.pg_t ORDER BY grade, id",
+      "raw_peer_blocks": [
+        {
+          "key": "(A,2)",
+          "rows": [
+            2
+          ]
+        },
+        {
+          "key": "(A,4)",
+          "rows": [
+            4
+          ]
+        },
+        {
+          "key": "(B,1)",
+          "rows": [
+            1
+          ]
+        },
+        {
+          "key": "(B,3)",
+          "rows": [
+            3
+          ]
+        },
+        {
+          "key": "(C,5)",
+          "rows": [
+            5
+          ]
+        }
+      ],
+      "reasoning": [
+        "id 가 PK 라 (grade,id) 는 **전순서**다. 모든 블록이 크기 1이고",
+        "허용 sequence 가 하나뿐이다 -- 이 부류는 peer-group quotient 없이",
+        "sequence 를 그대로 비교할 수 있다.",
+        "정량평가의 A 집합(total-order)이 이 모양이다."
+      ],
+      "allowed": [
+        "2|4|1|3|5"
+      ],
+      "forbidden_example": "4|2|1|3|5",
+      "forbidden_why": "전순서인데 2와 4가 뒤바뀌었다 -- 동률이 아니다",
+      "projection": {
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5"
+      }
+    }
+  ]
+}

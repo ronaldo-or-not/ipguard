@@ -1,0 +1,370 @@
+[
+ {
+  "fragment": "",
+  "gate": "accept",
+  "gate_code": "",
+  "gate_detail": "",
+  "naive": "accept",
+  "naive_effects": [],
+  "obligations": [],
+  "positions": [],
+  "qid": "Q1",
+  "tag": "realistic",
+  "touches_label": false
+ },
+ {
+  "fragment": "scalar subquery",
+  "gate": "reject",
+  "gate_code": "OUTSIDE_CERTIFIED_FRAGMENT",
+  "gate_detail": " OUTSIDE_CERTIFIED_FRAGMENT: scalar subquery",
+  "naive": "reject",
+  "naive_effects": [
+   "ORD"
+  ],
+  "obligations": [
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "ORD|MEMBERSHIP|ORDER BY key vector",
+   "ORD|MULTIPLICITY|ORDER BY key vector",
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "order_by",
+   "target"
+  ],
+  "qid": "Q2",
+  "tag": "realistic",
+  "touches_label": true
+ },
+ {
+  "fragment": "",
+  "gate": "accept",
+  "gate_code": "",
+  "gate_detail": "",
+  "naive": "accept",
+  "naive_effects": [],
+  "obligations": [],
+  "positions": [],
+  "qid": "Q3",
+  "tag": "realistic",
+  "touches_label": false
+ },
+ {
+  "fragment": "",
+  "gate": "accept",
+  "gate_code": "",
+  "gate_detail": "",
+  "naive": "accept",
+  "naive_effects": [],
+  "obligations": [],
+  "positions": [],
+  "qid": "Q4",
+  "tag": "realistic",
+  "touches_label": false
+ },
+ {
+  "fragment": "",
+  "gate": "accept",
+  "gate_code": "",
+  "gate_detail": "",
+  "naive": "accept",
+  "naive_effects": [],
+  "obligations": [],
+  "positions": [],
+  "qid": "Q5",
+  "tag": "realistic",
+  "touches_label": false
+ },
+ {
+  "fragment": "",
+  "gate": "accept",
+  "gate_code": "",
+  "gate_detail": "",
+  "naive": "accept",
+  "naive_effects": [],
+  "obligations": [],
+  "positions": [],
+  "qid": "Q6",
+  "tag": "realistic",
+  "touches_label": false
+ },
+ {
+  "fragment": "",
+  "gate": "accept",
+  "gate_code": "",
+  "gate_detail": "",
+  "naive": "accept",
+  "naive_effects": [],
+  "obligations": [],
+  "positions": [],
+  "qid": "Q7",
+  "tag": "realistic",
+  "touches_label": false
+ },
+ {
+  "fragment": "",
+  "gate": "accept",
+  "gate_code": "",
+  "gate_detail": "",
+  "naive": "accept",
+  "naive_effects": [],
+  "obligations": [],
+  "positions": [],
+  "qid": "Q8",
+  "tag": "realistic",
+  "touches_label": false
+ },
+ {
+  "fragment": "",
+  "gate": "accept",
+  "gate_code": "",
+  "gate_detail": "",
+  "naive": "accept",
+  "naive_effects": [],
+  "obligations": [],
+  "positions": [],
+  "qid": "Q9",
+  "tag": "realistic",
+  "touches_label": false
+ },
+ {
+  "fragment": "",
+  "gate": "reject",
+  "gate_code": "CAPABILITY_FAILS",
+  "gate_detail": " CAPABILITY_FAILS: EQ(GROUP BY key vector) -> CELL : equality_factor=fails, 인증서 없음",
+  "naive": "reject",
+  "naive_effects": [
+   "EQ"
+  ],
+  "obligations": [
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "group_by",
+   "target"
+  ],
+  "qid": "Q10",
+  "tag": "realistic",
+  "touches_label": true
+ },
+ {
+  "fragment": "scalar subquery",
+  "gate": "accept",
+  "gate_code": "",
+  "gate_detail": "",
+  "naive": "accept",
+  "naive_effects": [],
+  "obligations": [],
+  "positions": [],
+  "qid": "Q11",
+  "tag": "realistic",
+  "touches_label": false
+ },
+ {
+  "fragment": "",
+  "gate": "accept",
+  "gate_code": "",
+  "gate_detail": "",
+  "naive": "accept",
+  "naive_effects": [],
+  "obligations": [],
+  "positions": [],
+  "qid": "Q12",
+  "tag": "realistic",
+  "touches_label": false
+ },
+ {
+  "fragment": "outer join",
+  "gate": "accept",
+  "gate_code": "",
+  "gate_detail": "",
+  "naive": "accept",
+  "naive_effects": [],
+  "obligations": [],
+  "positions": [],
+  "qid": "Q13",
+  "tag": "realistic",
+  "touches_label": false
+ },
+ {
+  "fragment": "",
+  "gate": "accept",
+  "gate_code": "",
+  "gate_detail": "",
+  "naive": "accept",
+  "naive_effects": [],
+  "obligations": [],
+  "positions": [],
+  "qid": "Q14",
+  "tag": "realistic",
+  "touches_label": false
+ },
+ {
+  "fragment": "scalar subquery",
+  "gate": "reject",
+  "gate_code": "OUTSIDE_CERTIFIED_FRAGMENT",
+  "gate_detail": " OUTSIDE_CERTIFIED_FRAGMENT: scalar subquery",
+  "naive": "accept",
+  "naive_effects": [],
+  "obligations": [
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "target"
+  ],
+  "qid": "Q15",
+  "tag": "realistic",
+  "touches_label": true
+ },
+ {
+  "fragment": "NOT IN / <> ALL",
+  "gate": "accept",
+  "gate_code": "",
+  "gate_detail": "",
+  "naive": "accept",
+  "naive_effects": [],
+  "obligations": [],
+  "positions": [],
+  "qid": "Q16",
+  "tag": "realistic",
+  "touches_label": false
+ },
+ {
+  "fragment": "scalar subquery",
+  "gate": "accept",
+  "gate_code": "",
+  "gate_detail": "",
+  "naive": "accept",
+  "naive_effects": [],
+  "obligations": [],
+  "positions": [],
+  "qid": "Q17",
+  "tag": "realistic",
+  "touches_label": false
+ },
+ {
+  "fragment": "",
+  "gate": "reject",
+  "gate_code": "CAPABILITY_FAILS",
+  "gate_detail": " CAPABILITY_FAILS: EQ(GROUP BY key vector) -> CELL : equality_factor=fails, 인증서 없음",
+  "naive": "reject",
+  "naive_effects": [
+   "EQ"
+  ],
+  "obligations": [
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "group_by",
+   "target"
+  ],
+  "qid": "Q18",
+  "tag": "realistic",
+  "touches_label": true
+ },
+ {
+  "fragment": "",
+  "gate": "accept",
+  "gate_code": "",
+  "gate_detail": "",
+  "naive": "accept",
+  "naive_effects": [],
+  "obligations": [],
+  "positions": [],
+  "qid": "Q19",
+  "tag": "realistic",
+  "touches_label": false
+ },
+ {
+  "fragment": "scalar subquery",
+  "gate": "reject",
+  "gate_code": "OUTSIDE_CERTIFIED_FRAGMENT",
+  "gate_detail": " OUTSIDE_CERTIFIED_FRAGMENT: scalar subquery",
+  "naive": "reject",
+  "naive_effects": [
+   "ORD"
+  ],
+  "obligations": [
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "order_by",
+   "target"
+  ],
+  "qid": "Q20",
+  "tag": "realistic",
+  "touches_label": true
+ },
+ {
+  "fragment": "NOT EXISTS",
+  "gate": "reject",
+  "gate_code": "OUTSIDE_CERTIFIED_FRAGMENT",
+  "gate_detail": " OUTSIDE_CERTIFIED_FRAGMENT: NOT EXISTS",
+  "naive": "reject",
+  "naive_effects": [
+   "EQ",
+   "ORD"
+  ],
+  "obligations": [
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "ORD|MEMBERSHIP|ORDER BY key vector",
+   "ORD|MULTIPLICITY|ORDER BY key vector",
+   "VAL|CELL|column"
+  ],
+  "positions": [
+   "group_by",
+   "order_by",
+   "target"
+  ],
+  "qid": "Q21",
+  "tag": "realistic",
+  "touches_label": true
+ },
+ {
+  "fragment": "scalar subquery, NOT EXISTS",
+  "gate": "reject",
+  "gate_code": "OUTSIDE_CERTIFIED_FRAGMENT",
+  "gate_detail": " OUTSIDE_CERTIFIED_FRAGMENT: scalar subquery, NOT EXISTS",
+  "naive": "reject",
+  "naive_effects": [
+   "CARD",
+   "EQ",
+   "ORD"
+  ],
+  "obligations": [
+   "CARD|CELL|WHERE/JOIN predicate",
+   "CARD|MEMBERSHIP|WHERE/JOIN predicate",
+   "CARD|MULTIPLICITY|WHERE/JOIN predicate",
+   "CARD|ROW_COUNT|WHERE/JOIN predicate",
+   "EQ|CELL|GROUP BY key vector",
+   "EQ|MEMBERSHIP|GROUP BY key vector",
+   "EQ|MULTIPLICITY|GROUP BY key vector",
+   "EQ|ROW_COUNT|GROUP BY key vector",
+   "ORD|FINAL_ORDER|ORDER BY key vector",
+   "VAL|CELL|aggregate",
+   "VAL|CELL|subquery output"
+  ],
+  "positions": [
+   "agg_arg",
+   "group_by",
+   "order_by",
+   "target",
+   "where"
+  ],
+  "qid": "Q22",
+  "tag": "realistic",
+  "touches_label": true
+ }
+]

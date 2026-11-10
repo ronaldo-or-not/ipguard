@@ -1,0 +1,215 @@
+{
+  "note": "적대적 시험 3라운드. 표적은 **가장 젊은 코드**다 -- 의미 발산 판정식(R1/R2/R3)과 nullify 센티널. 이전 두 라운드가 결함 11건을 냈고 그중 0건을 기본 코퍼스가 찾지 못했으므로, 새 기능을 붙였으면 새로 쳐야 한다. expect 는 '판정식을 켠 상태에서 무엇이 일어나야 하는가'다.",
+  "entries": [
+    {
+      "id": "X01",
+      "class": "R1-우회",
+      "expect": "refuse",
+      "sql": "SELECT ssn, count(*) FROM cust GROUP BY 1",
+      "note": "서수 GROUP BY. 컬럼명 대신 위치로 지정하면 TLE 해석이 되는가"
+    },
+    {
+      "id": "X02",
+      "class": "R1-우회",
+      "expect": "refuse",
+      "sql": "SELECT DISTINCT ON (ssn) ssn, id FROM cust ORDER BY ssn, id",
+      "note": "DISTINCT ON. distinctClause 에 들어가는가"
+    },
+    {
+      "id": "X03",
+      "class": "R1-우회",
+      "expect": "refuse",
+      "sql": "SELECT ssn, grade, count(*) FROM cust GROUP BY ROLLUP (ssn, grade)",
+      "note": "ROLLUP. groupClause 와 groupingSets 가 따로 산다"
+    },
+    {
+      "id": "X04",
+      "class": "R1-우회",
+      "expect": "refuse",
+      "sql": "SELECT ssn, grade, count(*) FROM cust GROUP BY CUBE (ssn, grade)",
+      "note": "CUBE. 동일"
+    },
+    {
+      "id": "X05",
+      "class": "R1-우회",
+      "expect": "refuse",
+      "sql": "SELECT ssn FROM cust WHERE id < 100 EXCEPT ALL SELECT ssn FROM cust WHERE id < 50",
+      "note": "★ EXCEPT ALL. all=true 라 '중복 제거 없음'으로 보이지만 다중집합 차집합은 값에 좌우된다"
+    },
+    {
+      "id": "X06",
+      "class": "R1-우회",
+      "expect": "refuse",
+      "sql": "SELECT ssn FROM cust WHERE id < 100 INTERSECT ALL SELECT ssn FROM cust WHERE id < 50",
+      "note": "INTERSECT ALL. 동일"
+    },
+    {
+      "id": "X07",
+      "class": "R1-우회",
+      "expect": "refuse",
+      "sql": "SELECT DISTINCT s FROM (SELECT ssn AS s FROM cust UNION ALL SELECT ssn FROM cust) t",
+      "note": "안쪽은 ALL, 바깥에서 DISTINCT. Var 한 겹 경유"
+    },
+    {
+      "id": "X08",
+      "class": "R2-우회",
+      "expect": "pass",
+      "sql": "SELECT count(*) FROM cust HAVING count(DISTINCT ssn) > 1",
+      "note": "[재분류] HAVING 은 술어다. 설계상 술어는 실값을 본다(문서화된 부채널). 마스킹이 발동하지 않으므로 발산도 없다. 기대값 refuse 가 처음부터 틀렸다 -- 결함이 아니라 내 라벨 오류다"
+    },
+    {
+      "id": "X09",
+      "class": "R2-우회",
+      "expect": "refuse",
+      "sql": "SELECT x FROM (SELECT count(DISTINCT ssn) AS x FROM cust) t",
+      "note": "집계를 서브쿼리 안에 숨긴다"
+    },
+    {
+      "id": "X10",
+      "class": "R2-우회",
+      "expect": "refuse",
+      "sql": "WITH t AS (SELECT ssn FROM cust) SELECT count(DISTINCT ssn) FROM t",
+      "note": "CTE 경유. mask 는 CTE 안, 집계 인자는 Var"
+    },
+    {
+      "id": "X11",
+      "class": "R2-우회",
+      "expect": "refuse",
+      "sql": "SELECT percentile_cont(0.5) WITHIN GROUP (ORDER BY salary) FROM payroll",
+      "note": "★ 순서 집합 집계. 정렬 키가 aggorder 에 있다 -- args 만 보면 놓친다"
+    },
+    {
+      "id": "X12",
+      "class": "R2-우회",
+      "expect": "refuse",
+      "sql": "SELECT mode() WITHIN GROUP (ORDER BY ssn) FROM cust",
+      "note": "동일 계열"
+    },
+    {
+      "id": "X13",
+      "class": "R2-우회",
+      "expect": "refuse",
+      "sql": "SELECT corr(salary, bonus) FROM payroll",
+      "note": "두 인자 통계 집계"
+    },
+    {
+      "id": "X14",
+      "class": "R3-우회",
+      "expect": "refuse",
+      "sql": "SELECT * FROM (SELECT id, ssn FROM cust ORDER BY ssn LIMIT 5) t",
+      "note": "LIMIT 을 서브쿼리 안으로 밀어 넣는다"
+    },
+    {
+      "id": "X15",
+      "class": "R3-우회",
+      "expect": "refuse",
+      "sql": "SELECT id, ssn FROM cust ORDER BY ssn FETCH FIRST 5 ROWS ONLY",
+      "note": "FETCH FIRST 문법. limitCount 로 같은 자리에 오는가"
+    },
+    {
+      "id": "X16",
+      "class": "R3-우회",
+      "expect": "refuse",
+      "sql": "SELECT id, ssn FROM cust ORDER BY ssn OFFSET 10",
+      "note": "LIMIT 없이 OFFSET 만. 어느 행이 빠지는지가 마스크에 좌우된다"
+    },
+    {
+      "id": "X17",
+      "class": "R3-우회",
+      "expect": "refuse",
+      "sql": "SELECT id, ssn, ntile(4) OVER (ORDER BY ssn) AS q FROM cust WHERE id < 9",
+      "note": "ntile. 사분위가 마스크 순서에서 나온다"
+    },
+    {
+      "id": "X18",
+      "class": "R3-우회",
+      "expect": "refuse",
+      "sql": "SELECT id, ssn, sum(id) OVER (ORDER BY ssn ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) AS run FROM cust WHERE id < 6",
+      "note": "누적합. 프레임 순서가 마스크에 좌우되고 run 은 평범한 숫자다"
+    },
+    {
+      "id": "X19",
+      "class": "nullify",
+      "expect": "mask",
+      "sql": "SELECT id, bonus / NULLIF(salary, 0) AS ratio FROM payroll WHERE id < 6",
+      "note": "★ zero 센티널이면 0 나눗셈으로 **에러**가 났다(시끄러운 실패). nullify 는 조용히 NULL 을 준다 -- 어느 쪽이 나은가"
+    },
+    {
+      "id": "X20",
+      "class": "nullify",
+      "expect": "pass",
+      "sql": "SELECT count(*) FROM payroll WHERE salary > 50000000",
+      "note": "술어 전용. 마스킹 안 되므로 필터가 살아야 한다"
+    },
+    {
+      "id": "X21",
+      "class": "nullify",
+      "expect": "pass",
+      "sql": "SELECT count(*) FILTER (WHERE salary IS NOT NULL) FROM payroll",
+      "note": "[재분류] FILTER (WHERE …) 도 술어다. 처음에는 변이기가 FILTER 안까지 마스킹해 count 가 1000→0 이 됐고, 그건 진짜 결함이었다(수정함). 고친 뒤의 올바른 동작은 '술어이므로 손대지 않음' = pass 다. 라벨을 바꿔 빨간 것을 초록으로 만든 게 아니라, 결함을 고쳐서 정답이 달라졌다"
+    },
+    {
+      "id": "X22",
+      "class": "nullify",
+      "expect": "mask",
+      "sql": "SELECT id, salary IS NULL AS masked FROM payroll WHERE id < 6",
+      "note": "마스킹 여부 자체를 관측한다. 누출은 아니지만 판정이 뭐라 하는지"
+    },
+    {
+      "id": "X23",
+      "class": "대조군",
+      "expect": "pass",
+      "sql": "SELECT dept, count(*), sum(years_service) FROM payroll GROUP BY dept",
+      "note": "음성 대조군 -- PII 미참조 집계+그룹핑. 막히면 과거부다"
+    },
+    {
+      "id": "X24",
+      "class": "대조군",
+      "expect": "pass",
+      "sql": "SELECT grade, count(DISTINCT id) FROM cust GROUP BY grade ORDER BY grade LIMIT 3",
+      "note": "음성 대조군 -- DISTINCT 집계 + GROUP BY + ORDER BY + LIMIT 을 전부 쓰지만 인자가 PII 가 아니다"
+    },
+    {
+      "id": "X25",
+      "class": "대조군",
+      "expect": "pass",
+      "sql": "SELECT id FROM cust WHERE ssn LIKE '8001%' ORDER BY id LIMIT 5",
+      "note": "음성 대조군 -- PII 는 술어에만, 정렬 키는 비-PII"
+    },
+    {
+      "id": "X26",
+      "class": "누출-회귀",
+      "expect": "mask",
+      "sql": "SELECT * FROM (SELECT 'zzz'::text AS v UNION ALL SELECT ssn FROM cust WHERE id=1) t",
+      "note": "★★ 3R 최대 수확. 중첩 집합연산에서 **맨 왼쪽이 아닌 팔**의 PII 가 평문으로 나갔다. 탐지도 집행도 못 했다(verdict=pass, masked=0). 왼쪽 팔에 PII 를 두면 우연히 맞게 동작해서 기존 코퍼스가 못 잡았다"
+    },
+    {
+      "id": "X27",
+      "class": "누출-회귀",
+      "expect": "mask",
+      "sql": "SELECT * FROM (SELECT 'a'::text UNION ALL SELECT ssn FROM cust WHERE id=1 UNION ALL SELECT 'b'::text) t",
+      "note": "3-arm, 가운데만 PII. 같은 결함의 다른 형태"
+    },
+    {
+      "id": "X28",
+      "class": "누출-회귀",
+      "expect": "mask",
+      "sql": "WITH u AS (SELECT 'a'::text AS v UNION ALL SELECT ssn FROM cust WHERE id=1) SELECT * FROM u",
+      "note": "CTE 로 감싼 같은 형태. 분석기의 RTE_CTE 경로도 같은 구멍이었다"
+    },
+    {
+      "id": "X29",
+      "class": "누출-회귀",
+      "expect": "refuse",
+      "sql": "SELECT ssn FROM cust WHERE id<50 EXCEPT ALL SELECT ssn FROM cust WHERE id>=50 AND id<100",
+      "note": "서로소 EXCEPT ALL. 원본 49행이 마스킹 후 0행이 된다 -- X05 가 포함관계 집합이라 행 수가 우연히 같았던 것을 보완"
+    },
+    {
+      "id": "X30",
+      "class": "대조군",
+      "expect": "mask",
+      "sql": "SELECT ssn FROM cust WHERE id=1 UNION ALL SELECT ssn FROM cust WHERE id=2",
+      "note": "음성 대조군 -- UNION ALL 은 단순 연결이라 거부하면 안 된다. EXCEPT/INTERSECT ALL 수정이 여기까지 번지지 않았는지 확인"
+    }
+  ]
+}

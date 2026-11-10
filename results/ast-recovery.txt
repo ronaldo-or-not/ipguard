@@ -1,0 +1,112 @@
+======================================================================================
+AST 순회 탐지기 (ipguard) 채점 — 와이어 기준선 대비
+======================================================================================
+ID    cat 기대                         AST 탐지                     AST     와이어
+--------------------------------------------------------------------------------------
+  D01  D   ssn                        ssn                        PASS    PASS
+  D02  D   acct,addr,birth,ci,name,p  acct,addr,birth,ci,name,p  PASS    PASS
+  D03  D   name,ssn                   name,ssn                   PASS    PASS
+  D04  D   name,ssn                   name,ssn                   PASS    PASS
+  D05  D   acct,name,ssn              acct,name,ssn              PASS    PASS
+  D06  D   ssn                        ssn                        PASS    PASS
+  D07  D   -                          -                          PASS    PASS
+  D08  D   -                          -                          PASS    PASS
+  D09  D   -                          -                          PASS    PASS
+  E01  E   ssn                        ssn                        PASS    miss ←회수
+  E02  E   ssn                        ssn                        PASS    miss ←회수
+  E03  E   name,ssn                   name,ssn                   PASS    miss ←회수
+  E04  E   name                       name                       PASS    miss ←회수
+  E05  E   ssn                        ssn                        PASS    PASS
+  E06  E   ssn                        ssn                        PASS    miss ←회수
+  E07  E   ssn                        ssn                        PASS    miss ←회수
+  E08  E   ssn                        ssn                        PASS    miss ←회수
+  E09  E   ssn                        ssn                        PASS    miss ←회수
+  E10  E   ssn                        ssn                        PASS    miss ←회수
+  E11  E   ssn                        ssn                        PASS    miss ←회수
+  E12  E   ssn                        ssn                        PASS    miss ←회수
+  E13  E   ssn                        ssn                        PASS    miss ←회수
+  E14  E   ssn                        ssn                        PASS    miss ←회수
+  E15  E   ssn                        ssn                        PASS    miss ←회수
+  E16  E   birth                      birth                      PASS    miss ←회수
+  E17  E   -                          ssn                        PASS    PASS
+  E18  E   -                          ssn                        PASS    PASS
+  E19  E   name                       name                       PASS    miss ←회수
+  E20  E   ssn                        ssn                        PASS    miss ←회수
+  E21  E   ssn                        ssn                        PASS    miss ←회수
+  V01  V   ssn                        ssn                        PASS    miss ←회수
+  V02  V   ssn                        ssn                        PASS    PASS
+  V03  V   ssn                        ssn                        PASS    PASS
+  V04  V   ssn                        ssn                        PASS    miss ←회수
+  V05  V   ssn                        ssn                        PASS    PASS
+  V06  V   ssn                        ssn                        PASS    PASS
+  V07  V   ssn                        ssn                        PASS    miss ←회수
+  V08  V   ssn                        ssn                        PASS    miss ←회수
+! F01  F   ssn                        -                          FN      miss
+! F02  F   acct,addr,birth,ci,name,p  -                          FN      miss  unresolved=12
+! F03  F   ssn                        -                          FN      miss
+  F04  F   acct,addr,birth,ci,name,p  acct,addr,birth,ci,name,p  PASS    miss ←회수
+  F05  F   acct,addr,birth,ci,name,p  acct,addr,birth,ci,name,p  PASS    miss ←회수
+  F06  F   acct,addr,birth,ci,name,p  acct,addr,birth,ci,name,p  PASS    miss ←회수
+  F07  F   ssn                        ssn                        PASS    PASS
+  F08  F   acct,addr,birth,ci,name,p  acct,addr,birth,ci,name,p  PASS    miss ←회수
+  S01  S   -                          -                          PASS    PASS
+  S02  S   -                          -                          PASS    PASS
+  S03  S   -                          -                          PASS    PASS
+  S04  S   -                          -                          PASS    PASS
+  S05  S   -                          -                          PASS    PASS
+  C01  C   acct,addr,birth,ci,name,p  acct,addr,birth,ci,name,p  PASS    miss ←회수
+  C02  C   ssn                        ssn                        PASS    miss ←회수
+  C03  C   name,ssn                   name,ssn                   PASS    miss ←회수
+  C04  C   ssn                        ssn                        PASS    miss ←회수
+  B01  B   birth                      birth                      PASS    PASS
+  B02  B   -                          -                          PASS    PASS
+  B03  B   name                       name                       PASS    PASS
+  B04  B   addr                       addr                       PASS    PASS
+  B05  B   acct,birth,ssn             acct,birth,ssn             PASS    PASS
+  X01  X   -                          -                          PASS    PASS
+  X02  X   -                          -                          PASS    PASS
+  X03  X   -                          -                          PASS    PASS
+  X04  X   -                          -                          PASS    PASS
+  X05  X   -                          -                          PASS    PASS
+  X06  X   -                          -                          PASS    PASS
+  X07  X   ssn                        ssn                        PASS    miss ←회수
+  P01  P   name,ssn                   name,ssn                   PASS    PASS
+  P02  P   name,ssn                   name,ssn                   PASS    PASS
+  P03  P   name,ssn                   name,ssn                   PASS    PASS
+  P04  P   name,ssn                   name,ssn                   PASS    PASS
+  P05  P   name,ssn                   name,ssn                   PASS    PASS
+
+======================================================================================
+카테고리                   항목    통과    미탐    오탐    에러
+--------------------------------------------------------------------------------------
+직접참조                    9     9     0     0     0
+표현식래핑                  21    21     0     0     0
+뷰/CTE/집합연산              8     8     0     0     0
+함수/동적SQL                8     5     3     0     0
+부채널                     5     5     0     0     0
+COPY                    4     4     0     0     0
+바이너리/인코딩                5     5     0     0     0
+제어문                     7     7     0     0     0
+파라미터결속                  5     5     0     0     0
+--------------------------------------------------------------------------------------
+합계                     72    69     3     0     0
+
+======================================================================================
+헤드라인
+--------------------------------------------------------------------------------------
+PII 노출 항목                : 55
+  와이어 훅 탐지             :  21  (38%)
+  AST 순회 탐지              :  52  (95%)
+  회수                       :  31
+  여전히 미탐                :   3
+  퇴행(와이어는 잡았는데 AST가 놓침): 0
+오탐(FP) 총계                : 0   ← 0이어야 한다
+파생 메타데이터 항목(미결)   : 2  (E17, E18) — 정책 결정 전까지 FP로 세지 않음
+
+술어 참조 항목               : 56
+  AST가 술어 참조를 탐지      : 50  (89%)   (마스킹이 아니라 쿼리형태 정책의 입력)
+
+여전히 미탐 / 오탐:
+  F01 FN     미탐=ssn 오탐=-
+  F02 FN     미탐=acct,addr,birth,ci,name,phone,ssn 오탐=-
+  F03 FN     미탐=ssn 오탐=-

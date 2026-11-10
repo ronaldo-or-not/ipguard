@@ -1,0 +1,55 @@
+==============================================================================
+peer-group golden — 사람이 계산한 허용 결과 집합
+==============================================================================
+허용 집합은 release 결과를 **보기 전에** 동결됐다.
+실행기가 낸 한 sequence 가 아니라 **의미론적 허용 결과**다.
+
+PG01  공개 id 가 있어 peer 내부 순열이 관찰된다
+     SELECT id FROM h5.pg_t ORDER BY grade
+     허용 4가지
+  ✓  마스킹 OFF (손계산 검증)         2|4|1|3|5
+  ✓  legacy 게이트               2|4|1|3|5
+  ✓  release 게이트              2|4|1|3|5
+
+PG02  모든 출력이 같아 order sink 가 소거된다
+     SELECT 'x' FROM h5.pg_t ORDER BY secret
+     허용 1가지  (전순서)
+  ✓  마스킹 OFF (손계산 검증)         x|x|x|x|x
+  ✓  legacy 게이트               x|x|x|x|x
+  ✓  release 게이트              x|x|x|x|x
+
+PG03  NULL peer + NULLS FIRST
+     SELECT id FROM h5.pg_t ORDER BY secret NULLS FIRST
+     허용 2가지
+  ✓  마스킹 OFF (손계산 검증)         4|5|1|2|3
+  ✓  legacy 게이트               4|5|1|2|3
+  ·  release 게이트              거부
+
+PG04  NULL peer + NULLS LAST (기본)
+     SELECT id FROM h5.pg_t ORDER BY secret NULLS LAST
+     허용 2가지
+  ✓  마스킹 OFF (손계산 검증)         1|2|3|4|5
+  ✓  legacy 게이트               1|2|3|4|5
+  ·  release 게이트              거부
+
+PG05  DESC — 블록 사이 순서만 뒤집힌다
+     SELECT id FROM h5.pg_t ORDER BY grade DESC
+     허용 4가지
+  ✓  마스킹 OFF (손계산 검증)         5|1|3|2|4
+  ✓  legacy 게이트               5|1|3|2|4
+  ✓  release 게이트              5|1|3|2|4
+
+PG06  전순서 — 허용 sequence 가 하나뿐이다
+     SELECT id FROM h5.pg_t ORDER BY grade, id
+     허용 1가지  (전순서)
+  ✓  마스킹 OFF (손계산 검증)         2|4|1|3|5
+  ✓  legacy 게이트               2|4|1|3|5
+  ✓  release 게이트              2|4|1|3|5
+
+==============================================================================
+  허용 집합 안 16/16
+  release 게이트 거부: PG03, PG04
+
+  ★ 거부는 실패가 아니다. release 게이트가 인증서 없이 ORD 를 거부하는
+    것은 설계대로다. 여기서 보는 것은 **수락한 것이 허용 집합 안에
+    있는가** 이고, acceptance 비용은 §11-5 에서 따로 센다.

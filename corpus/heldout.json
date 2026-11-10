@@ -1,0 +1,8935 @@
+{
+ "attempts": 428,
+ "db_pairs": {
+  "eq_split": {
+   "hx_cust": {
+    "d1": [
+     {
+      "amt": 5,
+      "birth": "1980-01-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 1,
+      "ssn": "v000"
+     },
+     {
+      "amt": 1,
+      "birth": "1981-02-15",
+      "dept": "B",
+      "grade": "A",
+      "id": 2,
+      "ssn": "v001"
+     },
+     {
+      "amt": 9,
+      "birth": "1982-03-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 3,
+      "ssn": "v002"
+     },
+     {
+      "amt": 4,
+      "birth": "1983-04-15",
+      "dept": "C",
+      "grade": "A",
+      "id": 4,
+      "ssn": "v003"
+     },
+     {
+      "amt": 3,
+      "birth": "1984-05-15",
+      "dept": "B",
+      "grade": "B",
+      "id": 5,
+      "ssn": "v004"
+     },
+     {
+      "amt": 1,
+      "birth": null,
+      "dept": "B",
+      "grade": "A",
+      "id": 6,
+      "ssn": "v005"
+     },
+     {
+      "amt": 6,
+      "birth": "1986-07-15",
+      "dept": "C",
+      "grade": "A",
+      "id": 7,
+      "ssn": "v006"
+     },
+     {
+      "amt": 9,
+      "birth": "1987-08-15",
+      "dept": "A",
+      "grade": "C",
+      "id": 8,
+      "ssn": "v007"
+     },
+     {
+      "amt": 3,
+      "birth": "1988-09-15",
+      "dept": "A",
+      "grade": "C",
+      "id": 9,
+      "ssn": "v008"
+     },
+     {
+      "amt": 8,
+      "birth": "1989-10-15",
+      "dept": "B",
+      "grade": "A",
+      "id": 10,
+      "ssn": "v009"
+     },
+     {
+      "amt": 4,
+      "birth": "1990-11-15",
+      "dept": "B",
+      "grade": "C",
+      "id": 11,
+      "ssn": "v010"
+     },
+     {
+      "amt": 5,
+      "birth": "1991-12-15",
+      "dept": "A",
+      "grade": "A",
+      "id": 12,
+      "ssn": "v011"
+     }
+    ],
+    "d2": [
+     {
+      "amt": 5,
+      "birth": "1980-01-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 1,
+      "ssn": "v000"
+     },
+     {
+      "amt": 1,
+      "birth": "1981-02-15",
+      "dept": "B",
+      "grade": "A",
+      "id": 2,
+      "ssn": "v001"
+     },
+     {
+      "amt": 9,
+      "birth": "1980-01-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 3,
+      "ssn": "v000"
+     },
+     {
+      "amt": 4,
+      "birth": "1981-02-15",
+      "dept": "C",
+      "grade": "A",
+      "id": 4,
+      "ssn": "v001"
+     },
+     {
+      "amt": 3,
+      "birth": "1980-01-15",
+      "dept": "B",
+      "grade": "B",
+      "id": 5,
+      "ssn": "v000"
+     },
+     {
+      "amt": 1,
+      "birth": null,
+      "dept": "B",
+      "grade": "A",
+      "id": 6,
+      "ssn": "v001"
+     },
+     {
+      "amt": 6,
+      "birth": "1980-01-15",
+      "dept": "C",
+      "grade": "A",
+      "id": 7,
+      "ssn": "v000"
+     },
+     {
+      "amt": 9,
+      "birth": "1981-02-15",
+      "dept": "A",
+      "grade": "C",
+      "id": 8,
+      "ssn": "v001"
+     },
+     {
+      "amt": 3,
+      "birth": "1980-01-15",
+      "dept": "A",
+      "grade": "C",
+      "id": 9,
+      "ssn": "v000"
+     },
+     {
+      "amt": 8,
+      "birth": "1981-02-15",
+      "dept": "B",
+      "grade": "A",
+      "id": 10,
+      "ssn": "v001"
+     },
+     {
+      "amt": 4,
+      "birth": "1980-01-15",
+      "dept": "B",
+      "grade": "C",
+      "id": 11,
+      "ssn": "v000"
+     },
+     {
+      "amt": 5,
+      "birth": "1981-02-15",
+      "dept": "A",
+      "grade": "A",
+      "id": 12,
+      "ssn": "v001"
+     }
+    ]
+   },
+   "hx_pay": {
+    "d1": [
+     {
+      "band": "A",
+      "id": 3,
+      "pid": 1,
+      "salary": 1000
+     },
+     {
+      "band": "A",
+      "id": 9,
+      "pid": 2,
+      "salary": 1001
+     },
+     {
+      "band": "A",
+      "id": 3,
+      "pid": 3,
+      "salary": 1002
+     },
+     {
+      "band": "C",
+      "id": 2,
+      "pid": 4,
+      "salary": 1003
+     },
+     {
+      "band": "B",
+      "id": 4,
+      "pid": 5,
+      "salary": 1004
+     },
+     {
+      "band": "C",
+      "id": 2,
+      "pid": 6,
+      "salary": 1005
+     },
+     {
+      "band": "A",
+      "id": 6,
+      "pid": 7,
+      "salary": 1006
+     },
+     {
+      "band": "A",
+      "id": 7,
+      "pid": 8,
+      "salary": 1007
+     },
+     {
+      "band": "C",
+      "id": 5,
+      "pid": 9,
+      "salary": 1008
+     },
+     {
+      "band": "A",
+      "id": 9,
+      "pid": 10,
+      "salary": 1009
+     },
+     {
+      "band": "A",
+      "id": 3,
+      "pid": 11,
+      "salary": 1010
+     },
+     {
+      "band": "B",
+      "id": 7,
+      "pid": 12,
+      "salary": 1011
+     }
+    ],
+    "d2": [
+     {
+      "band": "A",
+      "id": 3,
+      "pid": 1,
+      "salary": 1000
+     },
+     {
+      "band": "A",
+      "id": 9,
+      "pid": 2,
+      "salary": 1001
+     },
+     {
+      "band": "A",
+      "id": 3,
+      "pid": 3,
+      "salary": 1000
+     },
+     {
+      "band": "C",
+      "id": 2,
+      "pid": 4,
+      "salary": 1001
+     },
+     {
+      "band": "B",
+      "id": 4,
+      "pid": 5,
+      "salary": 1000
+     },
+     {
+      "band": "C",
+      "id": 2,
+      "pid": 6,
+      "salary": 1001
+     },
+     {
+      "band": "A",
+      "id": 6,
+      "pid": 7,
+      "salary": 1000
+     },
+     {
+      "band": "A",
+      "id": 7,
+      "pid": 8,
+      "salary": 1001
+     },
+     {
+      "band": "C",
+      "id": 5,
+      "pid": 9,
+      "salary": 1000
+     },
+     {
+      "band": "A",
+      "id": 9,
+      "pid": 10,
+      "salary": 1001
+     },
+     {
+      "band": "A",
+      "id": 3,
+      "pid": 11,
+      "salary": 1000
+     },
+     {
+      "band": "B",
+      "id": 7,
+      "pid": 12,
+      "salary": 1001
+     }
+    ]
+   }
+  },
+  "multiplicity": {
+   "hx_cust": {
+    "d1": [
+     {
+      "amt": 8,
+      "birth": null,
+      "dept": "A",
+      "grade": "C",
+      "id": 1,
+      "ssn": "v000"
+     },
+     {
+      "amt": 6,
+      "birth": "1981-02-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 2,
+      "ssn": "v001"
+     },
+     {
+      "amt": 1,
+      "birth": "1982-03-15",
+      "dept": "B",
+      "grade": "A",
+      "id": 3,
+      "ssn": "v002"
+     },
+     {
+      "amt": 1,
+      "birth": "1980-01-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 4,
+      "ssn": null
+     },
+     {
+      "amt": 6,
+      "birth": "1981-02-15",
+      "dept": "B",
+      "grade": "A",
+      "id": 5,
+      "ssn": "v001"
+     },
+     {
+      "amt": 7,
+      "birth": "1982-03-15",
+      "dept": "B",
+      "grade": "C",
+      "id": 6,
+      "ssn": "v002"
+     },
+     {
+      "amt": 5,
+      "birth": null,
+      "dept": "A",
+      "grade": "B",
+      "id": 7,
+      "ssn": null
+     },
+     {
+      "amt": 6,
+      "birth": "1981-02-15",
+      "dept": "C",
+      "grade": "B",
+      "id": 8,
+      "ssn": "v001"
+     },
+     {
+      "amt": 2,
+      "birth": "1982-03-15",
+      "dept": "B",
+      "grade": "B",
+      "id": 9,
+      "ssn": "v002"
+     },
+     {
+      "amt": 2,
+      "birth": "1980-01-15",
+      "dept": "B",
+      "grade": "B",
+      "id": 10,
+      "ssn": "v000"
+     },
+     {
+      "amt": 4,
+      "birth": "1981-02-15",
+      "dept": "A",
+      "grade": "B",
+      "id": 11,
+      "ssn": "v001"
+     },
+     {
+      "amt": 8,
+      "birth": "1982-03-15",
+      "dept": "B",
+      "grade": "A",
+      "id": 12,
+      "ssn": "v002"
+     }
+    ],
+    "d2": [
+     {
+      "amt": 8,
+      "birth": null,
+      "dept": "A",
+      "grade": "C",
+      "id": 1,
+      "ssn": "v000"
+     },
+     {
+      "amt": 6,
+      "birth": "1980-01-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 2,
+      "ssn": "v000"
+     },
+     {
+      "amt": 1,
+      "birth": "1980-01-15",
+      "dept": "B",
+      "grade": "A",
+      "id": 3,
+      "ssn": "v000"
+     },
+     {
+      "amt": 1,
+      "birth": "1980-01-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 4,
+      "ssn": null
+     },
+     {
+      "amt": 6,
+      "birth": "1980-01-15",
+      "dept": "B",
+      "grade": "A",
+      "id": 5,
+      "ssn": "v000"
+     },
+     {
+      "amt": 7,
+      "birth": "1980-01-15",
+      "dept": "B",
+      "grade": "C",
+      "id": 6,
+      "ssn": "v000"
+     },
+     {
+      "amt": 5,
+      "birth": null,
+      "dept": "A",
+      "grade": "B",
+      "id": 7,
+      "ssn": null
+     },
+     {
+      "amt": 6,
+      "birth": "1980-01-15",
+      "dept": "C",
+      "grade": "B",
+      "id": 8,
+      "ssn": "v000"
+     },
+     {
+      "amt": 2,
+      "birth": "1980-01-15",
+      "dept": "B",
+      "grade": "B",
+      "id": 9,
+      "ssn": "v000"
+     },
+     {
+      "amt": 2,
+      "birth": "1980-01-15",
+      "dept": "B",
+      "grade": "B",
+      "id": 10,
+      "ssn": "v000"
+     },
+     {
+      "amt": 4,
+      "birth": "1981-02-15",
+      "dept": "A",
+      "grade": "B",
+      "id": 11,
+      "ssn": "v001"
+     },
+     {
+      "amt": 8,
+      "birth": "1982-03-15",
+      "dept": "B",
+      "grade": "A",
+      "id": 12,
+      "ssn": "v002"
+     }
+    ]
+   },
+   "hx_pay": {
+    "d1": [
+     {
+      "band": "C",
+      "id": 4,
+      "pid": 1,
+      "salary": 1000
+     },
+     {
+      "band": "B",
+      "id": 8,
+      "pid": 2,
+      "salary": 1001
+     },
+     {
+      "band": "B",
+      "id": 6,
+      "pid": 3,
+      "salary": 1002
+     },
+     {
+      "band": "B",
+      "id": 2,
+      "pid": 4,
+      "salary": 1000
+     },
+     {
+      "band": "C",
+      "id": 6,
+      "pid": 5,
+      "salary": 1001
+     },
+     {
+      "band": "A",
+      "id": 9,
+      "pid": 6,
+      "salary": 1002
+     },
+     {
+      "band": "C",
+      "id": 7,
+      "pid": 7,
+      "salary": 1000
+     },
+     {
+      "band": "C",
+      "id": 6,
+      "pid": 8,
+      "salary": null
+     },
+     {
+      "band": "A",
+      "id": 8,
+      "pid": 9,
+      "salary": 1002
+     },
+     {
+      "band": "C",
+      "id": 1,
+      "pid": 10,
+      "salary": 1000
+     },
+     {
+      "band": "C",
+      "id": 8,
+      "pid": 11,
+      "salary": 1001
+     },
+     {
+      "band": "C",
+      "id": 5,
+      "pid": 12,
+      "salary": 1002
+     }
+    ],
+    "d2": [
+     {
+      "band": "C",
+      "id": 4,
+      "pid": 1,
+      "salary": 1000
+     },
+     {
+      "band": "B",
+      "id": 8,
+      "pid": 2,
+      "salary": 1000
+     },
+     {
+      "band": "B",
+      "id": 6,
+      "pid": 3,
+      "salary": 1000
+     },
+     {
+      "band": "B",
+      "id": 2,
+      "pid": 4,
+      "salary": 1000
+     },
+     {
+      "band": "C",
+      "id": 6,
+      "pid": 5,
+      "salary": 1000
+     },
+     {
+      "band": "A",
+      "id": 9,
+      "pid": 6,
+      "salary": 1000
+     },
+     {
+      "band": "C",
+      "id": 7,
+      "pid": 7,
+      "salary": 1000
+     },
+     {
+      "band": "C",
+      "id": 6,
+      "pid": 8,
+      "salary": null
+     },
+     {
+      "band": "A",
+      "id": 8,
+      "pid": 9,
+      "salary": 1000
+     },
+     {
+      "band": "C",
+      "id": 1,
+      "pid": 10,
+      "salary": 1000
+     },
+     {
+      "band": "C",
+      "id": 8,
+      "pid": 11,
+      "salary": 1001
+     },
+     {
+      "band": "C",
+      "id": 5,
+      "pid": 12,
+      "salary": 1002
+     }
+    ]
+   }
+  },
+  "null_structure": {
+   "hx_cust": {
+    "d1": [
+     {
+      "amt": 1,
+      "birth": "1980-01-15",
+      "dept": "C",
+      "grade": "B",
+      "id": 1,
+      "ssn": "v000"
+     },
+     {
+      "amt": 5,
+      "birth": null,
+      "dept": "A",
+      "grade": "C",
+      "id": 2,
+      "ssn": null
+     },
+     {
+      "amt": 5,
+      "birth": "1982-03-15",
+      "dept": "C",
+      "grade": "A",
+      "id": 3,
+      "ssn": "v002"
+     },
+     {
+      "amt": 2,
+      "birth": "1983-04-15",
+      "dept": "B",
+      "grade": "C",
+      "id": 4,
+      "ssn": null
+     },
+     {
+      "amt": 5,
+      "birth": "1984-05-15",
+      "dept": "B",
+      "grade": "C",
+      "id": 5,
+      "ssn": "v004"
+     },
+     {
+      "amt": 1,
+      "birth": "1985-06-15",
+      "dept": "C",
+      "grade": "A",
+      "id": 6,
+      "ssn": "v005"
+     },
+     {
+      "amt": 2,
+      "birth": "1986-07-15",
+      "dept": "B",
+      "grade": "B",
+      "id": 7,
+      "ssn": "v006"
+     },
+     {
+      "amt": 9,
+      "birth": "1987-08-15",
+      "dept": "C",
+      "grade": "A",
+      "id": 8,
+      "ssn": "v007"
+     },
+     {
+      "amt": 1,
+      "birth": "1988-09-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 9,
+      "ssn": "v008"
+     },
+     {
+      "amt": 6,
+      "birth": "1989-10-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 10,
+      "ssn": "v009"
+     },
+     {
+      "amt": 4,
+      "birth": "1990-11-15",
+      "dept": "A",
+      "grade": "B",
+      "id": 11,
+      "ssn": "v010"
+     },
+     {
+      "amt": 5,
+      "birth": "1991-12-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 12,
+      "ssn": "v011"
+     }
+    ],
+    "d2": [
+     {
+      "amt": 1,
+      "birth": "1980-01-15",
+      "dept": "C",
+      "grade": "B",
+      "id": 1,
+      "ssn": "v000"
+     },
+     {
+      "amt": 5,
+      "birth": null,
+      "dept": "A",
+      "grade": "C",
+      "id": 2,
+      "ssn": null
+     },
+     {
+      "amt": 5,
+      "birth": "1982-03-15",
+      "dept": "C",
+      "grade": "A",
+      "id": 3,
+      "ssn": "v002"
+     },
+     {
+      "amt": 2,
+      "birth": "1980-01-15",
+      "dept": "B",
+      "grade": "C",
+      "id": 4,
+      "ssn": null
+     },
+     {
+      "amt": 5,
+      "birth": "1981-02-15",
+      "dept": "B",
+      "grade": "C",
+      "id": 5,
+      "ssn": "v001"
+     },
+     {
+      "amt": 1,
+      "birth": "1982-03-15",
+      "dept": "C",
+      "grade": "A",
+      "id": 6,
+      "ssn": "v002"
+     },
+     {
+      "amt": 2,
+      "birth": "1980-01-15",
+      "dept": "B",
+      "grade": "B",
+      "id": 7,
+      "ssn": "v000"
+     },
+     {
+      "amt": 9,
+      "birth": "1981-02-15",
+      "dept": "C",
+      "grade": "A",
+      "id": 8,
+      "ssn": "v001"
+     },
+     {
+      "amt": 1,
+      "birth": "1982-03-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 9,
+      "ssn": "v002"
+     },
+     {
+      "amt": 6,
+      "birth": "1980-01-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 10,
+      "ssn": "v000"
+     },
+     {
+      "amt": 4,
+      "birth": "1981-02-15",
+      "dept": "A",
+      "grade": "B",
+      "id": 11,
+      "ssn": "v001"
+     },
+     {
+      "amt": 5,
+      "birth": "1982-03-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 12,
+      "ssn": "v002"
+     }
+    ]
+   },
+   "hx_pay": {
+    "d1": [
+     {
+      "band": "B",
+      "id": 4,
+      "pid": 1,
+      "salary": 1000
+     },
+     {
+      "band": "B",
+      "id": 9,
+      "pid": 2,
+      "salary": null
+     },
+     {
+      "band": "A",
+      "id": 3,
+      "pid": 3,
+      "salary": 1002
+     },
+     {
+      "band": "C",
+      "id": 6,
+      "pid": 4,
+      "salary": 1003
+     },
+     {
+      "band": "A",
+      "id": 4,
+      "pid": 5,
+      "salary": 1004
+     },
+     {
+      "band": "B",
+      "id": 6,
+      "pid": 6,
+      "salary": 1005
+     },
+     {
+      "band": "C",
+      "id": 5,
+      "pid": 7,
+      "salary": 1006
+     },
+     {
+      "band": "A",
+      "id": 2,
+      "pid": 8,
+      "salary": 1007
+     },
+     {
+      "band": "B",
+      "id": 3,
+      "pid": 9,
+      "salary": null
+     },
+     {
+      "band": "B",
+      "id": 3,
+      "pid": 10,
+      "salary": 1009
+     },
+     {
+      "band": "A",
+      "id": 5,
+      "pid": 11,
+      "salary": 1010
+     },
+     {
+      "band": "B",
+      "id": 2,
+      "pid": 12,
+      "salary": 1011
+     }
+    ],
+    "d2": [
+     {
+      "band": "B",
+      "id": 4,
+      "pid": 1,
+      "salary": 1000
+     },
+     {
+      "band": "B",
+      "id": 9,
+      "pid": 2,
+      "salary": null
+     },
+     {
+      "band": "A",
+      "id": 3,
+      "pid": 3,
+      "salary": 1002
+     },
+     {
+      "band": "C",
+      "id": 6,
+      "pid": 4,
+      "salary": 1000
+     },
+     {
+      "band": "A",
+      "id": 4,
+      "pid": 5,
+      "salary": 1001
+     },
+     {
+      "band": "B",
+      "id": 6,
+      "pid": 6,
+      "salary": 1002
+     },
+     {
+      "band": "C",
+      "id": 5,
+      "pid": 7,
+      "salary": 1000
+     },
+     {
+      "band": "A",
+      "id": 2,
+      "pid": 8,
+      "salary": 1001
+     },
+     {
+      "band": "B",
+      "id": 3,
+      "pid": 9,
+      "salary": null
+     },
+     {
+      "band": "B",
+      "id": 3,
+      "pid": 10,
+      "salary": 1000
+     },
+     {
+      "band": "A",
+      "id": 5,
+      "pid": 11,
+      "salary": 1001
+     },
+     {
+      "band": "B",
+      "id": 2,
+      "pid": 12,
+      "salary": 1002
+     }
+    ]
+   }
+  },
+  "ord_permutation": {
+   "hx_cust": {
+    "d1": [
+     {
+      "amt": 6,
+      "birth": "1992-01-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 1,
+      "ssn": null
+     },
+     {
+      "amt": 2,
+      "birth": "1991-12-15",
+      "dept": "B",
+      "grade": "A",
+      "id": 2,
+      "ssn": "v011"
+     },
+     {
+      "amt": 2,
+      "birth": "1990-11-15",
+      "dept": "A",
+      "grade": "A",
+      "id": 3,
+      "ssn": "v010"
+     },
+     {
+      "amt": 5,
+      "birth": "1989-10-15",
+      "dept": "C",
+      "grade": "A",
+      "id": 4,
+      "ssn": "v009"
+     },
+     {
+      "amt": 2,
+      "birth": "1988-09-15",
+      "dept": "B",
+      "grade": "B",
+      "id": 5,
+      "ssn": "v008"
+     },
+     {
+      "amt": 3,
+      "birth": "1987-08-15",
+      "dept": "C",
+      "grade": "A",
+      "id": 6,
+      "ssn": "v007"
+     },
+     {
+      "amt": 8,
+      "birth": "1986-07-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 7,
+      "ssn": "v006"
+     },
+     {
+      "amt": 7,
+      "birth": "1985-06-15",
+      "dept": "B",
+      "grade": "B",
+      "id": 8,
+      "ssn": "v005"
+     },
+     {
+      "amt": 2,
+      "birth": "1984-05-15",
+      "dept": "B",
+      "grade": "C",
+      "id": 9,
+      "ssn": "v004"
+     },
+     {
+      "amt": 3,
+      "birth": "1983-04-15",
+      "dept": "A",
+      "grade": "B",
+      "id": 10,
+      "ssn": "v003"
+     },
+     {
+      "amt": 7,
+      "birth": "1982-03-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 11,
+      "ssn": "v002"
+     },
+     {
+      "amt": 2,
+      "birth": "1981-02-15",
+      "dept": "A",
+      "grade": "B",
+      "id": 12,
+      "ssn": "v001"
+     }
+    ],
+    "d2": [
+     {
+      "amt": 6,
+      "birth": "1980-01-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 1,
+      "ssn": null
+     },
+     {
+      "amt": 2,
+      "birth": "1981-02-15",
+      "dept": "B",
+      "grade": "A",
+      "id": 2,
+      "ssn": "v001"
+     },
+     {
+      "amt": 2,
+      "birth": "1982-03-15",
+      "dept": "A",
+      "grade": "A",
+      "id": 3,
+      "ssn": "v002"
+     },
+     {
+      "amt": 5,
+      "birth": "1983-04-15",
+      "dept": "C",
+      "grade": "A",
+      "id": 4,
+      "ssn": "v003"
+     },
+     {
+      "amt": 2,
+      "birth": "1984-05-15",
+      "dept": "B",
+      "grade": "B",
+      "id": 5,
+      "ssn": "v004"
+     },
+     {
+      "amt": 3,
+      "birth": "1985-06-15",
+      "dept": "C",
+      "grade": "A",
+      "id": 6,
+      "ssn": "v005"
+     },
+     {
+      "amt": 8,
+      "birth": "1986-07-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 7,
+      "ssn": "v006"
+     },
+     {
+      "amt": 7,
+      "birth": "1987-08-15",
+      "dept": "B",
+      "grade": "B",
+      "id": 8,
+      "ssn": "v007"
+     },
+     {
+      "amt": 2,
+      "birth": "1988-09-15",
+      "dept": "B",
+      "grade": "C",
+      "id": 9,
+      "ssn": "v008"
+     },
+     {
+      "amt": 3,
+      "birth": "1989-10-15",
+      "dept": "A",
+      "grade": "B",
+      "id": 10,
+      "ssn": "v009"
+     },
+     {
+      "amt": 7,
+      "birth": "1990-11-15",
+      "dept": "C",
+      "grade": "C",
+      "id": 11,
+      "ssn": "v010"
+     },
+     {
+      "amt": 2,
+      "birth": "1991-12-15",
+      "dept": "A",
+      "grade": "B",
+      "id": 12,
+      "ssn": "v011"
+     }
+    ]
+   },
+   "hx_pay": {
+    "d1": [
+     {
+      "band": "B",
+      "id": 7,
+      "pid": 1,
+      "salary": 1012
+     },
+     {
+      "band": "B",
+      "id": 8,
+      "pid": 2,
+      "salary": null
+     },
+     {
+      "band": "C",
+      "id": 1,
+      "pid": 3,
+      "salary": 1010
+     },
+     {
+      "band": "A",
+      "id": 4,
+      "pid": 4,
+      "salary": 1009
+     },
+     {
+      "band": "C",
+      "id": 3,
+      "pid": 5,
+      "salary": 1008
+     },
+     {
+      "band": "C",
+      "id": 7,
+      "pid": 6,
+      "salary": 1007
+     },
+     {
+      "band": "A",
+      "id": 9,
+      "pid": 7,
+      "salary": 1006
+     },
+     {
+      "band": "A",
+      "id": 6,
+      "pid": 8,
+      "salary": 1005
+     },
+     {
+      "band": "A",
+      "id": 5,
+      "pid": 9,
+      "salary": 1004
+     },
+     {
+      "band": "B",
+      "id": 3,
+      "pid": 10,
+      "salary": 1003
+     },
+     {
+      "band": "A",
+      "id": 3,
+      "pid": 11,
+      "salary": 1002
+     },
+     {
+      "band": "B",
+      "id": 7,
+      "pid": 12,
+      "salary": 1001
+     }
+    ],
+    "d2": [
+     {
+      "band": "B",
+      "id": 7,
+      "pid": 1,
+      "salary": 1000
+     },
+     {
+      "band": "B",
+      "id": 8,
+      "pid": 2,
+      "salary": null
+     },
+     {
+      "band": "C",
+      "id": 1,
+      "pid": 3,
+      "salary": 1002
+     },
+     {
+      "band": "A",
+      "id": 4,
+      "pid": 4,
+      "salary": 1003
+     },
+     {
+      "band": "C",
+      "id": 3,
+      "pid": 5,
+      "salary": 1004
+     },
+     {
+      "band": "C",
+      "id": 7,
+      "pid": 6,
+      "salary": 1005
+     },
+     {
+      "band": "A",
+      "id": 9,
+      "pid": 7,
+      "salary": 1006
+     },
+     {
+      "band": "A",
+      "id": 6,
+      "pid": 8,
+      "salary": 1007
+     },
+     {
+      "band": "A",
+      "id": 5,
+      "pid": 9,
+      "salary": 1008
+     },
+     {
+      "band": "B",
+      "id": 3,
+      "pid": 10,
+      "salary": 1009
+     },
+     {
+      "band": "A",
+      "id": 3,
+      "pid": 11,
+      "salary": 1010
+     },
+     {
+      "band": "B",
+      "id": 7,
+      "pid": 12,
+      "salary": 1011
+     }
+    ]
+   }
+  }
+ },
+ "discard_reasons": [
+  "syntax",
+  "alignment",
+  "duplicate"
+ ],
+ "discarded_by_reason_shape": {
+  "duplicate": {
+   "aggregate": 6,
+   "derived": 5,
+   "distinct": 3,
+   "group_by": 1,
+   "order_by": 9,
+   "order_limit": 1,
+   "projection": 3
+  }
+ },
+ "discarded_total": 28,
+ "gate_used_for_selection": false,
+ "generator": "tools/gen_heldout.py",
+ "label_placement": {
+  "hx_cust": {
+   "birth": "hxdate",
+   "ssn": "hxsec"
+  },
+  "hx_pay": {
+   "salary": "hxnum"
+  }
+ },
+ "mask_instances": [
+  {
+   "in": "text",
+   "kind": "hxsec",
+   "out": "text"
+  },
+  {
+   "in": "date",
+   "kind": "hxdate",
+   "out": "date"
+  },
+  {
+   "in": "int",
+   "kind": "hxnum",
+   "out": "int"
+  }
+ ],
+ "masked_equivalence_check": {
+  "eq_split/hx_cust": [],
+  "eq_split/hx_pay": [],
+  "multiplicity/hx_cust": [],
+  "multiplicity/hx_pay": [],
+  "null_structure/hx_cust": [],
+  "null_structure/hx_pay": [],
+  "ord_permutation/hx_cust": [],
+  "ord_permutation/hx_pay": []
+ },
+ "masked_equivalence_ok": true,
+ "max_attempts": 20000,
+ "max_depth": 2,
+ "n_generated": 400,
+ "n_rows_per_pair": 12,
+ "n_target": 400,
+ "n_touching_labeled": 347,
+ "note": [
+  "★ alignment 폐기는 generator 결함만이 아니다. 네 가지가 가능하다:",
+  "  (a) generator grammar 와 명세 불일치",
+  "  (b) rewrite 가 예상 못 한 구조를 생성",
+  "  (c) ipguard_fragment() 의 false negative",
+  "  (d) fragment 문서와 구현 불일치",
+  "  이름이 generator/fragment alignment failure 인 이유다.",
+  "",
+  "★ acceptance 를 전체로만 보고하면 안 된다. 비접촉 25% 가 쉬운",
+  "  표본이라 수치를 올린다. touches_labeled 로 분리하고,",
+  "  label-touching subset 에서 effect·sink 별 분포까지 낸다.",
+  "",
+  "★ lineage 는 generator 가 스스로 아는 사실이다 -- 게이트를 보지",
+  "  않고 적었으므로 oracle 로 독립적이다."
+ ],
+ "pair_types": [
+  "eq_split",
+  "ord_permutation",
+  "null_structure",
+  "multiplicity"
+ ],
+ "queries": [
+  {
+   "id": "HO0001",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE id = 77",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0002",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "band",
+    "salary"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT band, salary FROM h5.hx_pay WHERE salary <> $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0003",
+   "lineage": {
+    "ssn": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "dept"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT dept FROM h5.hx_cust ORDER BY ssn, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0004",
+   "lineage": {},
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT id FROM h5.hx_cust ORDER BY dept NULLS LAST, id LIMIT 1",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0005",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE id > 13",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0006",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "amt",
+    "birth"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT amt, birth FROM h5.hx_cust WHERE ssn = 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0007",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "avg(salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT avg(salary) FROM h5.hx_pay WHERE id < 63",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0008",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ],
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn",
+    "birth",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT ssn, birth, count(*) FROM h5.hx_cust WHERE birth = DATE '1990-01-01' GROUP BY ssn, birth",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0009",
+   "lineage": {
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(ssn)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(ssn) FROM h5.hx_cust WHERE amt <> 68",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0010",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [
+    {
+     "col": "band",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE band = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0011",
+   "lineage": {},
+   "out_cols": [
+    "sum(amt)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT sum(amt) FROM h5.hx_cust WHERE grade = 'x'",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0012",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE band < 'x'",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0013",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "count(birth)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(birth) FROM h5.hx_cust WHERE ssn IS NULL",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0014",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT ssn FROM h5.hx_cust WHERE ssn = 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0015",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT salary FROM h5.hx_pay WHERE salary = 98",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0016",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "dept"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT dept FROM h5.hx_cust ORDER BY birth, id LIMIT 5",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0017",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "ssn"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT id, ssn FROM h5.hx_cust WHERE ssn < 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0018",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(DISTINCT salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(DISTINCT salary) FROM h5.hx_pay WHERE salary <> 47",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0019",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn",
+    "count(*)"
+   ],
+   "params": [
+    {
+     "col": "grade",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "group_by",
+   "sql": "SELECT ssn, count(*) FROM h5.hx_cust WHERE grade = $1 GROUP BY ssn HAVING count(*) > 1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0020",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "amt",
+    "birth"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT amt, birth FROM h5.hx_cust WHERE ssn <> 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0021",
+   "lineage": {
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "grade",
+    "ssn"
+   ],
+   "params": [
+    {
+     "col": "id",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT grade, ssn FROM h5.hx_cust WHERE id > $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0022",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT ssn FROM h5.hx_cust WHERE amt <> 34",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0023",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "amt"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT amt FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0024",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "ssn"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT id, ssn FROM h5.hx_cust WHERE ssn = 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0025",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT pid, salary FROM h5.hx_pay WHERE id > 51",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0026",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "band",
+    "id"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT band, id FROM h5.hx_pay WHERE salary = 38",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0027",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "birth",
+    "amt",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT birth, amt, count(*) FROM h5.hx_cust GROUP BY birth, amt",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0028",
+   "lineage": {},
+   "out_cols": [
+    "amt",
+    "grade"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT amt, grade FROM h5.hx_cust WHERE id IS NULL",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0029",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary < 88",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0030",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "amt",
+    "ssn"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT amt, ssn FROM h5.hx_cust WHERE ssn < 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0031",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "dept",
+    "ssn"
+   ],
+   "params": [
+    {
+     "col": "birth",
+     "n": 1,
+     "type": "date"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT dept, ssn FROM h5.hx_cust WHERE birth = $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0032",
+   "lineage": {
+    "birth": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "amt"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT amt FROM h5.hx_cust ORDER BY birth NULLS FIRST, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0033",
+   "lineage": {},
+   "out_cols": [
+    "id",
+    "length(amt::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, length(amt::text) FROM h5.hx_cust WHERE amt <> 16",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0034",
+   "lineage": {
+    "ssn": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "amt"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT amt FROM h5.hx_cust ORDER BY ssn NULLS LAST, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0035",
+   "lineage": {
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "amt",
+    "dept"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT amt, dept FROM h5.hx_cust WHERE ssn < 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0036",
+   "lineage": {},
+   "out_cols": [
+    "pid"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT pid FROM h5.hx_pay ORDER BY band NULLS FIRST, pid LIMIT 5",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0037",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "setop",
+   "sql": "SELECT ssn FROM h5.hx_cust WHERE birth < DATE '1990-01-01' UNION ALL SELECT ssn FROM h5.hx_cust WHERE ssn <> $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0038",
+   "lineage": {
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "dept",
+    "id",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT dept, id, count(*) FROM h5.hx_cust WHERE ssn > 'x' GROUP BY dept, id HAVING count(*) > 0",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0039",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE band <> 'x'",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0040",
+   "lineage": {},
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT id FROM h5.hx_cust ORDER BY amt DESC NULLS FIRST, id",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0041",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(salary) FROM h5.hx_pay WHERE salary <> 26",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0042",
+   "lineage": {},
+   "out_cols": [
+    "dept"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT dept FROM h5.hx_cust ORDER BY id NULLS FIRST, id",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0043",
+   "lineage": {},
+   "out_cols": [
+    "pid",
+    "pid"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT pid, pid FROM h5.hx_pay WHERE id <> 45",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0044",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE band = 'x'",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0045",
+   "lineage": {
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "count(dept)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(dept) FROM h5.hx_cust WHERE ssn = 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0046",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "band",
+    "salary"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT band, salary FROM h5.hx_pay WHERE salary = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0047",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT salary FROM h5.hx_pay WHERE salary < 4",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0048",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT salary FROM h5.hx_pay WHERE pid > 22",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0049",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [],
+   "shape": "setop",
+   "sql": "SELECT salary FROM h5.hx_pay WHERE pid IS NULL EXCEPT SELECT salary FROM h5.hx_pay",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0050",
+   "lineage": {},
+   "out_cols": [
+    "count(DISTINCT id)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(DISTINCT id) FROM h5.hx_cust WHERE grade <> 'x'",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0051",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "count(birth)"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "aggregate",
+   "sql": "SELECT count(birth) FROM h5.hx_cust WHERE ssn = $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0052",
+   "lineage": {},
+   "out_cols": [
+    "pid"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT pid FROM h5.hx_pay ORDER BY band DESC, pid",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0053",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn"
+   ],
+   "params": [],
+   "shape": "setop",
+   "sql": "SELECT ssn FROM h5.hx_cust WHERE grade <> 'x' EXCEPT SELECT ssn FROM h5.hx_cust WHERE birth > DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0054",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT ssn FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0055",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT salary FROM h5.hx_pay WHERE salary = 50",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0056",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT band FROM h5.hx_pay WHERE salary <> 59",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0057",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT id FROM h5.hx_cust ORDER BY ssn NULLS LAST, id LIMIT 2",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0058",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT pid, salary FROM h5.hx_pay WHERE salary = 66",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0059",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "dept"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT dept FROM h5.hx_cust ORDER BY birth, id LIMIT 1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0060",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "max(birth)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT max(birth) FROM h5.hx_cust WHERE birth <> DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0061",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT id FROM h5.hx_cust ORDER BY ssn, id LIMIT 2",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0062",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(DISTINCT salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(DISTINCT salary) FROM h5.hx_pay WHERE salary < 81",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0063",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "lower(dept)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, lower(dept) FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0064",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "setop",
+   "sql": "SELECT id FROM h5.hx_cust WHERE birth < DATE '1990-01-01' UNION ALL SELECT id FROM h5.hx_cust WHERE ssn <> 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0065",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "dept",
+    "birth"
+   ],
+   "params": [
+    {
+     "col": "birth",
+     "n": 1,
+     "type": "date"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT dept, birth FROM h5.hx_cust WHERE birth = $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0066",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT salary, count(*) FROM h5.hx_pay GROUP BY salary",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0067",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary > $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0068",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "min(salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT min(salary) FROM h5.hx_pay WHERE salary IS NULL",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0069",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT id, count(*) FROM h5.hx_pay WHERE salary = 15 GROUP BY id",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0070",
+   "lineage": {
+    "salary": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT id FROM h5.hx_pay ORDER BY salary, pid",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0071",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "count(id)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(id) FROM h5.hx_pay WHERE salary < 91",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0072",
+   "lineage": {
+    "salary": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY salary DESC NULLS LAST, pid",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0073",
+   "lineage": {},
+   "out_cols": [
+    "id",
+    "grade"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT id, grade FROM h5.hx_cust",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0074",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT id FROM h5.hx_cust ORDER BY birth DESC NULLS FIRST, id LIMIT 3",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0075",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "length(birth::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, length(birth::text) FROM h5.hx_cust",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0076",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "dept",
+    "ssn"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT dept, ssn FROM h5.hx_cust WHERE ssn = $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0077",
+   "lineage": {
+    "salary": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY salary DESC NULLS FIRST, pid",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0078",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ],
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn",
+    "birth",
+    "count(*)"
+   ],
+   "params": [
+    {
+     "col": "birth",
+     "n": 1,
+     "type": "date"
+    }
+   ],
+   "shape": "group_by",
+   "sql": "SELECT ssn, birth, count(*) FROM h5.hx_cust WHERE birth = $1 GROUP BY ssn, birth HAVING count(*) > 0",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0079",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary = 95",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0080",
+   "lineage": {},
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT id FROM h5.hx_cust ORDER BY dept DESC NULLS LAST, id LIMIT 1",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0081",
+   "lineage": {
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "count(DISTINCT grade)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(DISTINCT grade) FROM h5.hx_cust WHERE ssn = 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0082",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT salary, count(*) FROM h5.hx_pay WHERE salary = 67 GROUP BY salary",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0083",
+   "lineage": {
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "amt",
+    "amt"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT amt, amt FROM h5.hx_cust WHERE ssn > 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0084",
+   "lineage": {
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "substr(ssn, 1, 1)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, substr(ssn, 1, 1) FROM h5.hx_cust WHERE id = 22",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0085",
+   "lineage": {
+    "ssn": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "dept"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT dept FROM h5.hx_cust ORDER BY ssn NULLS FIRST, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0086",
+   "lineage": {},
+   "out_cols": [
+    "pid",
+    "substr(band, 1, 2)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, substr(band, 1, 2) FROM h5.hx_pay WHERE band = 'x'",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0087",
+   "lineage": {},
+   "out_cols": [
+    "grade"
+   ],
+   "params": [],
+   "shape": "setop",
+   "sql": "SELECT grade FROM h5.hx_cust WHERE id = 41 UNION ALL SELECT grade FROM h5.hx_cust WHERE grade = 'x'",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0088",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "grade",
+    "ssn"
+   ],
+   "params": [
+    {
+     "col": "birth",
+     "n": 1,
+     "type": "date"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT grade, ssn FROM h5.hx_cust WHERE birth < $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0089",
+   "lineage": {
+    "birth": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT id FROM h5.hx_cust ORDER BY birth DESC, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0090",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary < $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0091",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn"
+   ],
+   "params": [],
+   "shape": "setop",
+   "sql": "SELECT ssn FROM h5.hx_cust WHERE amt = 24 UNION SELECT ssn FROM h5.hx_cust WHERE grade < 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0092",
+   "lineage": {
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "amt",
+    "ssn"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT amt, ssn FROM h5.hx_cust",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0093",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT salary FROM h5.hx_pay WHERE salary = 25",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0094",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "birth",
+    "count(*)"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "group_by",
+   "sql": "SELECT birth, count(*) FROM h5.hx_cust WHERE ssn < $1 GROUP BY birth HAVING count(*) > 0",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0095",
+   "lineage": {},
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY id DESC NULLS FIRST, pid",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0096",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "salary"
+   ],
+   "params": [
+    {
+     "col": "pid",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT id, salary FROM h5.hx_pay WHERE pid < $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0097",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(DISTINCT ssn)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(DISTINCT ssn) FROM h5.hx_cust WHERE ssn IS NULL",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0098",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "dept",
+    "birth"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT dept, birth FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0099",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "pid"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT pid, pid FROM h5.hx_pay WHERE salary = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0100",
+   "lineage": {
+    "birth": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "amt"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT amt FROM h5.hx_cust ORDER BY birth DESC, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0101",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "grade",
+    "birth"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT grade, birth FROM h5.hx_cust WHERE amt = 10",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0102",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "birth",
+    "grade",
+    "count(*)"
+   ],
+   "params": [
+    {
+     "col": "birth",
+     "n": 1,
+     "type": "date"
+    }
+   ],
+   "shape": "group_by",
+   "sql": "SELECT birth, grade, count(*) FROM h5.hx_cust WHERE birth <> $1 GROUP BY birth, grade HAVING count(*) > 0",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0103",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "band",
+    "id"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT band, id FROM h5.hx_pay WHERE salary = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0104",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "max(salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT max(salary) FROM h5.hx_pay WHERE salary = 38",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0105",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "band",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT band, salary FROM h5.hx_pay",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0106",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT id, salary FROM h5.hx_pay WHERE salary = 89",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0107",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary",
+    "count(*)"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "group_by",
+   "sql": "SELECT salary, count(*) FROM h5.hx_pay WHERE salary <> $1 GROUP BY salary",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0108",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "grade",
+    "ssn"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT grade, ssn FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0109",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary",
+    "band"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT salary, band FROM h5.hx_pay WHERE salary = 87",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0110",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [],
+   "shape": "setop",
+   "sql": "SELECT salary FROM h5.hx_pay WHERE id <> 67 UNION SELECT salary FROM h5.hx_pay WHERE salary <> 9",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0111",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "sum(salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT sum(salary) FROM h5.hx_pay WHERE salary = 80",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0112",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "sum(salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT sum(salary) FROM h5.hx_pay",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0113",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary <> 89",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0114",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT salary, count(*) FROM h5.hx_pay WHERE salary = 83 GROUP BY salary HAVING count(*) > 2",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0115",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY salary NULLS LAST, pid LIMIT 3",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0116",
+   "lineage": {
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "upper(ssn)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, upper(ssn) FROM h5.hx_cust",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0117",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "amt",
+    "birth"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT amt, birth FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0118",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "grade",
+    "amt"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT grade, amt FROM h5.hx_cust WHERE birth > DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0119",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(birth)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(birth) FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0120",
+   "lineage": {
+    "ssn": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "amt"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT amt FROM h5.hx_cust ORDER BY ssn DESC NULLS LAST, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0121",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "count(birth)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(birth) FROM h5.hx_cust WHERE ssn = 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0122",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "setop",
+   "sql": "SELECT salary FROM h5.hx_pay WHERE salary < 37 EXCEPT SELECT salary FROM h5.hx_pay WHERE salary = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0123",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn",
+    "count(*)"
+   ],
+   "params": [
+    {
+     "col": "birth",
+     "n": 1,
+     "type": "date"
+    }
+   ],
+   "shape": "group_by",
+   "sql": "SELECT ssn, count(*) FROM h5.hx_cust WHERE birth <> $1 GROUP BY ssn",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0124",
+   "lineage": {
+    "salary": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "pid"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT pid FROM h5.hx_pay ORDER BY salary NULLS FIRST, pid",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0125",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn"
+   ],
+   "params": [
+    {
+     "col": "id",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT ssn FROM h5.hx_cust WHERE id = $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0126",
+   "lineage": {
+    "birth": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "dept"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT dept FROM h5.hx_cust ORDER BY birth DESC NULLS LAST, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0127",
+   "lineage": {},
+   "out_cols": [
+    "grade"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT grade FROM h5.hx_cust ORDER BY grade DESC, id",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0128",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT salary, count(*) FROM h5.hx_pay WHERE salary <> 15 GROUP BY salary",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0129",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "birth",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT birth, count(*) FROM h5.hx_cust WHERE id < 84 GROUP BY birth",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0130",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "birth",
+    "count(*)"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "group_by",
+   "sql": "SELECT birth, count(*) FROM h5.hx_cust WHERE ssn < $1 GROUP BY birth HAVING count(*) > 1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0131",
+   "lineage": {},
+   "out_cols": [
+    "amt"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT amt FROM h5.hx_cust ORDER BY grade, id LIMIT 2",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0132",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(salary) FROM h5.hx_pay WHERE salary = 6",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0133",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(salary) FROM h5.hx_pay WHERE salary > 39",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0134",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    },
+    {
+     "col": "salary",
+     "n": 2,
+     "type": "int"
+    }
+   ],
+   "shape": "setop",
+   "sql": "SELECT salary FROM h5.hx_pay WHERE salary = $1 INTERSECT SELECT salary FROM h5.hx_pay WHERE salary < $2",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0135",
+   "lineage": {},
+   "out_cols": [
+    "pid"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT pid FROM h5.hx_pay ORDER BY id DESC, pid",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0136",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0137",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "avg(salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT avg(salary) FROM h5.hx_pay WHERE salary = 53",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0138",
+   "lineage": {
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "dept"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT id, dept FROM h5.hx_cust WHERE ssn > 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0139",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "salary"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT id, salary FROM h5.hx_pay WHERE salary IS NULL",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0140",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "amt"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT amt FROM h5.hx_cust ORDER BY ssn NULLS FIRST, id LIMIT 4",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0141",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT ssn FROM h5.hx_cust WHERE grade = 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0142",
+   "lineage": {
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "grade",
+    "grade"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT grade, grade FROM h5.hx_cust WHERE ssn < $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0143",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [],
+   "shape": "setop",
+   "sql": "SELECT salary FROM h5.hx_pay WHERE salary > 10 UNION ALL SELECT salary FROM h5.hx_pay WHERE salary = 65",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0144",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "dept",
+    "birth"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT dept, birth FROM h5.hx_cust WHERE birth > DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0145",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT salary, count(*) FROM h5.hx_pay WHERE salary > 70 GROUP BY salary",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0146",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "length(birth::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, length(birth::text) FROM h5.hx_cust WHERE dept <> 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0147",
+   "lineage": {},
+   "out_cols": [
+    "id",
+    "band"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT id, band FROM h5.hx_pay WHERE id IS NULL",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0148",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "avg(salary)"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "aggregate",
+   "sql": "SELECT avg(salary) FROM h5.hx_pay WHERE salary = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0149",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "setop",
+   "sql": "SELECT id FROM h5.hx_pay WHERE salary > 21 UNION SELECT id FROM h5.hx_pay WHERE id <> 76",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0150",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "amt"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT amt FROM h5.hx_cust ORDER BY birth DESC NULLS FIRST, id LIMIT 4",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0151",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "band",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT band, salary FROM h5.hx_pay WHERE salary = 80",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0152",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary = 48",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0153",
+   "lineage": {},
+   "out_cols": [
+    "dept"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT dept FROM h5.hx_cust ORDER BY dept, id",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0154",
+   "lineage": {
+    "salary": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "pid"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT pid FROM h5.hx_pay ORDER BY salary, pid",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0155",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "salary"
+   ],
+   "params": [
+    {
+     "col": "id",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT id, salary FROM h5.hx_pay WHERE id <> $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0156",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "birth",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT birth, count(*) FROM h5.hx_cust WHERE ssn < 'x' GROUP BY birth HAVING count(*) > 1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0157",
+   "lineage": {
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "amt"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT id, amt FROM h5.hx_cust WHERE ssn < $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0158",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "min(birth)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT min(birth) FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0159",
+   "lineage": {
+    "birth": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "grade"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT grade FROM h5.hx_cust ORDER BY birth DESC, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0160",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "birth",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT birth, count(*) FROM h5.hx_cust WHERE amt = 27 GROUP BY birth",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0161",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(ssn)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(ssn) FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0162",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "birth"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT birth FROM h5.hx_cust WHERE ssn <> $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0163",
+   "lineage": {
+    "ssn": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT id FROM h5.hx_cust ORDER BY ssn DESC NULLS LAST, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0164",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "birth",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT birth, count(*) FROM h5.hx_cust WHERE grade <> 'x' GROUP BY birth HAVING count(*) > 2",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0165",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "grade"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT grade FROM h5.hx_cust ORDER BY birth DESC, id LIMIT 2",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0166",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(birth)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(birth) FROM h5.hx_cust WHERE amt = 6",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0167",
+   "lineage": {
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "substr(ssn, 1, 3)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, substr(ssn, 1, 3) FROM h5.hx_cust WHERE grade > 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0168",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "salary"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT pid, salary FROM h5.hx_pay WHERE salary <> $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0169",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary = 51",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0170",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "dept",
+    "birth"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT dept, birth FROM h5.hx_cust WHERE ssn < $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0171",
+   "lineage": {},
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY id NULLS LAST, pid",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0172",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "birth",
+    "grade"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT birth, grade FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0173",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY salary DESC NULLS LAST, pid LIMIT 4",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0174",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "birth",
+    "count(*)"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "group_by",
+   "sql": "SELECT birth, count(*) FROM h5.hx_cust WHERE ssn < $1 GROUP BY birth",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0175",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(birth)"
+   ],
+   "params": [
+    {
+     "col": "birth",
+     "n": 1,
+     "type": "date"
+    }
+   ],
+   "shape": "aggregate",
+   "sql": "SELECT count(birth) FROM h5.hx_cust WHERE birth > $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0176",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn"
+   ],
+   "params": [],
+   "shape": "setop",
+   "sql": "SELECT ssn FROM h5.hx_cust EXCEPT SELECT ssn FROM h5.hx_cust WHERE birth < DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0177",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "length(birth::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, length(birth::text) FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0178",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary",
+    "pid",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT salary, pid, count(*) FROM h5.hx_pay WHERE salary = 42 GROUP BY salary, pid",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0179",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "dept",
+    "birth"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT dept, birth FROM h5.hx_cust WHERE grade = 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0180",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "max(salary)"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "aggregate",
+   "sql": "SELECT max(salary) FROM h5.hx_pay WHERE salary = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0181",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY salary NULLS FIRST, pid LIMIT 5",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0182",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "band"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT pid, band FROM h5.hx_pay WHERE salary = 28",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0183",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "sum(id)"
+   ],
+   "params": [
+    {
+     "col": "birth",
+     "n": 1,
+     "type": "date"
+    }
+   ],
+   "shape": "aggregate",
+   "sql": "SELECT sum(id) FROM h5.hx_cust WHERE birth < $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0184",
+   "lineage": {
+    "salary": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY salary NULLS FIRST, pid",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0185",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT pid, salary FROM h5.hx_pay WHERE band < 'x'",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0186",
+   "lineage": {
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(ssn)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(ssn) FROM h5.hx_cust",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0187",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "amt",
+    "ssn",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT amt, ssn, count(*) FROM h5.hx_cust WHERE birth = DATE '1990-01-01' GROUP BY amt, ssn HAVING count(*) > 0",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0188",
+   "lineage": {},
+   "out_cols": [
+    "pid"
+   ],
+   "params": [
+    {
+     "col": "band",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT pid FROM h5.hx_pay WHERE band = $1",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0189",
+   "lineage": {},
+   "out_cols": [
+    "grade",
+    "id"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT grade, id FROM h5.hx_cust WHERE grade <> 'x'",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0190",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT pid, salary FROM h5.hx_pay WHERE salary = 65",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0191",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT id FROM h5.hx_pay ORDER BY salary DESC, pid LIMIT 4",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0192",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(salary) FROM h5.hx_pay WHERE salary < 23",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0193",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "salary"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT id, salary FROM h5.hx_pay WHERE salary = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0194",
+   "lineage": {},
+   "out_cols": [
+    "amt"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT amt FROM h5.hx_cust ORDER BY dept, id LIMIT 5",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0195",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "grade"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT grade FROM h5.hx_cust ORDER BY ssn DESC NULLS FIRST, id LIMIT 1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0196",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary <> 52",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0197",
+   "lineage": {},
+   "out_cols": [
+    "band",
+    "band"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT band, band FROM h5.hx_pay WHERE band < 'x'",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0198",
+   "lineage": {
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "grade",
+    "ssn"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT grade, ssn FROM h5.hx_cust WHERE dept > 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0199",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary = 88",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0200",
+   "lineage": {
+    "ssn": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "amt"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT amt FROM h5.hx_cust ORDER BY ssn NULLS FIRST, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0201",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary < 46",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0202",
+   "lineage": {
+    "salary": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT id FROM h5.hx_pay ORDER BY salary DESC NULLS LAST, pid",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0203",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT pid, salary FROM h5.hx_pay WHERE salary <> 29",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0204",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary = 47",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0205",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "min(birth)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT min(birth) FROM h5.hx_cust WHERE ssn = 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0206",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT id, salary FROM h5.hx_pay",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0207",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "min(band)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT min(band) FROM h5.hx_pay WHERE salary = 99",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0208",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT id, salary FROM h5.hx_pay WHERE salary = 18",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0209",
+   "lineage": {},
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT id FROM h5.hx_cust ORDER BY id NULLS FIRST, id LIMIT 3",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0210",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [
+    {
+     "col": "id",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE id = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0211",
+   "lineage": {
+    "salary": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY salary DESC, pid",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0212",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY salary DESC NULLS FIRST, pid LIMIT 3",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0213",
+   "lineage": {},
+   "out_cols": [
+    "pid",
+    "band"
+   ],
+   "params": [
+    {
+     "col": "id",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT pid, band FROM h5.hx_pay WHERE id > $1",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0214",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    },
+    {
+     "col": "salary",
+     "n": 2,
+     "type": "int"
+    }
+   ],
+   "shape": "setop",
+   "sql": "SELECT id FROM h5.hx_pay WHERE salary = $1 INTERSECT SELECT id FROM h5.hx_pay WHERE salary = $2",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0215",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "substr(band, 1, 4)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, substr(band, 1, 4) FROM h5.hx_pay WHERE salary <> 41",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0216",
+   "lineage": {
+    "ssn": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT id FROM h5.hx_cust ORDER BY ssn, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0217",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT salary FROM h5.hx_pay",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0218",
+   "lineage": {},
+   "out_cols": [
+    "id",
+    "id"
+   ],
+   "params": [
+    {
+     "col": "pid",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT id, id FROM h5.hx_pay WHERE pid = $1",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0219",
+   "lineage": {},
+   "out_cols": [
+    "pid"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT pid FROM h5.hx_pay ORDER BY band DESC NULLS LAST, pid",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0220",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT pid, salary FROM h5.hx_pay WHERE salary <> 49",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0221",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "count(id)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(id) FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0222",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "length(birth::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, length(birth::text) FROM h5.hx_cust WHERE ssn > 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0223",
+   "lineage": {},
+   "out_cols": [
+    "id",
+    "id"
+   ],
+   "params": [
+    {
+     "col": "band",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT id, id FROM h5.hx_pay WHERE band < $1",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0224",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "birth",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT birth, count(*) FROM h5.hx_cust WHERE birth = DATE '1990-01-01' GROUP BY birth",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0225",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT pid, salary FROM h5.hx_pay WHERE salary < 25",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0226",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "lower(band)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, lower(band) FROM h5.hx_pay WHERE salary <> 38",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0227",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "count(band)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(band) FROM h5.hx_pay WHERE salary > 13",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0228",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0229",
+   "lineage": {},
+   "out_cols": [
+    "dept",
+    "id"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT dept, id FROM h5.hx_cust",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0230",
+   "lineage": {
+    "birth": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "amt"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT amt FROM h5.hx_cust ORDER BY birth DESC NULLS LAST, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0231",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "setop",
+   "sql": "SELECT salary FROM h5.hx_pay WHERE salary = 78 EXCEPT SELECT salary FROM h5.hx_pay WHERE salary < $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0232",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "avg(salary)"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "aggregate",
+   "sql": "SELECT avg(salary) FROM h5.hx_pay WHERE salary < $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0233",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "lower(ssn)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, lower(ssn) FROM h5.hx_cust WHERE ssn IS NULL",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0234",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "sum(salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT sum(salary) FROM h5.hx_pay WHERE salary = 87",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0235",
+   "lineage": {
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "id"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT id, id FROM h5.hx_cust WHERE ssn = $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0236",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary <> $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0237",
+   "lineage": {},
+   "out_cols": [
+    "id",
+    "amt"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT id, amt FROM h5.hx_cust WHERE dept = 'x'",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0238",
+   "lineage": {},
+   "out_cols": [
+    "pid",
+    "pid"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT pid, pid FROM h5.hx_pay WHERE id > 53",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0239",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT id, salary FROM h5.hx_pay WHERE salary = 32",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0240",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "count(DISTINCT id)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(DISTINCT id) FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0241",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "band",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT band, salary FROM h5.hx_pay WHERE salary = 26",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0242",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT salary, count(*) FROM h5.hx_pay WHERE salary IS NULL GROUP BY salary HAVING count(*) > 1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0243",
+   "lineage": {},
+   "out_cols": [
+    "grade",
+    "grade"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT grade, grade FROM h5.hx_cust WHERE grade < 'x'",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0244",
+   "lineage": {
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "id"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT id, id FROM h5.hx_cust WHERE ssn < $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0245",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "avg(salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT avg(salary) FROM h5.hx_pay WHERE salary > 29",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0246",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary <> 2",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0247",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY salary DESC, pid LIMIT 3",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0248",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(DISTINCT birth)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(DISTINCT birth) FROM h5.hx_cust WHERE birth > DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0249",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT pid, salary FROM h5.hx_pay WHERE salary = 93",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0250",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "birth"
+   ],
+   "params": [
+    {
+     "col": "birth",
+     "n": 1,
+     "type": "date"
+    },
+    {
+     "col": "grade",
+     "n": 2,
+     "type": "text"
+    }
+   ],
+   "shape": "setop",
+   "sql": "SELECT birth FROM h5.hx_cust WHERE birth <> $1 INTERSECT SELECT birth FROM h5.hx_cust WHERE grade = $2",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0251",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(pid::text)"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "derived",
+   "sql": "SELECT pid, length(pid::text) FROM h5.hx_pay WHERE salary <> $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0252",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary < 77",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0253",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "pid"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "setop",
+   "sql": "SELECT pid FROM h5.hx_pay WHERE salary = 44 UNION SELECT pid FROM h5.hx_pay WHERE salary = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0254",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "band",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT band, salary FROM h5.hx_pay WHERE salary <> 4",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0255",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "birth"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "setop",
+   "sql": "SELECT birth FROM h5.hx_cust WHERE ssn <> 'x' UNION SELECT birth FROM h5.hx_cust WHERE ssn = $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0256",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "birth"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "setop",
+   "sql": "SELECT birth FROM h5.hx_cust WHERE ssn < $1 EXCEPT SELECT birth FROM h5.hx_cust WHERE amt <> 10",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0257",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "amt",
+    "birth"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT amt, birth FROM h5.hx_cust WHERE ssn <> $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0258",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT salary FROM h5.hx_pay WHERE salary = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0259",
+   "lineage": {
+    "ssn": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "dept"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT dept FROM h5.hx_cust ORDER BY ssn DESC NULLS LAST, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0260",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [],
+   "shape": "setop",
+   "sql": "SELECT salary FROM h5.hx_pay WHERE pid <> 24 UNION ALL SELECT salary FROM h5.hx_pay WHERE salary = 58",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0261",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary < 25",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0262",
+   "lineage": {},
+   "out_cols": [
+    "dept"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT dept FROM h5.hx_cust ORDER BY dept NULLS LAST, id",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0263",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT salary, count(*) FROM h5.hx_pay WHERE pid <> 22 GROUP BY salary HAVING count(*) > 0",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0264",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT salary, count(*) FROM h5.hx_pay WHERE salary = 68 GROUP BY salary",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0265",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary",
+    "count(*)"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "group_by",
+   "sql": "SELECT salary, count(*) FROM h5.hx_pay WHERE salary = $1 GROUP BY salary HAVING count(*) > 0",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0266",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "setop",
+   "sql": "SELECT ssn FROM h5.hx_cust WHERE ssn <> 'x' UNION ALL SELECT ssn FROM h5.hx_cust WHERE ssn < $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0267",
+   "lineage": {},
+   "out_cols": [
+    "band",
+    "pid"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT band, pid FROM h5.hx_pay WHERE id = 49",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0268",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "band",
+    "salary"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT band, salary FROM h5.hx_pay WHERE salary < $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0269",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "birth",
+    "dept",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT birth, dept, count(*) FROM h5.hx_cust WHERE birth = DATE '1990-01-01' GROUP BY birth, dept HAVING count(*) > 1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0270",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ],
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn",
+    "birth"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT ssn, birth FROM h5.hx_cust WHERE birth < DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0271",
+   "lineage": {
+    "ssn": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "grade"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT grade FROM h5.hx_cust ORDER BY ssn NULLS FIRST, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0272",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary",
+    "id"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT salary, id FROM h5.hx_pay WHERE salary = 30",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0273",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "amt",
+    "id"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT amt, id FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0274",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT id, salary FROM h5.hx_pay WHERE salary <> 76",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0275",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "setop",
+   "sql": "SELECT band FROM h5.hx_pay WHERE salary > 89 UNION ALL SELECT band FROM h5.hx_pay WHERE salary = 39",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0276",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "birth"
+   ],
+   "params": [],
+   "shape": "setop",
+   "sql": "SELECT birth FROM h5.hx_cust WHERE ssn = 'x' UNION SELECT birth FROM h5.hx_cust WHERE ssn <> 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0277",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(birth)"
+   ],
+   "params": [
+    {
+     "col": "amt",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "aggregate",
+   "sql": "SELECT count(birth) FROM h5.hx_cust WHERE amt = $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0278",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [],
+   "shape": "setop",
+   "sql": "SELECT salary FROM h5.hx_pay WHERE salary > 37 UNION ALL SELECT salary FROM h5.hx_pay WHERE salary = 86",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0279",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT salary FROM h5.hx_pay WHERE salary < 65",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0280",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary",
+    "count(*)"
+   ],
+   "params": [
+    {
+     "col": "id",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "group_by",
+   "sql": "SELECT salary, count(*) FROM h5.hx_pay WHERE id = $1 GROUP BY salary",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0281",
+   "lineage": {
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "dept",
+    "ssn"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT dept, ssn FROM h5.hx_cust",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0282",
+   "lineage": {
+    "ssn": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "grade"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT grade FROM h5.hx_cust ORDER BY ssn NULLS LAST, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0283",
+   "lineage": {
+    "salary": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY salary, pid",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0284",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary = 86",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0285",
+   "lineage": {
+    "ssn": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "dept"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT dept FROM h5.hx_cust ORDER BY ssn DESC, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0286",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "birth",
+    "id"
+   ],
+   "params": [
+    {
+     "col": "birth",
+     "n": 1,
+     "type": "date"
+    }
+   ],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT birth, id FROM h5.hx_cust WHERE birth < $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0287",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(pid::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(pid::text) FROM h5.hx_pay WHERE salary = 80",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0288",
+   "lineage": {
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "ssn"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT id, ssn FROM h5.hx_cust WHERE id = 75",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0289",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "birth"
+   ],
+   "params": [
+    {
+     "col": "amt",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT birth FROM h5.hx_cust WHERE amt = $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0290",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "amt"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT amt FROM h5.hx_cust ORDER BY ssn, id LIMIT 5",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0291",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    },
+    {
+     "col": "ssn",
+     "n": 2,
+     "type": "text"
+    }
+   ],
+   "shape": "setop",
+   "sql": "SELECT ssn FROM h5.hx_cust WHERE ssn < $1 UNION ALL SELECT ssn FROM h5.hx_cust WHERE ssn = $2",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0292",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT id FROM h5.hx_pay ORDER BY salary NULLS FIRST, pid LIMIT 2",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0293",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "dept",
+    "ssn"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT dept, ssn FROM h5.hx_cust WHERE birth < DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0294",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "count(birth)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(birth) FROM h5.hx_cust WHERE ssn > 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0295",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "max(birth)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT max(birth) FROM h5.hx_cust WHERE id IS NULL",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0296",
+   "lineage": {
+    "salary": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT id FROM h5.hx_pay ORDER BY salary NULLS FIRST, pid",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0297",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT id, salary FROM h5.hx_pay WHERE salary = 66",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0298",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "sum(salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT sum(salary) FROM h5.hx_pay WHERE salary <> 64",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0299",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "dept",
+    "birth"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT dept, birth FROM h5.hx_cust WHERE ssn = $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0300",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "grade",
+    "birth"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT grade, birth FROM h5.hx_cust WHERE ssn = $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0301",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ],
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn",
+    "birth",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT ssn, birth, count(*) FROM h5.hx_cust WHERE birth <> DATE '1990-01-01' GROUP BY ssn, birth HAVING count(*) > 0",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0302",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn",
+    "dept"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT ssn, dept FROM h5.hx_cust WHERE amt <> 27",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0303",
+   "lineage": {
+    "birth": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT id FROM h5.hx_cust ORDER BY birth NULLS LAST, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0304",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "pid"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT pid FROM h5.hx_pay ORDER BY salary, pid LIMIT 4",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0305",
+   "lineage": {
+    "salary": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY salary NULLS LAST, pid",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0306",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "max(salary)"
+   ],
+   "params": [
+    {
+     "col": "id",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "aggregate",
+   "sql": "SELECT max(salary) FROM h5.hx_pay WHERE id < $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0307",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "band",
+    "count(*)"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "group_by",
+   "sql": "SELECT band, count(*) FROM h5.hx_pay WHERE salary < $1 GROUP BY band HAVING count(*) > 1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0308",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT ssn FROM h5.hx_cust WHERE ssn IS NULL",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0309",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "dept",
+    "dept"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT dept, dept FROM h5.hx_cust WHERE birth <> DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0310",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "grade",
+    "birth",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT grade, birth, count(*) FROM h5.hx_cust WHERE ssn < 'x' GROUP BY grade, birth HAVING count(*) > 0",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0311",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY salary NULLS FIRST, pid LIMIT 2",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0312",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "upper(ssn)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, upper(ssn) FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0313",
+   "lineage": {
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "amt",
+    "ssn"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT amt, ssn FROM h5.hx_cust WHERE dept < 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0314",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT id FROM h5.hx_pay WHERE salary < $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0315",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "pid"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT id, pid FROM h5.hx_pay WHERE salary = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0316",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT id, salary FROM h5.hx_pay WHERE salary <> 75",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0317",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "length(birth::text)"
+   ],
+   "params": [
+    {
+     "col": "birth",
+     "n": 1,
+     "type": "date"
+    }
+   ],
+   "shape": "derived",
+   "sql": "SELECT id, length(birth::text) FROM h5.hx_cust WHERE birth = $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0318",
+   "lineage": {
+    "birth": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "grade"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT grade FROM h5.hx_cust ORDER BY birth NULLS LAST, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0319",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "dept",
+    "birth"
+   ],
+   "params": [
+    {
+     "col": "id",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT dept, birth FROM h5.hx_cust WHERE id = $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0320",
+   "lineage": {},
+   "out_cols": [
+    "id",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT id, count(*) FROM h5.hx_cust WHERE amt = 18 GROUP BY id",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0321",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "min(ssn)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT min(ssn) FROM h5.hx_cust WHERE ssn = 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0322",
+   "lineage": {},
+   "out_cols": [
+    "dept"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT dept FROM h5.hx_cust ORDER BY grade NULLS LAST, id",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0323",
+   "lineage": {},
+   "out_cols": [
+    "count(band)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(band) FROM h5.hx_pay WHERE id < 25",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0324",
+   "lineage": {
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "ssn"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT id, ssn FROM h5.hx_cust",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0325",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY salary DESC, pid LIMIT 4",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0326",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(id::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(id::text) FROM h5.hx_pay WHERE salary <> 73",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0327",
+   "lineage": {},
+   "out_cols": [
+    "max(pid)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT max(pid) FROM h5.hx_pay",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0328",
+   "lineage": {
+    "salary": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "pid"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT pid FROM h5.hx_pay ORDER BY salary DESC NULLS FIRST, pid",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0329",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT ssn FROM h5.hx_cust WHERE id < 52",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0330",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "birth",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT birth, count(*) FROM h5.hx_cust GROUP BY birth",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0331",
+   "lineage": {
+    "ssn": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "amt"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT amt FROM h5.hx_cust ORDER BY ssn DESC NULLS FIRST, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0332",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "ssn",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT ssn, count(*) FROM h5.hx_cust WHERE birth < DATE '1990-01-01' GROUP BY ssn",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0333",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary = 5",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0334",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "max(ssn)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT max(ssn) FROM h5.hx_cust WHERE birth IS NULL",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0335",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(salary::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT pid, length(salary::text) FROM h5.hx_pay WHERE salary <> 16",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0336",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT id FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0337",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT id, count(*) FROM h5.hx_pay WHERE salary IS NULL GROUP BY id",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0338",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT salary FROM h5.hx_pay WHERE salary > 77",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0339",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(DISTINCT salary)"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "aggregate",
+   "sql": "SELECT count(DISTINCT salary) FROM h5.hx_pay WHERE salary = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0340",
+   "lineage": {
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "length(ssn)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, length(ssn) FROM h5.hx_cust WHERE id = 54",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0341",
+   "lineage": {},
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT id FROM h5.hx_pay ORDER BY band DESC NULLS FIRST, pid",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0342",
+   "lineage": {},
+   "out_cols": [
+    "grade"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT grade FROM h5.hx_cust ORDER BY amt NULLS LAST, id",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0343",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "min(id)"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "aggregate",
+   "sql": "SELECT min(id) FROM h5.hx_pay WHERE salary = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0344",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ],
+    "ssn": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "count(birth)"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "aggregate",
+   "sql": "SELECT count(birth) FROM h5.hx_cust WHERE ssn <> $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0345",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "birth"
+   ],
+   "params": [
+    {
+     "col": "birth",
+     "n": 1,
+     "type": "date"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT id, birth FROM h5.hx_cust WHERE birth = $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0346",
+   "lineage": {},
+   "out_cols": [
+    "id",
+    "length(id::text)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, length(id::text) FROM h5.hx_cust WHERE amt <> 33",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0347",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "count(pid)"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "aggregate",
+   "sql": "SELECT count(pid) FROM h5.hx_pay WHERE salary = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0348",
+   "lineage": {},
+   "out_cols": [
+    "amt"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT amt FROM h5.hx_cust ORDER BY amt DESC NULLS LAST, id LIMIT 5",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0349",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "sum(salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT sum(salary) FROM h5.hx_pay WHERE pid = 19",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0350",
+   "lineage": {},
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT id FROM h5.hx_cust ORDER BY amt, id LIMIT 4",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0351",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(DISTINCT salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(DISTINCT salary) FROM h5.hx_pay WHERE salary = 55",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0352",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "dept",
+    "ssn"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT dept, ssn FROM h5.hx_cust WHERE birth = DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0353",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY salary NULLS FIRST, pid LIMIT 4",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0354",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "amt",
+    "ssn"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT amt, ssn FROM h5.hx_cust WHERE birth <> DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0355",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "lower(ssn)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, lower(ssn) FROM h5.hx_cust WHERE birth IS NULL",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0356",
+   "lineage": {},
+   "out_cols": [
+    "id",
+    "upper(grade)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, upper(grade) FROM h5.hx_cust WHERE dept = 'x'",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0357",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT id, salary FROM h5.hx_pay WHERE salary = 98",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0358",
+   "lineage": {},
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT id FROM h5.hx_pay ORDER BY band DESC NULLS FIRST, pid LIMIT 5",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0359",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT pid, salary FROM h5.hx_pay WHERE band IS NULL",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0360",
+   "lineage": {
+    "birth": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "grade"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT grade FROM h5.hx_cust ORDER BY birth DESC NULLS LAST, id",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0361",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "band",
+    "id"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT band, id FROM h5.hx_pay WHERE salary < $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0362",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "dept",
+    "amt"
+   ],
+   "params": [
+    {
+     "col": "birth",
+     "n": 1,
+     "type": "date"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT dept, amt FROM h5.hx_cust WHERE birth > $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0363",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "lower(ssn)"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "derived",
+   "sql": "SELECT id, lower(ssn) FROM h5.hx_cust WHERE ssn = $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0364",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT salary FROM h5.hx_pay WHERE salary = 60",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0365",
+   "lineage": {
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "amt",
+    "ssn"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT amt, ssn FROM h5.hx_cust WHERE dept <> 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0366",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "band",
+    "band"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT band, band FROM h5.hx_pay WHERE salary > $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0367",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "length(id::text)"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "derived",
+   "sql": "SELECT pid, length(id::text) FROM h5.hx_pay WHERE salary < $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0368",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "substr(ssn, 1, 2)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, substr(ssn, 1, 2) FROM h5.hx_cust WHERE ssn <> 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0369",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT salary, count(*) FROM h5.hx_pay WHERE id > 15 GROUP BY salary HAVING count(*) > 1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0370",
+   "lineage": {
+    "birth": [
+     "CARD"
+    ],
+    "ssn": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "upper(ssn)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, upper(ssn) FROM h5.hx_cust WHERE birth IS NULL",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0371",
+   "lineage": {
+    "birth": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "min(birth)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT min(birth) FROM h5.hx_cust",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0372",
+   "lineage": {
+    "salary": [
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(DISTINCT salary)"
+   ],
+   "params": [
+    {
+     "col": "id",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "aggregate",
+   "sql": "SELECT count(DISTINCT salary) FROM h5.hx_pay WHERE id < $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0373",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(DISTINCT salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(DISTINCT salary) FROM h5.hx_pay WHERE salary = 86",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0374",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(DISTINCT ssn)"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "aggregate",
+   "sql": "SELECT count(DISTINCT ssn) FROM h5.hx_cust WHERE ssn > $1",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0375",
+   "lineage": {},
+   "out_cols": [
+    "max(pid)"
+   ],
+   "params": [
+    {
+     "col": "band",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "aggregate",
+   "sql": "SELECT max(pid) FROM h5.hx_pay WHERE band = $1",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0376",
+   "lineage": {},
+   "out_cols": [
+    "id"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT id FROM h5.hx_pay ORDER BY id DESC, pid",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0377",
+   "lineage": {},
+   "out_cols": [
+    "dept"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT dept FROM h5.hx_cust ORDER BY grade NULLS FIRST, id",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0378",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "band",
+    "id"
+   ],
+   "params": [
+    {
+     "col": "salary",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT band, id FROM h5.hx_pay WHERE salary <> $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0379",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "sum(salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT sum(salary) FROM h5.hx_pay WHERE salary = 90",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0380",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(birth)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(birth) FROM h5.hx_cust WHERE birth IS NULL",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0381",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT pid, count(*) FROM h5.hx_pay WHERE salary < 54 GROUP BY pid",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0382",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "dept"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT dept FROM h5.hx_cust ORDER BY birth NULLS LAST, id LIMIT 3",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0383",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary",
+    "count(*)"
+   ],
+   "params": [],
+   "shape": "group_by",
+   "sql": "SELECT salary, count(*) FROM h5.hx_pay WHERE salary IS NULL GROUP BY salary",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0384",
+   "lineage": {
+    "salary": [
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "pid"
+   ],
+   "params": [],
+   "shape": "order_by",
+   "sql": "SELECT pid FROM h5.hx_pay ORDER BY salary DESC, pid",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0385",
+   "lineage": {},
+   "out_cols": [
+    "count(DISTINCT amt)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(DISTINCT amt) FROM h5.hx_cust WHERE amt > 83",
+   "table": "hx_cust",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0386",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ],
+    "ssn": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "birth",
+    "ssn",
+    "count(*)"
+   ],
+   "params": [
+    {
+     "col": "ssn",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "group_by",
+   "sql": "SELECT birth, ssn, count(*) FROM h5.hx_cust WHERE ssn = $1 GROUP BY birth, ssn",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0387",
+   "lineage": {
+    "salary": [
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "band",
+    "salary"
+   ],
+   "params": [
+    {
+     "col": "id",
+     "n": 1,
+     "type": "int"
+    }
+   ],
+   "shape": "projection",
+   "sql": "SELECT band, salary FROM h5.hx_pay WHERE id = $1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0388",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "band",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT band, salary FROM h5.hx_pay WHERE salary IS NULL",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0389",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [],
+   "shape": "setop",
+   "sql": "SELECT salary FROM h5.hx_pay WHERE salary = 71 UNION SELECT salary FROM h5.hx_pay WHERE salary < 48",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0390",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "birth"
+   ],
+   "params": [],
+   "shape": "distinct",
+   "sql": "SELECT DISTINCT birth FROM h5.hx_cust WHERE birth <> DATE '1990-01-01'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0391",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(DISTINCT salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(DISTINCT salary) FROM h5.hx_pay WHERE salary = 70",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0392",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "band"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT band FROM h5.hx_pay ORDER BY salary NULLS FIRST, pid LIMIT 1",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0393",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "pid",
+    "salary"
+   ],
+   "params": [],
+   "shape": "projection",
+   "sql": "SELECT pid, salary FROM h5.hx_pay WHERE salary <> 80",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0394",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "salary"
+   ],
+   "params": [],
+   "shape": "setop",
+   "sql": "SELECT salary FROM h5.hx_pay WHERE salary = 46 UNION ALL SELECT salary FROM h5.hx_pay WHERE salary IS NULL",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0395",
+   "lineage": {
+    "salary": [
+     "CARD"
+    ]
+   },
+   "out_cols": [
+    "count(DISTINCT band)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(DISTINCT band) FROM h5.hx_pay WHERE salary = 6",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0396",
+   "lineage": {},
+   "out_cols": [
+    "count(pid)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(pid) FROM h5.hx_pay",
+   "table": "hx_pay",
+   "touches_labeled": false
+  },
+  {
+   "id": "HO0397",
+   "lineage": {
+    "salary": [
+     "CARD",
+     "EQ",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "count(DISTINCT salary)"
+   ],
+   "params": [],
+   "shape": "aggregate",
+   "sql": "SELECT count(DISTINCT salary) FROM h5.hx_pay WHERE salary <> 69",
+   "table": "hx_pay",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0398",
+   "lineage": {
+    "birth": [
+     "CARD",
+     "ORD"
+    ]
+   },
+   "out_cols": [
+    "dept"
+   ],
+   "params": [],
+   "shape": "order_limit",
+   "sql": "SELECT dept FROM h5.hx_cust ORDER BY birth NULLS LAST, id LIMIT 2",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0399",
+   "lineage": {
+    "ssn": [
+     "CARD",
+     "VAL"
+    ]
+   },
+   "out_cols": [
+    "id",
+    "upper(ssn)"
+   ],
+   "params": [],
+   "shape": "derived",
+   "sql": "SELECT id, upper(ssn) FROM h5.hx_cust WHERE ssn < 'x'",
+   "table": "hx_cust",
+   "touches_labeled": true
+  },
+  {
+   "id": "HO0400",
+   "lineage": {},
+   "out_cols": [
+    "pid",
+    "count(*)"
+   ],
+   "params": [
+    {
+     "col": "band",
+     "n": 1,
+     "type": "text"
+    }
+   ],
+   "shape": "group_by",
+   "sql": "SELECT pid, count(*) FROM h5.hx_pay WHERE band = $1 GROUP BY pid",
+   "table": "hx_pay",
+   "touches_labeled": false
+  }
+ ],
+ "realized_shape_counts": {
+  "aggregate": 68,
+  "derived": 54,
+  "distinct": 33,
+  "group_by": 42,
+  "order_by": 49,
+  "order_limit": 33,
+  "projection": 95,
+  "setop": 26
+ },
+ "requested_shape_weights": {
+  "aggregate": 16,
+  "derived": 12,
+  "distinct": 10,
+  "group_by": 14,
+  "order_by": 14,
+  "order_limit": 8,
+  "projection": 20,
+  "setop": 6
+ },
+ "seed": "a3062488859d4a48",
+ "shortfall": 0,
+ "trial_unit": {
+  "generated_queries": 400,
+  "note": "trial = (Q[θ], pair). 질의 수와 trial 수는 다른 단위다.",
+  "pair_types": 4,
+  "query_pair_trials": 1600
+ },
+ "validated_with": "ipguard_fragment() -- 동결된 fragment classifier",
+ "weights": {
+  "agg": {
+   "avg": 15,
+   "count": 25,
+   "count_distinct": 20,
+   "max": 10,
+   "min": 10,
+   "sum": 20
+  },
+  "func": {
+   "length": 20,
+   "lower": 25,
+   "substr": 35,
+   "upper": 20
+  },
+  "p_touch_labeled_per_draw": 0.75,
+  "pred": {
+   "<": 15,
+   "<>": 15,
+   "=": 40,
+   ">": 15,
+   "IS NULL": 5,
+   "none": 10
+  },
+  "pred_operand": {
+   "const": 70,
+   "param": 30
+  },
+  "setop": {
+   "EXCEPT": 20,
+   "INTERSECT": 15,
+   "UNION": 25,
+   "UNION ALL": 40
+  }
+ }
+}

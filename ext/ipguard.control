@@ -1,0 +1,6 @@
+comment = 'PII provenance analysis over the rewritten query tree (detection only)'
+default_version = '1.0'
+module_pathname = '$libdir/ipguard'
+# relocatable = false 이어야 한다. 레지스트리 조회 API 는 SECURITY DEFINER 이고
+# search_path 를 @extschema@ 로 고정한다 -- 스키마가 바뀌면 그 고정이 깨진다.
+relocatable = false

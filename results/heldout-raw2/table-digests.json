@@ -1,0 +1,18 @@
+{
+ "eq_split/hx_cust/d1": "abdc274a280a24bacb49065762cb92ac",
+ "eq_split/hx_cust/d2": "256e9d7b405af57bac19b0ba0446616d",
+ "eq_split/hx_pay/d1": "a0f0cb15b55a5f04f6eb1f5b6ead8137",
+ "eq_split/hx_pay/d2": "6f03e4dce317a78c693419026745a082",
+ "multiplicity/hx_cust/d1": "16a2305e7872d8489e601ed05aa63bf7",
+ "multiplicity/hx_cust/d2": "6aa0cf54d68a4314acfe99ec01a0cc13",
+ "multiplicity/hx_pay/d1": "33306f4b5fe4f5ae4f33315f1653b9a4",
+ "multiplicity/hx_pay/d2": "281c982219a2635a008d1e8516ccbb70",
+ "null_structure/hx_cust/d1": "f9a58ef37fd6a4e5698088be1b84cbd0",
+ "null_structure/hx_cust/d2": "6a0dcf60d72467d78e2243bddeae52bd",
+ "null_structure/hx_pay/d1": "87f7059f7ddebe47c78dddeb09f24bf3",
+ "null_structure/hx_pay/d2": "54750e2661b00e393761d59f8ff2f877",
+ "ord_permutation/hx_cust/d1": "e69c2205649d584c1193e2dd11014935",
+ "ord_permutation/hx_cust/d2": "5cfba06b9641d39d8a23f3e029a031db",
+ "ord_permutation/hx_pay/d1": "685c8e071f1232140065376f5bb84f52",
+ "ord_permutation/hx_pay/d2": "f1c7a59717e2f6454ad30a980a5a92f0"
+}

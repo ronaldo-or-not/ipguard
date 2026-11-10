@@ -1,0 +1,18 @@
+{
+ "realistic": {
+  "backward": 0,
+  "in_fcore": 13,
+  "n": 22,
+  "recovered": [],
+  "recovery": 0,
+  "sink_erasure": 0
+ },
+ "stress": {
+  "backward": 0,
+  "in_fcore": 13,
+  "n": 22,
+  "recovered": [],
+  "recovery": 0,
+  "sink_erasure": 0
+ }
+}

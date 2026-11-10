@@ -1,0 +1,175 @@
+==============================================================================
+release-factorization gate — 판정 행
+==============================================================================
+
+[0] ★ fail-closed — 미구현·미인증 경로가 수락으로 빠지는가
+  ✓ F_core 밖: window function                            reject   (기대 reject)
+      OUTSIDE_CERTIFIED_FRAGMENT — 인증 대상이 아니다
+  ✓ F_core 밖: outer join                                 reject   (기대 reject)
+  ✓ F_core 밖: NOT IN                                     reject   (기대 reject)
+  ✓ F_core 밖: 상관 스칼라 서브쿼리                                reject   (기대 reject)
+  ✓ 집합연산 UNION(비-ALL), equality_factor=holds             accept   (기대 accept)
+  ✓ 집합연산 UNION ALL (값 비교 없음)                             accept   (기대 accept)
+  ✓ ★ UNION(비-ALL), equality_factor=fails                reject   (기대 reject)
+      노드를 안 만들면 여기서 조용히 수락된다 = 미탐
+  ✓ ★ EXCEPT, equality_factor=fails                      reject   (기대 reject)
+  ✓ ★ INTERSECT, equality_factor=fails                   reject   (기대 reject)
+  ✓ UNION ALL 은 여전히 수락 (값 비교를 하지 않는다)                    accept   (기대 accept)
+  ✓ ★ 중첩 집합연산 (서브쿼리 안)                                   reject   (기대 reject)
+      ── key term 문맥 (파생 표현식 · collation) ──
+  ✓ bare Var + 기본 collation (기준선)                        accept   (기대 accept)
+  ✓ ★ 파생 표현식 ORDER BY lower(secret)                      reject   (기대 reject)
+      order_factor 는 컬럼에 대한 주장이지 그 위의 함수에 대한 주장이 아니다
+  ✓ ★ ORDER BY secret COLLATE "C"                        reject   (기대 reject)
+  ✓ ★ 파생 표현식 GROUP BY upper(secret)                      reject   (기대 reject)
+  ✓ ★ bare Var 지만 컬럼이 COLLATE "C" 로 선언됨                  reject   (기대 reject)
+      인스턴스가 기본 collation 으로만 등록돼 있다
+      ── EQ/ORD 의 null_equivalence 전제 ──
+  ✓ ★ order_factor=holds 인데 null_equivalence=fails: ORDER BY reject   (기대 reject)
+      NULL 은 cmp 가 아니라 NULLS FIRST/LAST 로 놓인다
+  ✓ ★ 같은 상태에서 GROUP BY                                   reject   (기대 reject)
+      SQL grouping 은 NULL 들을 한 그룹으로 묶는다
+  ✓    null_equivalence=holds 로 되돌리면 수락                  accept   (기대 accept)
+      ── comparator 인증서 (sortop / eqop) ──
+  ✓ 기본 sortop 인증됨                                        accept   (기대 accept)
+  ✓ ★ ORD comparator 인증서를 지우면                            reject   (기대 reject)
+      order_factor 만으로는 부족하다
+  ✓ ★ EQ comparator 인증서를 지우면 DISTINCT                    reject   (기대 reject)
+  ✓ DESC 는 다른 sortop(>) 이지만 같이 등록된다                      accept   (기대 accept)
+  ✓ ★ 다른 opfamily 의 정렬 연산자 (~<~)                         reject   (기대 reject)
+      기본 `<` 인증서가 text_pattern_ops 를 덮지 않는다
+  ✓    기본 정렬은 여전히 수락                                     accept   (기대 accept)
+  ✓ ★ 기본 comparator 를 claim=unknown 으로 등록                reject   (기대 reject)
+      기본 연산자라는 사실이 factor-through 증거를 만들지 않는다
+      ── CARD 의 활성 sink ──
+  ✓ WHERE 술어                                             MEMBERSHIP,MULTIPLICIT (기대 MEMBERSHIP,MULTIPLICIT)
+  ✓ ★ 투영이 행 구별을 지우면 MEMBERSHIP 소거                        MULTIPLICITY,ROW_COUNT (기대 MULTIPLICITY,ROW_COUNT)
+  ✓ inner join ON 절                                      MEMBERSHIP,MULTIPLICIT (기대 MEMBERSHIP,MULTIPLICIT)
+  ✓ semi-join (EXISTS)                                   MEMBERSHIP,MULTIPLICIT (기대 MEMBERSHIP,MULTIPLICIT)
+  ✓ HAVING                                               MEMBERSHIP,MULTIPLICIT (기대 MEMBERSHIP,MULTIPLICIT)
+  ✓ ★ aggregate FILTER -> 그 집계의 CELL                     CELL                   (기대 CELL)
+      ── CARD -> downstream aggregate CELL ──
+  ✓ ★ 스칼라 집계: CELL 만 (최종 shape 는 1행)                     CELL                   (기대 CELL)
+  ✓ GROUP BY 있으면 shape 도 변한다 (그룹이 통째로 사라질 수 있다)          CELL,MEMBERSHIP,MULTIP (기대 CELL,MEMBERSHIP,MULTIP)
+  ✓ 집계 없으면 CELL 없음                                       MEMBERSHIP,MULTIPLICIT (기대 MEMBERSHIP,MULTIPLICIT)
+  ✓ ★ 서브쿼리 selection 을 바깥 집계가 소비                         CELL,MEMBERSHIP,MULTIP (기대 CELL,MEMBERSHIP,MULTIP)
+      ── transfer function 감사 (서브쿼리 경계를 넘는 합성) ──
+  ✓ ★ W1 EQ -> 집계 CELL (그룹 수가 같아도 셀이 다르다)                CELL,MEMBERSHIP,MULT (기대 CELL,MEMBERSHIP,MULT)
+  ✓ ★ W2 ORD+LIMIT -> MULTIPLICITY (ROW_COUNT 는 **아니다**) FINAL_ORDER,MEMBERSH (기대 FINAL_ORDER,MEMBERSH)
+  ✓ ★ W3 ORD -> 바깥 집계 CELL                               CELL,MEMBERSHIP,MULT (기대 CELL,MEMBERSHIP,MULT)
+  ✓ ★ W4 HAVING -> 바깥 집계 CELL                            CELL,MEMBERSHIP,MULT (기대 CELL,MEMBERSHIP,MULT)
+  ✓ ★ W5 집합연산 -> 바깥 집계 CELL                              CELL,MULTIPLICITY,RO (기대 CELL,MULTIPLICITY,RO)
+  ✓    대조: 같은 수준 HAVING 은 CELL 을 만들지 않는다                 MEMBERSHIP,MULTIPLIC (기대 MEMBERSHIP,MULTIPLIC)
+      ── VAL transfer function (proof tree) ──
+  ✓ ★ V1 맨 컬럼 — commutation 은 없지만 MASK_APPLY baseline 은 본다 VAL/CELL                 (기대 VAL/CELL)
+  ✓ V2 스칼라 변환                                            VAL/CELL                 (기대 VAL/CELL)
+  ✓ ★ V3 중첩 변환 (질의 경계를 넘는 합성)                            VAL/CELL                 (기대 VAL/CELL)
+  ✓ V4 민감 입력 하나 + 공개 하나                                  VAL/CELL                 (기대 VAL/CELL)
+  ✓ ★ V5 control dependency -> CELL (CARD 가 아니다)         VAL/CELL                 (기대 VAL/CELL)
+  ✓ V6 집계 값                                              VAL/CELL                 (기대 VAL/CELL)
+  ✓ ★ V4b 마스킹된 입력 둘 -- 공통 출력 마스크 증명 불가                   VAL/CELL                 (기대 VAL/CELL)
+  ✓ V7 그룹 키가 동시에 공개 값                                    EQ/CELL,EQ/MEMBERSHIP,EQ (기대 EQ/CELL,EQ/MEMBERSHIP,EQ)
+  ✓ ★ V8 집합연산 출력이 바깥 표현식으로                               VAL/CELL                 (기대 VAL/CELL)
+  ✓ N1 resjunk 키 — VAL 없이 ORD 만                          ORD/FINAL_ORDER          (기대 ORD/FINAL_ORDER)
+  ✓ N2 술어만 — VAL 이 아니라 CARD                              CARD/MEMBERSHIP,CARD/MUL (기대 CARD/MEMBERSHIP,CARD/MUL)
+      ── proof tree 음성 대조군 ──
+  ✓ V1 baseline 통과 (마스크 등록·인증됨)                          accept   (기대 accept)
+  ✓ ★ V3 합성 경로 인증됨                                       accept   (기대 accept)
+  ✓ ★ lower 인증서 삭제 -> V3 거부                              reject   (기대 reject)
+  ✓ ★ upper 인증서 삭제 -> V3 거부                              reject   (기대 reject)
+      마지막 변환만 보면 이게 통과한다
+  ✓    되돌리면 수락                                           accept   (기대 accept)
+  ✓ concat 인증됨                                           accept   (기대 accept)
+  ✓ ★ concat 인증서 삭제 -> 거부                                reject   (기대 reject)
+  ✓ ★ 인자 위치가 다른 인증서만 존재 -> 거부                            reject   (기대 reject)
+      concat(a,b) 와 concat(b,a) 는 다른 주장이다
+  ✓    pos=0 인증서를 넣으면 수락                                 accept   (기대 accept)
+  ✓ ★ 마스킹된 입력 둘 -> 거부                                    reject   (기대 reject)
+      공통 출력 마스크를 증명할 수 없다
+      ── 경계 폐쇄성 행렬 (bag_out / ord) ──
+  ✓ B1 selection -> 부모 CELL 전파                           True     (기대 True)
+  ✓ B2 EQ partition -> 부모 CELL 전파                        True     (기대 True)
+  ✓ B3 set-op bag -> 부모 CELL 전파                          True     (기대 True)
+  ✓ O1 child ORD+LIMIT -> 부모 CELL 전파                     True     (기대 True)
+  ✓ O3 최상위 ORDER BY 없음 -> 자식 order 소거                    (없음)     (기대 (없음))
+  ✓ O4 공개 outer order 가 대체                               (없음)     (기대 (없음))
+  ✓ B1 인증서 발급 -> 수락                                      accept   (기대 accept)
+  ✓ ★ B1 context preservation: 'b' 는 다른 문맥               reject   (기대 reject)
+      상수가 canonical 에 들어간다 -- 경계를 넘어도 유지된다
+  ✓ ★ B1 인증서 삭제 -> 거부                                    reject   (기대 reject)
+  ✓ ★ B2 EQ comparator 있으면 수락                            accept   (기대 accept)
+  ✓ ★ B2 EQ comparator 삭제 -> 거부                          reject   (기대 reject)
+      GROUP BY 의 eqop 인증서가 경계를 넘어 필요하다
+  ✓ ★ B3 set-op 도 같은 이유로 거부                              reject   (기대 reject)
+  ✓ ★ O1 ORD comparator 있으면 수락                           accept   (기대 accept)
+  ✓ ★ O1 ORD comparator 삭제 -> 거부                         reject   (기대 reject)
+      comparator context 가 소비 지점까지 유지된다
+  ✓ ★ ~<~ 가 경계를 넘어도 기본 `<` 인증서로 통과하지 않는다                 reject   (기대 reject)
+  ✓ P0  CARD -> CELL 미인증                                 reject   (기대 reject)
+  ✓ ★ shape sink 만 허가하면 CELL 의무가 남아 거부                   reject   (기대 reject)
+      decision-path declassification 이 downstream cell 까지 덮어야 한다
+  ✓ P1  CARD -> CELL 까지 정확한 context 로 허가                 accept   (기대 accept)
+  ✓ ★ ROW_COUNT 만 허가하면 MEMBERSHIP 이 남아 거부                reject   (기대 reject)
+      행 수가 같아도 어느 행이 남는지가 다를 수 있다
+  ✓    셋 다 허가하면 수락                                       accept   (기대 accept)
+      ── 레지스트리 조회 오류 뒤 fail-open 되는가 ──
+  ✓ 조회 오류 전 (holds)                                      accept   (기대 accept)
+  ✓ ★ 조회가 터지면 수락이 아니라 오류                                 not-accept (기대 not-accept)
+  ✓ 복구 후 정상 동작                                           accept   (기대 accept)
+
+[1] 기본 — 상수 마스크(order_factor=fails), 인증서 없음
+  ✓ Q10  ORD 있으나 관찰 가능한 행 구별 없음                          accept   (기대 accept)
+      모든 출력 행이 'x' 라 순서가 결과 bag 을 바꾸지 못한다
+  ✓ Q9   ORD -> FINAL_ORDER(공개 id)                       reject   (기대 reject)
+  ✓ Q6   ORD -> MEMBERSHIP + FINAL_ORDER                 reject   (기대 reject)
+  ✓ Q6'  전순서 정렬 + LIMIT, 그러나 row identity 소멸             accept   (기대 accept)
+      ★ 정렬키는 전순서지만 투영이 행 구별을 지운다
+  ✓      비민감 대조군                                         accept   (기대 accept)
+
+[2] 전순서 보존 마스크 (order_factor=holds)
+  ✓ Q9   factor-through 로 해소                             accept   (기대 accept)
+      키 벡터 전체가 release 로부터 재구성 가능하다
+  ✓ Q6   membership 도 같은 ORD 노드라 함께 해소                   accept   (기대 accept)
+  ✓      그래도 EQ 는 별개다: DISTINCT secret                   reject   (기대 reject)
+      order_factor 가 equality_factor 를 대신하지 않는다
+
+[3] declassification — (effect, sink) 쌍 단위
+  ✓ Q9   최종 순서만 declassify                               accept   (기대 accept)
+  ✓ Q6   순서만 허가, membership 미허가                          reject   (기대 reject)
+      ★ 같은 컬럼·같은 effect 라도 sink 가 다르면 별도 허가가 필요하다
+  ✓ Q6   membership 까지 허가하면                              accept   (기대 accept)
+  ✓ ★ 같은 (effect,sink) 지만 파생 표현식 문맥                      reject   (기대 reject)
+      context_key 가 달라 bare 인증서가 덮지 않는다
+  ✓ ★ 같은 (effect,sink) 지만 다른 비교자 (~<~)                   reject   (기대 reject)
+      ── parameterized predicate ──
+  ✓ ★ param_scope=none 이면 $1 술어 거부                       reject   (기대 reject)
+      인증서가 어느 $1 값을 허가하는지 불명확하다
+  ✓    param_scope=all_values 로 명시하면 수락                  accept   (기대 accept)
+      ★ 강한 declassification -- 적응적으로 값을 바꾸면 열거 가능하다
+  ✓ ★ 상수 술어는 **다른 문맥**이라 여전히 거부                          reject   (기대 reject)
+      cval 이 canonical 에 들어간다
+  ✓    상수 술어에 발급하면 그것만 수락                                accept   (기대 accept)
+  ✓ ★ 다른 상수는 거부                                          reject   (기대 reject)
+  ✓ ★ 다른 연산자는 거부                                         reject   (기대 reject)
+  ✓      EQ 는 여전히 미허가: DISTINCT secret                   reject   (기대 reject)
+
+[4] 인증서 unknown -> 거부
+  ✓ Q9   order_factor=unknown                            reject   (기대 reject)
+  ✓      DISTINCT, equality_factor=unknown               reject   (기대 reject)
+  ✓ Q9   MaskInstance 자체가 미등록                            reject   (기대 reject)
+      등록 안 된 것이 조용히 '안전' 으로 읽히면 안 된다
+
+[5] ★ 연결 회귀 — 같은 generic plan: 철회 -> 재계획 -> 거부
+  ✓ 연결1 holds 인증서로 generic plan 생성                       accept   (기대 accept)
+  ✓ 연결2 철회 후 같은 plan 이 재계획된다                             +1       (기대 +1)
+  ✓ 연결3 ★ 그리고 거부된다                                       reject   (기대 reject)
+      사유: DETAIL:  ORD(ORDER BY key vector) -> FINAL_ORDER : order_factor=unknow
+  ✓ 연결4 declassification 으로 generic plan 생성              accept   (기대 accept)
+  ✓ 연결5 declassification 철회 -> 재계획                       +1       (기대 +1)
+  ✓ 연결6 ★ 그리고 거부된다                                       reject   (기대 reject)
+  ✓ 연결7 legacy 로 generic plan 생성                         accept   (기대 accept)
+  ✓ 연결8 gate 모드 전환 -> 재계획                                +1       (기대 +1)
+  ✓ 연결9 ★ 같은 plan 이 release 판정을 받는다                      reject   (기대 reject)
+
+==============================================================================
+  합계 118/118

@@ -1,0 +1,34 @@
+{
+ "eq_split/hx_cust": {
+  "failures": [],
+  "masked_equivalent": true
+ },
+ "eq_split/hx_pay": {
+  "failures": [],
+  "masked_equivalent": true
+ },
+ "multiplicity/hx_cust": {
+  "failures": [],
+  "masked_equivalent": true
+ },
+ "multiplicity/hx_pay": {
+  "failures": [],
+  "masked_equivalent": true
+ },
+ "null_structure/hx_cust": {
+  "failures": [],
+  "masked_equivalent": true
+ },
+ "null_structure/hx_pay": {
+  "failures": [],
+  "masked_equivalent": true
+ },
+ "ord_permutation/hx_cust": {
+  "failures": [],
+  "masked_equivalent": true
+ },
+ "ord_permutation/hx_pay": {
+  "failures": [],
+  "masked_equivalent": true
+ }
+}

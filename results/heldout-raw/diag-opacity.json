@@ -1,0 +1,250 @@
+[
+ {
+  "bound_pred": "birth < DATE '1990-01-01'",
+  "bound_sql": "SELECT ssn FROM h5.hx_cust WHERE birth < DATE '1990-01-01' UNION ALL SELECT ssn FROM h5.hx_cust WHERE ssn <> 'x'",
+  "delta_d1": "10=true|11=false|12=false|1=true|2=true|3=true|4=true|5=true|6=NULL|7=true|8=true|9=true",
+  "delta_d2": "10=true|11=true|12=true|1=true|2=true|3=true|4=true|5=true|6=NULL|7=true|8=true|9=true",
+  "delta_equivalent_measured": false,
+  "n_rows_d1": 21,
+  "n_rows_d2": 23,
+  "pair_type": "eq_split",
+  "query_id": "HO0037",
+  "rows_equal": false,
+  "rows_only_d1": [
+   "(v002)",
+   "(v002)",
+   "(v003)",
+   "(v003)",
+   "(v004)",
+   "(v004)"
+  ],
+  "rows_only_d2": [],
+  "table": "hx_cust"
+ },
+ {
+  "bound_pred": "birth < DATE '1990-01-01'",
+  "bound_sql": "SELECT ssn FROM h5.hx_cust WHERE birth < DATE '1990-01-01' UNION ALL SELECT ssn FROM h5.hx_cust WHERE ssn <> 'x'",
+  "delta_d1": "10=true|11=false|12=false|1=true|2=NULL|3=true|4=true|5=true|6=true|7=true|8=true|9=true",
+  "delta_d2": "10=true|11=true|12=true|1=true|2=NULL|3=true|4=true|5=true|6=true|7=true|8=true|9=true",
+  "delta_equivalent_measured": false,
+  "n_rows_d1": 19,
+  "n_rows_d2": 21,
+  "pair_type": "null_structure",
+  "query_id": "HO0037",
+  "rows_equal": false,
+  "rows_only_d1": [
+   "(v004)",
+   "(v004)",
+   "(v005)",
+   "(v005)",
+   "(v006)",
+   "(v006)"
+  ],
+  "rows_only_d2": [
+   "(v001)",
+   "(v001)",
+   "(v001)",
+   "(v001)",
+   "(v001)",
+   "(v001)"
+  ],
+  "table": "hx_cust"
+ },
+ {
+  "bound_pred": "birth < DATE '1990-01-01'",
+  "bound_sql": "SELECT grade, ssn FROM h5.hx_cust WHERE birth < DATE '1990-01-01'",
+  "delta_d1": "10=true|11=false|12=false|1=true|2=true|3=true|4=true|5=true|6=NULL|7=true|8=true|9=true",
+  "delta_d2": "10=true|11=true|12=true|1=true|2=true|3=true|4=true|5=true|6=NULL|7=true|8=true|9=true",
+  "delta_equivalent_measured": false,
+  "n_rows_d1": 9,
+  "n_rows_d2": 11,
+  "pair_type": "eq_split",
+  "query_id": "HO0088",
+  "rows_equal": false,
+  "rows_only_d1": [
+   "(A,v003)",
+   "(A,v006)",
+   "(A,v009)",
+   "(B,v004)",
+   "(C,v002)",
+   "(C,v007)"
+  ],
+  "rows_only_d2": [
+   "(A,v000)",
+   "(B,v000)",
+   "(C,v001)"
+  ],
+  "table": "hx_cust"
+ },
+ {
+  "bound_pred": "birth < DATE '1990-01-01'",
+  "bound_sql": "SELECT grade, ssn FROM h5.hx_cust WHERE birth < DATE '1990-01-01'",
+  "delta_d1": "10=true|11=false|12=false|1=true|2=NULL|3=true|4=true|5=true|6=true|7=true|8=true|9=true",
+  "delta_d2": "10=true|11=true|12=true|1=true|2=NULL|3=true|4=true|5=true|6=true|7=true|8=true|9=true",
+  "delta_equivalent_measured": false,
+  "n_rows_d1": 9,
+  "n_rows_d2": 11,
+  "pair_type": "null_structure",
+  "query_id": "HO0088",
+  "rows_equal": false,
+  "rows_only_d1": [
+   "(A,v005)",
+   "(A,v007)",
+   "(B,v006)",
+   "(C,v004)",
+   "(C,v008)",
+   "(C,v009)"
+  ],
+  "rows_only_d2": [
+   "(A,v001)",
+   "(B,v001)",
+   "(C,v000)",
+   "(C,v001)",
+   "(C,v002)",
+   "(C,v002)"
+  ],
+  "table": "hx_cust"
+ },
+ {
+  "bound_pred": "birth < DATE '1990-01-01'",
+  "bound_sql": "SELECT grade, ssn FROM h5.hx_cust WHERE birth < DATE '1990-01-01'",
+  "delta_d1": "10=true|11=true|12=true|1=false|2=false|3=false|4=true|5=true|6=true|7=true|8=true|9=true",
+  "delta_d2": "10=true|11=false|12=false|1=true|2=true|3=true|4=true|5=true|6=true|7=true|8=true|9=true",
+  "delta_equivalent_measured": false,
+  "n_rows_d1": 9,
+  "n_rows_d2": 10,
+  "pair_type": "ord_permutation",
+  "query_id": "HO0088",
+  "rows_equal": false,
+  "rows_only_d1": [
+   "(A,v007)",
+   "(A,v009)",
+   "(B,v001)",
+   "(B,v003)",
+   "(B,v005)",
+   "(B,v008)"
+  ],
+  "rows_only_d2": [
+   "(A,v001)",
+   "(A,v002)",
+   "(A,v003)",
+   "(A,v005)",
+   "(B,v004)",
+   "(B,v007)"
+  ],
+  "table": "hx_cust"
+ },
+ {
+  "bound_pred": "birth < DATE '1990-01-01'",
+  "bound_sql": "SELECT sum(id) FROM h5.hx_cust WHERE birth < DATE '1990-01-01'",
+  "delta_d1": "10=true|11=false|12=false|1=true|2=true|3=true|4=true|5=true|6=NULL|7=true|8=true|9=true",
+  "delta_d2": "10=true|11=true|12=true|1=true|2=true|3=true|4=true|5=true|6=NULL|7=true|8=true|9=true",
+  "delta_equivalent_measured": false,
+  "n_rows_d1": 1,
+  "n_rows_d2": 1,
+  "pair_type": "eq_split",
+  "query_id": "HO0183",
+  "rows_equal": false,
+  "rows_only_d1": [
+   "(49)"
+  ],
+  "rows_only_d2": [
+   "(72)"
+  ],
+  "table": "hx_cust"
+ },
+ {
+  "bound_pred": "birth < DATE '1990-01-01'",
+  "bound_sql": "SELECT sum(id) FROM h5.hx_cust WHERE birth < DATE '1990-01-01'",
+  "delta_d1": "10=true|11=false|12=false|1=true|2=NULL|3=true|4=true|5=true|6=true|7=true|8=true|9=true",
+  "delta_d2": "10=true|11=true|12=true|1=true|2=NULL|3=true|4=true|5=true|6=true|7=true|8=true|9=true",
+  "delta_equivalent_measured": false,
+  "n_rows_d1": 1,
+  "n_rows_d2": 1,
+  "pair_type": "null_structure",
+  "query_id": "HO0183",
+  "rows_equal": false,
+  "rows_only_d1": [
+   "(53)"
+  ],
+  "rows_only_d2": [
+   "(76)"
+  ],
+  "table": "hx_cust"
+ },
+ {
+  "bound_pred": "birth < DATE '1990-01-01'",
+  "bound_sql": "SELECT sum(id) FROM h5.hx_cust WHERE birth < DATE '1990-01-01'",
+  "delta_d1": "10=true|11=true|12=true|1=false|2=false|3=false|4=true|5=true|6=true|7=true|8=true|9=true",
+  "delta_d2": "10=true|11=false|12=false|1=true|2=true|3=true|4=true|5=true|6=true|7=true|8=true|9=true",
+  "delta_equivalent_measured": false,
+  "n_rows_d1": 1,
+  "n_rows_d2": 1,
+  "pair_type": "ord_permutation",
+  "query_id": "HO0183",
+  "rows_equal": false,
+  "rows_only_d1": [
+   "(72)"
+  ],
+  "rows_only_d2": [
+   "(55)"
+  ],
+  "table": "hx_cust"
+ },
+ {
+  "bound_pred": "birth > DATE '1990-01-01'",
+  "bound_sql": "SELECT dept, amt FROM h5.hx_cust WHERE birth > DATE '1990-01-01'",
+  "delta_d1": "10=false|11=true|12=true|1=false|2=false|3=false|4=false|5=false|6=NULL|7=false|8=false|9=false",
+  "delta_d2": "10=false|11=false|12=false|1=false|2=false|3=false|4=false|5=false|6=NULL|7=false|8=false|9=false",
+  "delta_equivalent_measured": false,
+  "n_rows_d1": 2,
+  "n_rows_d2": 0,
+  "pair_type": "eq_split",
+  "query_id": "HO0362",
+  "rows_equal": false,
+  "rows_only_d1": [
+   "(A,5)",
+   "(B,4)"
+  ],
+  "rows_only_d2": [],
+  "table": "hx_cust"
+ },
+ {
+  "bound_pred": "birth > DATE '1990-01-01'",
+  "bound_sql": "SELECT dept, amt FROM h5.hx_cust WHERE birth > DATE '1990-01-01'",
+  "delta_d1": "10=false|11=true|12=true|1=false|2=NULL|3=false|4=false|5=false|6=false|7=false|8=false|9=false",
+  "delta_d2": "10=false|11=false|12=false|1=false|2=NULL|3=false|4=false|5=false|6=false|7=false|8=false|9=false",
+  "delta_equivalent_measured": false,
+  "n_rows_d1": 2,
+  "n_rows_d2": 0,
+  "pair_type": "null_structure",
+  "query_id": "HO0362",
+  "rows_equal": false,
+  "rows_only_d1": [
+   "(A,4)",
+   "(C,5)"
+  ],
+  "rows_only_d2": [],
+  "table": "hx_cust"
+ },
+ {
+  "bound_pred": "birth > DATE '1990-01-01'",
+  "bound_sql": "SELECT dept, amt FROM h5.hx_cust WHERE birth > DATE '1990-01-01'",
+  "delta_d1": "10=false|11=false|12=false|1=true|2=true|3=true|4=false|5=false|6=false|7=false|8=false|9=false",
+  "delta_d2": "10=false|11=true|12=true|1=false|2=false|3=false|4=false|5=false|6=false|7=false|8=false|9=false",
+  "delta_equivalent_measured": false,
+  "n_rows_d1": 3,
+  "n_rows_d2": 2,
+  "pair_type": "ord_permutation",
+  "query_id": "HO0362",
+  "rows_equal": false,
+  "rows_only_d1": [
+   "(B,2)",
+   "(C,6)"
+  ],
+  "rows_only_d2": [
+   "(C,7)"
+  ],
+  "table": "hx_cust"
+ }
+]

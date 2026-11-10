@@ -1,0 +1,996 @@
+{
+ "version": 1,
+ "purpose": "H5 표현식 우회 미탐율(FN rate) 측정용 정본 코퍼스. 와이어 훅(RowDescription resorigtbl)과 C 확장 AST 순회(plan targetlist Var walk)의 탐지 능력 차이를 정량화한다.",
+ "schema": "corpus/schema.sql",
+ "field_semantics": {
+  "id": "안정적 식별자. 삭제하지 말고 deprecated 표시할 것.",
+  "cat": "D=직접참조 E=표현식래핑 V=뷰/CTE/집합연산 F=함수/동적SQL S=부채널 C=COPY B=바이너리/인코딩 X=제어문 P=파라미터결속",
+  "sql": "$1 은 CI(연계정보) 바인딩 파라미터 자리.",
+  "exposes": "이 쿼리의 결과로 클라이언트에 값이 도달하는 PII 종류. 빈 배열이면 출력에 PII 값 없음.",
+  "predicate_pii": "출력에는 없지만 술어(WHERE/ORDER BY)에서 PII 컬럼을 참조하는가. 부채널 정책의 대상.",
+  "gt": "wire=RowDescription의 resorigtbl이 base table을 가리켜 와이어 훅으로 탐지 가능 | view=resorigtbl이 뷰를 가리켜 뷰 의존성 해석이 추가로 필요 | ast=계획 트리 Var 순회가 필요 | none=계획만으로는 탐지 불가 | exempt=차단 대상이 아님",
+  "gt_confidence": "asserted=소스 근거로 확신 | measure=실측으로 확정해야 함. measure 항목의 결과가 곧 논문에 실을 데이터다.",
+  "note": "왜 이 항목이 코퍼스에 있는지.",
+  "derived_only": "값이 아니라 파생 메타데이터만 노출되는 항목. 탐지기가 flag해도 오탐으로 단정할 수 없어 별도 집계한다. 정책 결정 후 확정."
+ },
+ "scoring": {
+  "fn": "exposes가 비어있지 않은데 탐지기가 해당 컬럼을 놓친 경우",
+  "fp": "exposes가 비어있는데 탐지기가 마스킹을 수행한 경우 (= 정상 업무 쿼리 파손)",
+  "report": "wire 탐지기와 ast 탐지기 각각에 대해 FN/FP를 따로 집계하고, 카테고리별로 분해하여 보고한다. 총계 하나로 뭉뚱그리지 말 것 — 카테고리별 분해가 결과의 핵심이다.",
+  "anti_cheat": "탐지기는 pii_label 테이블만 근거로 삼아야 한다. 컬럼명 문자열 패턴(예: 'ssn' 포함)을 쓰면 이 코퍼스는 무의미해진다. 채점 스크립트는 컬럼명을 난독화한 변형 스키마로 재실행하여 이를 검사한다."
+ },
+ "entries": [
+  {
+   "id": "D01",
+   "cat": "D",
+   "sql": "SELECT ssn FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "기준선. 이걸 놓치면 탐지기가 동작하지 않는 것.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "D02",
+   "cat": "D",
+   "sql": "SELECT * FROM cust WHERE ci = $1",
+   "exposes": [
+    "ci",
+    "name",
+    "ssn",
+    "phone",
+    "addr",
+    "birth",
+    "acct"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "SELECT * 는 별표 확장 후 각 컬럼이 직접 참조라 wire로 잡힌다.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "D03",
+   "cat": "D",
+   "sql": "SELECT c.name, c.ssn FROM cust c WHERE c.ci = $1",
+   "exposes": [
+    "name",
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "테이블 별칭.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "D04",
+   "cat": "D",
+   "sql": "SELECT ssn AS x, name AS y FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn",
+    "name"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "컬럼 별칭은 resorigtbl을 지우지 않는다. name 필드만 바뀐다.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "D05",
+   "cat": "D",
+   "sql": "SELECT acct_no, grade, name, balance, ssn FROM cust WHERE ci = $1",
+   "exposes": [
+    "acct",
+    "name",
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "PII/non-PII 혼합 + 순서 교란. 인덱스 기반 마스킹의 오프셋 버그를 잡는다.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "D06",
+   "cat": "D",
+   "sql": "SELECT c.ssn, t.amount FROM cust c JOIN tx t ON t.cust_id = c.id WHERE c.ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "조인. 다른 릴레이션의 컬럼이 섞여도 provenance가 유지되는지.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "D07",
+   "cat": "D",
+   "sql": "SELECT grade, balance, created_at FROM cust WHERE ci = $1",
+   "exposes": [],
+   "predicate_pii": true,
+   "gt": "exempt",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "음성 대조군. 마스킹하면 FP.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "D08",
+   "cat": "D",
+   "sql": "SELECT memo FROM cust WHERE ci = $1",
+   "exposes": [],
+   "predicate_pii": true,
+   "gt": "exempt",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "FP 유도. memo 일부 행에 주민번호 형태 문자열이 들어있다. 바이트 패턴 매칭 방식이면 여기서 터진다.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "D09",
+   "cat": "D",
+   "sql": "SELECT DISTINCT grade FROM cust WHERE ci = $1",
+   "exposes": [],
+   "predicate_pii": true,
+   "gt": "exempt",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "집계/중복제거 경로의 음성 대조군.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "E01",
+   "cat": "E",
+   "sql": "SELECT substr(ssn, 1, 6) FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "1차 심사에서 제기된 대표 우회. 생년월일 6자리가 그대로 나간다.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E02",
+   "cat": "E",
+   "sql": "SELECT ssn || '' FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "가장 값싼 우회. 연산자 하나.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E03",
+   "cat": "E",
+   "sql": "SELECT concat(name, '/', ssn) FROM cust WHERE ci = $1",
+   "exposes": [
+    "name",
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "두 PII를 한 출력 컬럼으로 병합. 컬럼 단위 마스킹의 전제를 깬다.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E04",
+   "cat": "E",
+   "sql": "SELECT upper(name) FROM cust WHERE ci = $1",
+   "exposes": [
+    "name"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "무해해 보이는 함수도 동일하게 provenance를 지운다.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E05",
+   "cat": "E",
+   "sql": "SELECT ssn::text FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "동일 타입 캐스트는 플래너가 제거할 수 있다. 제거되면 wire로도 잡힐 수 있음 — 실측 대상.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "E06",
+   "cat": "E",
+   "sql": "SELECT CASE WHEN true THEN ssn ELSE NULL END FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "상수 폴딩이 CASE를 접으면 Var만 남을 수 있다.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E07",
+   "cat": "E",
+   "sql": "SELECT coalesce(ssn, '') FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": null,
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E08",
+   "cat": "E",
+   "sql": "SELECT format('%s', ssn) FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": null,
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E09",
+   "cat": "E",
+   "sql": "SELECT encode(ssn::bytea, 'base64') FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "인코딩 우회. 출력 바이트는 원본과 전혀 닮지 않는다.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E10",
+   "cat": "E",
+   "sql": "SELECT md5(ssn) FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "주민번호는 탐색 공간이 작아 해시가 사실상 가역이다. '해시했으니 안전'이 아님을 보이는 항목.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E11",
+   "cat": "E",
+   "sql": "SELECT left(ssn, 6) || right(ssn, 7) FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "분할 후 재조립. 원본 전체가 복원된다.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E12",
+   "cat": "E",
+   "sql": "SELECT translate(ssn, '0123456789', 'abcdefghij') FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "단순 치환 암호. 가역.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E13",
+   "cat": "E",
+   "sql": "SELECT (SELECT ssn FROM cust WHERE ci = $1) AS s",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "스칼라 서브쿼리. SubPlan 안의 targetlist까지 순회해야 한다.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E14",
+   "cat": "E",
+   "sql": "SELECT reverse(ssn) FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": null,
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E15",
+   "cat": "E",
+   "sql": "SELECT regexp_replace(ssn, '-', '') FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": null,
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E16",
+   "cat": "E",
+   "sql": "SELECT to_char(birth, 'YYYYMMDD') FROM cust WHERE ci = $1",
+   "exposes": [
+    "birth"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "date를 텍스트로 빼내는 경로. 센티널 마스킹의 타입 판정과도 얽힌다.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E17",
+   "cat": "E",
+   "sql": "SELECT length(ssn) FROM cust WHERE ci = $1",
+   "exposes": [],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "값 자체는 안 나가고 파생 메타데이터만 나간다(길이/널 여부). AST 탐지기는 ssn 참조를 정확히 본다 — 와이어는 length()를 뚫지 못해 '통과'했을 뿐 맞는 이유로 통과한 게 아니다. 노출로 셀지는 집행 지점에 달렸다: 소스 컬럼을 마스킹하면 length(마스크값)이 되어 정상 동작이고, 출력 바이트만 마스킹하면 정수를 마스킹할 수 없다. 미결 정책 질문이므로 derived_only로 분리 집계하고 라벨은 바꾸지 않는다.",
+   "wire_verdict": "PASS",
+   "derived_only": true
+  },
+  {
+   "id": "E18",
+   "cat": "E",
+   "sql": "SELECT ssn IS NOT NULL FROM cust WHERE ci = $1",
+   "exposes": [],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "값 자체는 안 나가고 파생 메타데이터만 나간다(길이/널 여부). AST 탐지기는 ssn 참조를 정확히 본다 — 와이어는 length()를 뚫지 못해 '통과'했을 뿐 맞는 이유로 통과한 게 아니다. 노출로 셀지는 집행 지점에 달렸다: 소스 컬럼을 마스킹하면 length(마스크값)이 되어 정상 동작이고, 출력 바이트만 마스킹하면 정수를 마스킹할 수 없다. 미결 정책 질문이므로 derived_only로 분리 집계하고 라벨은 바꾸지 않는다.",
+   "wire_verdict": "PASS",
+   "derived_only": true
+  },
+  {
+   "id": "E19",
+   "cat": "E",
+   "sql": "SELECT convert_to(name, 'EUC-KR') FROM cust WHERE ci = $1",
+   "exposes": [
+    "name"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "인코딩 변환 + bytea 출력. 동일 바이트 길이 마스킹 가정이 여기서 깨지는지 확인.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E20",
+   "cat": "E",
+   "sql": "SELECT string_agg(ssn, ',') FROM cust WHERE grade = 'A'",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": false,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "집계로 다수 행의 PII를 한 셀에 모은다. 행 수 상한 정책을 우회하는 경로이기도 하다 — 중요.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "E21",
+   "cat": "E",
+   "sql": "SELECT array_agg(ssn) FROM cust WHERE grade = 'A'",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": false,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "E20과 동일. 배열 출력.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "V01",
+   "cat": "V",
+   "sql": "SELECT ssn FROM v_cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "view",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "markTargetListOrigin이 파스 단계에서 동작하므로 resorigtbl은 뷰 OID일 가능성이 높다. 뷰 의존성을 라벨에 반영하지 않으면 미탐. 실측 필요.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "V02",
+   "cat": "V",
+   "sql": "WITH x AS (SELECT ssn FROM cust WHERE ci = $1) SELECT * FROM x",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "CTE. RTE_CTE는 resorigtbl을 안 준다. 계획의 CTE/SubPlan까지 내려가야 한다.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "V03",
+   "cat": "V",
+   "sql": "WITH x AS MATERIALIZED (SELECT ssn FROM cust WHERE ci = $1) SELECT * FROM x",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "MATERIALIZED는 인라인을 막아 계획 형태가 달라진다. V02와 결과가 갈리는지 확인.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "V04",
+   "cat": "V",
+   "sql": "SELECT ssn FROM cust WHERE ci = $1 UNION ALL SELECT ssn FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "집합연산 출력에는 resorigtbl이 없다. 양쪽 arm을 모두 순회해야 한다.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "V05",
+   "cat": "V",
+   "sql": "SELECT * FROM (SELECT ssn AS a FROM cust WHERE ci = $1) t",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "markTargetListOrigin은 RTE_SUBQUERY로 재귀한다고 알려져 있다. 사실이면 wire로도 잡힌다 — 확인 대상.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "V06",
+   "cat": "V",
+   "sql": "SELECT c.ssn FROM cust c, LATERAL (SELECT 1) l WHERE c.ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "LATERAL이 provenance에 영향을 주는지.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "V07",
+   "cat": "V",
+   "sql": "SELECT ssn FROM v_cust UNION SELECT ssn FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "뷰 + 집합연산 결합. 두 약점이 겹칠 때.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "V08",
+   "cat": "V",
+   "sql": "WITH RECURSIVE r(n, s) AS (SELECT 1, ssn FROM cust WHERE ci = $1 UNION ALL SELECT n+1, s FROM r WHERE n < 3) SELECT s FROM r",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "재귀 CTE. 순회기가 무한 재귀에 빠지지 않는지도 함께 본다.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "F01",
+   "cat": "F",
+   "sql": "SELECT f_ssn(id) FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "none",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "SQL 함수는 플래너가 인라인할 수 있다. 인라인되면 base Var가 계획에 드러나 ast로 잡힌다. 인라인 여부가 탐지 여부를 가르는 것 자체가 보고할 결과.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "F02",
+   "cat": "F",
+   "sql": "SELECT * FROM f_srf()",
+   "exposes": [
+    "ci",
+    "name",
+    "ssn",
+    "phone",
+    "addr",
+    "birth",
+    "acct"
+   ],
+   "predicate_pii": false,
+   "gt": "none",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "SETOF 반환 함수. FunctionScan은 내부를 노출하지 않는다.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "F03",
+   "cat": "F",
+   "sql": "SELECT f_dyn('ssn')",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": false,
+   "gt": "none",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "plpgsql EXECUTE. 계획 시점에 알 수 있는 것이 없다. 예상 미탐이며 한계 절에 명시할 항목.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "F04",
+   "cat": "F",
+   "sql": "SELECT row_to_json(c) FROM cust c WHERE c.ci = $1",
+   "exposes": [
+    "ci",
+    "name",
+    "ssn",
+    "phone",
+    "addr",
+    "birth",
+    "acct"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "전체 행 Var(varattno=0). 순회기가 whole-row var를 전 컬럼으로 전개하지 않으면 통째로 샌다. 매우 중요한 항목.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "F05",
+   "cat": "F",
+   "sql": "SELECT c FROM cust c WHERE c.ci = $1",
+   "exposes": [
+    "ci",
+    "name",
+    "ssn",
+    "phone",
+    "addr",
+    "birth",
+    "acct"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "F04와 동일 논점. 복합 타입 출력이라 마스킹 지점도 애매하다.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "F06",
+   "cat": "F",
+   "sql": "SELECT to_jsonb(c) FROM cust c WHERE c.ci = $1",
+   "exposes": [
+    "ci",
+    "name",
+    "ssn",
+    "phone",
+    "addr",
+    "birth",
+    "acct"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": null,
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "F07",
+   "cat": "F",
+   "sql": "SELECT (c).ssn FROM cust c WHERE c.ci = $1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "whole-row에서 필드 선택. FieldSelect 노드 처리.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "F08",
+   "cat": "F",
+   "sql": "SELECT json_agg(c) FROM cust c WHERE c.grade = 'A'",
+   "exposes": [
+    "ci",
+    "name",
+    "ssn",
+    "phone",
+    "addr",
+    "birth",
+    "acct"
+   ],
+   "predicate_pii": false,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "whole-row + 집계. 다수 행 PII가 한 셀에 모인다. E20/E21과 함께 행 수 상한 정책의 우회 경로.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "S01",
+   "cat": "S",
+   "sql": "SELECT count(*) FROM cust WHERE ssn LIKE '8001%'",
+   "exposes": [],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "이진탐색 오라클. 출력에 PII가 없으므로 마스킹은 구조적으로 무의미하다. 술어 참조 탐지 + 쿼리 형태 allowlist만이 막는다.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "S02",
+   "cat": "S",
+   "sql": "SELECT 1 FROM cust WHERE ssn = $1",
+   "exposes": [],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "존재 오라클.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "S03",
+   "cat": "S",
+   "sql": "SELECT id FROM cust ORDER BY ssn LIMIT 1",
+   "exposes": [],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "정렬 순서를 통한 누출. ORDER BY 절의 Var까지 순회하는지.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "S04",
+   "cat": "S",
+   "sql": "SELECT id FROM cust WHERE ssn < $1",
+   "exposes": [],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "비교 오라클. 로그 시간에 전체 값 복원 가능.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "S05",
+   "cat": "S",
+   "sql": "SELECT grade, count(*) FROM cust WHERE acct_no LIKE $1 GROUP BY grade",
+   "exposes": [],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "계좌번호 대상 동일 기법.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "C01",
+   "cat": "C",
+   "sql": "COPY cust TO STDOUT",
+   "exposes": [
+    "ci",
+    "name",
+    "ssn",
+    "phone",
+    "addr",
+    "birth",
+    "acct"
+   ],
+   "predicate_pii": false,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "C 확장 피벗으로 분류 가능해진 경로. CopyToState의 attnum 목록으로 잡히는지 실측.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "C02",
+   "cat": "C",
+   "sql": "COPY (SELECT ssn FROM cust WHERE ci = $1) TO STDOUT",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": true,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "COPY (query) 형태는 일반 계획을 거친다.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "C03",
+   "cat": "C",
+   "sql": "COPY cust (id, ssn, name) TO STDOUT WITH (FORMAT csv)",
+   "exposes": [
+    "ssn",
+    "name"
+   ],
+   "predicate_pii": false,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "컬럼 지정 + CSV. 구분자 기반 출력에서 마스킹 위치를 잡을 수 있는지.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "C04",
+   "cat": "C",
+   "sql": "COPY (SELECT substr(ssn,1,6) FROM cust) TO STDOUT",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": false,
+   "gt": "ast",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "COPY + 표현식 우회 결합.",
+   "wire_verdict": "FN"
+  },
+  {
+   "id": "B01",
+   "cat": "B",
+   "sql": "SELECT birth FROM cust WHERE ci = $1",
+   "exposes": [
+    "birth"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "pgJDBC 기본값에서 date는 바이너리 전송. 센티널 마스킹(1900-01-01) 경로.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "B02",
+   "cat": "B",
+   "sql": "SELECT id, balance FROM cust WHERE ci = $1",
+   "exposes": [],
+   "predicate_pii": true,
+   "gt": "exempt",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "바이너리 non-PII 음성 대조군. 건드리면 FP.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "B03",
+   "cat": "B",
+   "sql": "SELECT name FROM cust WHERE ci = $1",
+   "exposes": [
+    "name"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "client_encoding=UTF8 / EUC_KR 두 번 실행할 것. 한글 음절이 3바이트/2바이트로 달라져 동일 바이트 길이 마스크 글리프 선택이 바뀐다.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "B04",
+   "cat": "B",
+   "sql": "SELECT addr FROM cust WHERE ci = $1",
+   "exposes": [
+    "addr"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "가변 길이 한글 + ASCII 혼합. 패딩 로직을 태운다.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "B05",
+   "cat": "B",
+   "sql": "SELECT ssn, birth, acct_no, balance FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn",
+    "birth",
+    "acct"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "한 행에 텍스트/바이너리/PII/non-PII 전부. 센티널 선택 로직 통합 테스트.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "X01",
+   "cat": "X",
+   "sql": "BEGIN",
+   "exposes": [],
+   "predicate_pii": false,
+   "gt": "exempt",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "pgJDBC가 항상 simple 'Q'로 보낸다. 토큰이 없으므로 fail-closed 규칙에 그대로 걸리면 모든 트랜잭션이 리셋된다.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "X02",
+   "cat": "X",
+   "sql": "COMMIT",
+   "exposes": [],
+   "predicate_pii": false,
+   "gt": "exempt",
+   "gt_confidence": "measured_2026-08-08",
+   "note": null,
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "X03",
+   "cat": "X",
+   "sql": "ROLLBACK",
+   "exposes": [],
+   "predicate_pii": false,
+   "gt": "exempt",
+   "gt_confidence": "measured_2026-08-08",
+   "note": null,
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "X04",
+   "cat": "X",
+   "sql": "SAVEPOINT sp1",
+   "exposes": [],
+   "predicate_pii": false,
+   "gt": "exempt",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "이름이 가변이라 리터럴 완전 일치 화이트리스트가 성립하지 않는다. 예외 규칙 설계가 필요한 항목.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "X05",
+   "cat": "X",
+   "sql": "SET application_name = 'x'",
+   "exposes": [],
+   "predicate_pii": false,
+   "gt": "exempt",
+   "gt_confidence": "measured_2026-08-08",
+   "note": null,
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "X06",
+   "cat": "X",
+   "sql": "SELECT 1",
+   "exposes": [],
+   "predicate_pii": false,
+   "gt": "exempt",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "HikariCP connectionTestQuery. 예외 목록에 없으면 풀 전체가 죽는다.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "X07",
+   "cat": "X",
+   "sql": "SELECT ssn FROM cust; SELECT 1",
+   "exposes": [
+    "ssn"
+   ],
+   "predicate_pii": false,
+   "gt": "no_parse",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "예외 목록 우회 시도: 화이트리스트된 문장을 다중 문장에 끼워넣기. 예외를 '리터럴 완전 일치'로 해야 하는 이유.",
+   "wire_verdict": "PREPARE_FAIL"
+  },
+  {
+   "id": "P01",
+   "cat": "P",
+   "sql": "SELECT name, ssn FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn",
+    "name"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "파라미터 결속 양성: $1 == 토큰의 CI. 통과해야 한다.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "P02",
+   "cat": "P",
+   "sql": "SELECT name, ssn FROM cust WHERE ci = $1",
+   "exposes": [
+    "ssn",
+    "name"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "파라미터 결속 음성(IDOR): SQL은 P01과 동일하고 $1만 타인의 CI. 지문은 일치하므로 파라미터 대조만이 막는다. 차단되어야 한다.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "P03",
+   "cat": "P",
+   "sql": "SELECT name, ssn FROM cust WHERE id = $1",
+   "exposes": [
+    "ssn",
+    "name"
+   ],
+   "predicate_pii": false,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "미해결 정책 질문: 결속할 CI 파라미터가 없는 쿼리는 어떻게 하는가. 전면 거부하면 정상 업무가 깨지고, 통과시키면 IDOR가 열린다. 답을 정하고 여기 기록할 것.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "P04",
+   "cat": "P",
+   "sql": "SELECT name, ssn FROM cust WHERE ci = $1 OR 1=1",
+   "exposes": [
+    "ssn",
+    "name"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "파라미터는 맞지만 술어를 무력화. 지문이 달라지므로 allowlist에서 걸려야 한다 — 지문 대조가 실제로 이걸 잡는지 확인.",
+   "wire_verdict": "PASS"
+  },
+  {
+   "id": "P05",
+   "cat": "P",
+   "sql": "SELECT name, ssn FROM cust WHERE ci = ANY($1)",
+   "exposes": [
+    "ssn",
+    "name"
+   ],
+   "predicate_pii": true,
+   "gt": "wire",
+   "gt_confidence": "measured_2026-08-08",
+   "note": "배열 파라미터. 단일 값 바이트 비교 로직이 배열에서 어떻게 되는지. 다수 CI를 한 번에 넣는 우회.",
+   "wire_verdict": "PASS"
+  }
+ ],
+ "measurement": {
+  "date": "2026-08-08",
+  "host": "db.example.internal",
+  "postgresql": "16.10 (source build, --without-icu --without-readline)",
+  "method": "PQprepare + PQdescribePrepared, PQftable()/PQftablecol() 판독 (쿼리 미실행)",
+  "artifact": "results/wire-baseline.txt",
+  "headline": {
+   "pii_exposing_entries": 55,
+   "wire_fully_detected": 21,
+   "wire_rate": "38%",
+   "ast_recovery_target": 34
+  }
+ }
+}

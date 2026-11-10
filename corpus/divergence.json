@@ -1,0 +1,275 @@
+{
+  "note": "마스킹이 결과를 조용히 바꾸는 경로의 분류 코퍼스. ipguard 는 '마스킹이 결과를 바꾸면 거부한다'고 주장하지만 실제로 거부하는 것은 한 조건(마스킹된 서브쿼리 출력을 술어가 참조)뿐이고, 아래 대부분을 통과시킨다. 얼마나 틀리는지 재는 것이 목적이다. 정답 라벨을 붙이지 않는다 -- 무엇이 허용 가능한지가 바로 재려는 대상이다.",
+  "entries": [
+    {
+      "id": "DV01",
+      "class": "dedup",
+      "sql": "SELECT DISTINCT ssn FROM cust",
+      "note": "중복 제거가 마스크값 위에서 일어난다"
+    },
+    {
+      "id": "DV02",
+      "class": "dedup",
+      "sql": "SELECT ssn FROM cust UNION SELECT ssn FROM cust",
+      "note": "UNION 의 암묵적 중복 제거"
+    },
+    {
+      "id": "DV03",
+      "class": "groupby",
+      "sql": "SELECT ssn, count(*) FROM cust GROUP BY ssn",
+      "note": "그룹 키가 마스킹되면 전부 한 그룹"
+    },
+    {
+      "id": "DV04",
+      "class": "groupby",
+      "sql": "SELECT ssn, count(*) FROM cust GROUP BY ssn HAVING count(*) > 1",
+      "note": "HAVING 이 붕괴된 그룹 위에서 평가된다"
+    },
+    {
+      "id": "DV05",
+      "class": "agg-count",
+      "sql": "SELECT count(DISTINCT ssn) FROM cust",
+      "note": "★ 행 수는 1로 그대로다. 값만 조용히 틀린다 -- 행 수 기반 탐지로는 안 잡힌다"
+    },
+    {
+      "id": "DV06",
+      "class": "agg-count",
+      "sql": "SELECT count(DISTINCT name) FROM cust",
+      "note": "동일, 다른 컬럼"
+    },
+    {
+      "id": "DV07",
+      "class": "agg-count",
+      "sql": "SELECT grade, count(DISTINCT ssn) FROM cust GROUP BY grade",
+      "note": "그룹별 고유 인원수 -- 실무에서 흔한 집계"
+    },
+    {
+      "id": "DV08",
+      "class": "agg-date",
+      "sql": "SELECT count(DISTINCT birth) FROM cust",
+      "note": "날짜 PII 의 고유값 수. 전부 1900-01-01 이 되어 1 이 된다"
+    },
+    {
+      "id": "DV09",
+      "class": "agg-date",
+      "sql": "SELECT round(avg(extract(year FROM birth))) FROM cust",
+      "note": "★ 출력은 연도 숫자다. 마스크 센티널이 아니라 1900 이라는 그럴듯한 값이 나온다 -- 조용한 오답의 최악 형태"
+    },
+    {
+      "id": "DV10",
+      "class": "agg-date",
+      "sql": "SELECT max(birth), min(birth) FROM cust",
+      "note": "출력 타입이 PII 자신(date)이라 마스크값이 나온다 = 의도한 동작"
+    },
+    {
+      "id": "DV11",
+      "class": "agg-text",
+      "sql": "SELECT max(ssn) FROM cust",
+      "note": "출력 타입이 PII 자신이다 -- 마스크값이 나오는 게 의도한 동작일 수 있다"
+    },
+    {
+      "id": "DV12",
+      "class": "agg-text",
+      "sql": "SELECT string_agg(ssn, ',') FROM cust WHERE id < 4",
+      "note": "동일. 마스크값들의 연결"
+    },
+    {
+      "id": "DV13",
+      "class": "window",
+      "sql": "SELECT ssn, row_number() OVER (ORDER BY ssn) FROM cust WHERE id < 6",
+      "note": "정렬 키가 마스킹되면 순위가 무의미해진다"
+    },
+    {
+      "id": "DV14",
+      "class": "window",
+      "sql": "SELECT ssn, rank() OVER (PARTITION BY ssn ORDER BY id) FROM cust WHERE id < 6",
+      "note": "파티션 키 붕괴"
+    },
+    {
+      "id": "DV15",
+      "class": "window",
+      "sql": "SELECT ssn, dense_rank() OVER (ORDER BY ssn) FROM cust WHERE id < 6",
+      "note": "dense_rank 는 고유값 수를 센다 -- 전부 1 이 된다"
+    },
+    {
+      "id": "DV16",
+      "class": "orderby",
+      "sql": "SELECT ssn FROM cust ORDER BY ssn LIMIT 5",
+      "note": "정렬이 마스크값 위에서 일어나 어떤 5행이 나올지가 바뀐다"
+    },
+    {
+      "id": "DV17",
+      "class": "orderby",
+      "sql": "SELECT id FROM cust ORDER BY ssn LIMIT 5",
+      "note": "★ 출력은 PII 가 아니다. 그런데 정렬 키가 PII 라 어떤 id 가 나올지가 바뀐다"
+    },
+    {
+      "id": "DV18",
+      "class": "setop",
+      "sql": "SELECT ssn FROM cust WHERE id < 100 EXCEPT SELECT ssn FROM cust WHERE id < 50",
+      "note": "차집합이 마스크값 위에서 계산된다 -- 전부 사라진다"
+    },
+    {
+      "id": "DV19",
+      "class": "setop",
+      "sql": "SELECT ssn FROM cust WHERE id < 100 INTERSECT SELECT ssn FROM cust WHERE id < 50",
+      "note": "교집합도 마찬가지"
+    },
+    {
+      "id": "DV20",
+      "class": "join",
+      "sql": "SELECT count(*) FROM cust a JOIN cust b ON a.ssn = b.ssn",
+      "note": "마스킹된 컬럼으로 조인하면 교차곱이 될 것 같지만, ssn 은 조인 술어에만 있고 출력이 아니므로 마스킹되지 않는다. [측정으로 예측이 뒤집힌 항목] 술어 불가침 설계가 맞게 동작한다는 증거"
+    },
+    {
+      "id": "DV21",
+      "class": "control",
+      "sql": "SELECT grade, count(*) FROM cust GROUP BY grade",
+      "note": "음성 대조군 -- PII 미참조. 아무것도 바뀌면 안 된다"
+    },
+    {
+      "id": "DV22",
+      "class": "control",
+      "sql": "SELECT count(DISTINCT grade) FROM cust",
+      "note": "음성 대조군 -- 같은 형태지만 인자가 PII 가 아니다"
+    },
+    {
+      "id": "DV23",
+      "class": "control",
+      "sql": "SELECT count(*) FROM cust WHERE extract(year FROM birth) < 1950",
+      "note": "음성 대조군 -- PII 가 술어에만 있다. 필터가 그대로 살아야 한다"
+    },
+    {
+      "id": "DV24",
+      "class": "agg-date",
+      "sql": "SELECT grade, count(DISTINCT birth) FROM cust GROUP BY grade",
+      "note": "등급별 생년 분포 -- 실무 집계. 전부 1 이 된다"
+    },
+    {
+      "id": "DV25",
+      "class": "agg-num",
+      "sql": "SELECT sum(salary) FROM payroll",
+      "note": "★ 숫자 PII 의 합계. 마스크가 0 이므로 합계도 0 이 된다"
+    },
+    {
+      "id": "DV26",
+      "class": "agg-num",
+      "sql": "SELECT round(avg(salary)) FROM payroll",
+      "note": "평균도 0"
+    },
+    {
+      "id": "DV27",
+      "class": "agg-num",
+      "sql": "SELECT max(salary), min(salary) FROM payroll",
+      "note": "★★ 값 보존 집계다 -- R2 는 통과시킨다. 그런데 결과 0 은 텍스트의 '****' 와 달리 **정상 값과 구별되지 않는다.** R2 의 면제 근거가 숫자형에서 성립하는지가 여기서 판가름난다"
+    },
+    {
+      "id": "DV28",
+      "class": "agg-num",
+      "sql": "SELECT count(DISTINCT salary) FROM payroll",
+      "note": "고유 급여 수 43 -> 1"
+    },
+    {
+      "id": "DV29",
+      "class": "agg-num",
+      "sql": "SELECT dept, sum(bonus) FROM payroll GROUP BY dept",
+      "note": "부서별 상여 총액 -- 그룹 키는 비-PII, 집계 대상만 PII"
+    },
+    {
+      "id": "DV30",
+      "class": "agg-num",
+      "sql": "SELECT sum(salary) FILTER (WHERE years_service > 10) FROM payroll",
+      "note": "FILTER 절 집계. 술어는 비-PII 라 필터는 살고 합계만 0 이 된다"
+    },
+    {
+      "id": "DV31",
+      "class": "agg-num",
+      "sql": "SELECT salary, count(*) FROM payroll GROUP BY salary",
+      "note": "숫자 PII 로 그룹핑 -- R1 이 잡아야 한다"
+    },
+    {
+      "id": "DV32",
+      "class": "control",
+      "sql": "SELECT dept, sum(years_service) FROM payroll GROUP BY dept",
+      "note": "음성 대조군 -- 숫자지만 PII 가 아니다. 아무것도 바뀌면 안 된다"
+    },
+    {
+      "id": "DV33",
+      "class": "window",
+      "sql": "SELECT id, ssn, dense_rank() OVER (ORDER BY ssn) AS r FROM cust WHERE id < 6",
+      "note": "★ r 은 평범한 정수인데 전부 1 이 된다. id 도 같이 나가므로 클라이언트는 마스킹된 컬럼만 보고 넘길 수 없다"
+    },
+    {
+      "id": "DV34",
+      "class": "window",
+      "sql": "SELECT id, ssn, rank() OVER (PARTITION BY ssn ORDER BY id) AS r FROM cust WHERE id < 6",
+      "note": "파티션 키 붕괴 -- 전부 한 파티션이 되어 순위가 1..5 로 이어진다"
+    },
+    {
+      "id": "DV35",
+      "class": "window",
+      "sql": "SELECT id, salary, lag(id) OVER (ORDER BY salary) AS prev FROM payroll WHERE id < 8",
+      "note": "[재작성] 원래는 cust.ssn 으로 쟀는데 **이 데이터의 ssn 순서가 id 순서와 완전히 같아서**(800102-1000001→800106-1000005) 마스킹으로 순서가 무너져도 lag 값이 같게 나왔다. 규칙(R3a)은 잡는데 측정으로는 확인이 안 됐던 이유다. payroll.salary 는 id 와 순서가 다르다(1,7,2,3,4,5,6) -- 이제 실측된다"
+    },
+    {
+      "id": "DV36",
+      "class": "window",
+      "sql": "SELECT id, row_number() OVER (ORDER BY id) AS r FROM cust WHERE id < 6",
+      "note": "음성 대조군 -- 윈도우 키가 PII 가 아니다"
+    },
+    {
+      "id": "DV37",
+      "class": "orderby",
+      "sql": "SELECT id, ssn FROM cust ORDER BY ssn LIMIT 5",
+      "note": "★ 정렬+LIMIT. 어느 5행이 나올지가 마스크값에 좌우된다. id 는 평범한 값인데 다른 행 집합이 나온다"
+    },
+    {
+      "id": "DV38",
+      "class": "orderby",
+      "sql": "SELECT id, ssn FROM cust ORDER BY id LIMIT 5",
+      "note": "음성 대조군 -- 정렬 키가 PII 가 아니다"
+    },
+    {
+      "id": "DV39",
+      "class": "orderby",
+      "sql": "SELECT id, ssn FROM cust ORDER BY ssn",
+      "note": "LIMIT 없음. 행 집합은 그대로고 순서만 바뀐다 -- 규칙에 넣을지 판단 대상"
+    },
+    {
+      "id": "DV40",
+      "class": "window",
+      "sql": "SELECT dept, salary, rank() OVER (ORDER BY salary DESC) AS r FROM payroll WHERE id < 6",
+      "note": "숫자 PII 로 순위 매기기 -- 급여 순위표. r 도 salary 도 평범한 숫자로 나간다"
+    },
+    {
+      "id": "DV41",
+      "class": "sentinel",
+      "sql": "SELECT count(salary) FROM payroll",
+      "note": "★ 0 마스크에서는 정확히 1000 이다(0 은 NULL 이 아니므로). NULL 마스크로 바꾸면 0 이 된다 -- NULL 이 새로 만드는 조용한 오답"
+    },
+    {
+      "id": "DV42",
+      "class": "sentinel",
+      "sql": "SELECT id, salary + bonus AS total FROM payroll WHERE id < 6",
+      "note": "산술. 0 마스크는 0, NULL 마스크는 NULL 이 전파된다"
+    },
+    {
+      "id": "DV43",
+      "class": "sentinel",
+      "sql": "SELECT id, coalesce(salary, 0) AS s FROM payroll WHERE id < 6",
+      "note": "★★ 방어적 SQL. NULL 마스크를 coalesce 가 도로 0 으로 되돌린다 -- NULL 의 '알아볼 수 있음'이 애플리케이션 코드 한 줄로 무력화된다"
+    },
+    {
+      "id": "DV44",
+      "class": "sentinel",
+      "sql": "SELECT id, salary FROM payroll WHERE id < 6",
+      "note": "평범한 조회. 두 센티널이 클라이언트에 어떻게 보이는지의 기준선"
+    },
+    {
+      "id": "DV45",
+      "class": "sentinel",
+      "sql": "SELECT max(salary) FROM payroll",
+      "note": "값 보존 집계. NULL 마스크면 결과가 NULL 이라 알아볼 수 있다 -- 그러면 R2 의 면제를 되살릴 수 있는가"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+==============================================================================
+§11-5 held-out 평가 — attempt 2 (runner-only 수정)
+==============================================================================
+[0] 입력 ordered list 1600행  digest 115127f14c827b11
+[1] 스키마·registry 복원
+[2] applicability digest 7fc01d112e775d2e  masked-equivalent 8/8
+    적재 table digest d934aa47c1e37c48  (16개 상태)
+[3] P0 실행 중 …
+    trial 1600
+[4] registry 재복원
+[5] raw obligation 1265건 -> P1 인증서 653건
+[6] 인증서 digest 20b781d03339bc02
+[7] δ matrix digest e9d9cb13f1b954bd  δ-equivalent 1558/1600  미측정 0
+[8] P1 실행 중 …
+[9~10] raw trial 3200건  digest 8dd5d6066c7305d5
+       수동 감사 표본 17건 (id 해시로 선택)

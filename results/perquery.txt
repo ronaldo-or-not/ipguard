@@ -1,0 +1,377 @@
+================================================================================================================
+SQL 단위 적용 내역
+  예측 = ipguard_verdict(sql)   실측 = enforce off/on 결과 비교
+  일치 = 예측==실측(자기일관성)  보안 = 실측==코퍼스 정답
+  뷰   = 같은 SQL 을 마스킹 뷰로 돌렸을 때 (masked/broken/bypassed)
+======================================================================================================================
+ID     예측          마스 실측         일치   정답         보안       뷰         SQL
+----------------------------------------------------------------------------------------------------------------------
+D01    mask         1 changed    ✓    -          OK       broken    SELECT ssn FROM cust WHERE ci 
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+D02    mask         7 changed    ✓    -          OK       broken    SELECT * FROM cust WHERE ci = 
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+D03    mask         2 changed    ✓    -          OK       broken    SELECT c.name, c.ssn FROM cust
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+D04    mask         2 changed    ✓    -          OK       broken    SELECT ssn AS x, name AS y FRO
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+D05    mask         3 changed    ✓    -          OK       broken    SELECT acct_no, grade, name, b
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+D06    mask         1 changed    ✓    -          OK       broken    SELECT c.ssn, t.amount FROM cu
+         └─ 행 수 50000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+D07    pass         0 unchanged  ✓    -          OK       -         SELECT grade, balance, created
+D08    pass         0 unchanged  ✓    -          OK       -         SELECT memo FROM cust WHERE ci
+D09    pass         0 unchanged  ✓    -          OK       -         SELECT DISTINCT grade FROM cus
+E01    mask         1 changed    ✓    -          OK       broken    SELECT substr(ssn, 1, 6) FROM 
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E02    mask         1 changed    ✓    -          OK       broken    SELECT ssn || '' FROM cust WHE
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E03    mask         2 changed    ✓    -          OK       broken    SELECT concat(name, '/', ssn) 
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E04    mask         1 changed    ✓    -          OK       broken    SELECT upper(name) FROM cust W
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E05    mask         1 changed    ✓    -          OK       broken    SELECT ssn::text FROM cust WHE
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E06    mask         1 changed    ✓    -          OK       broken    SELECT CASE WHEN true THEN ssn
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E07    mask         1 changed    ✓    -          OK       broken    SELECT coalesce(ssn, '') FROM 
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E08    mask         1 changed    ✓    -          OK       broken    SELECT format('%s', ssn) FROM 
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E09    mask         1 changed    ✓    -          OK       broken    SELECT encode(ssn::bytea, 'bas
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E10    mask         1 changed    ✓    -          OK       broken    SELECT md5(ssn) FROM cust WHER
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E11    mask         2 changed    ✓    -          OK       broken    SELECT left(ssn, 6) || right(s
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E12    mask         1 changed    ✓    -          OK       broken    SELECT translate(ssn, '0123456
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E13    mask         1 ERR(off)   ·    -          -        -         SELECT (SELECT ssn FROM cust W
+         └─ enforce=off 에서도 실패: more than one row returned by a subquery used as an expression
+E14    mask         1 changed    ✓    -          OK       broken    SELECT reverse(ssn) FROM cust 
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E15    mask         1 changed    ✓    -          OK       broken    SELECT regexp_replace(ssn, '-'
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E16    mask         1 changed    ✓    -          OK       broken    SELECT to_char(birth, 'YYYYMMD
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E17    mask         1 unchanged  ✓    -          OK       broken    SELECT length(ssn) FROM cust W
+         └─ 파생값만 출력(length/IS NULL) -- 마스크가 글자수를 보존하고 NULL 이 아니므로 설계상 동일
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E18    mask         1 unchanged  ✓    -          OK       broken    SELECT ssn IS NOT NULL FROM cu
+         └─ 파생값만 출력(length/IS NULL) -- 마스크가 글자수를 보존하고 NULL 이 아니므로 설계상 동일
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E19    mask         1 changed    ✓    -          OK       broken    SELECT convert_to(name, 'EUC-K
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+E20    mask         1 changed    ✓    -          OK       masked    SELECT string_agg(ssn, ',') FR
+E21    mask         1 changed    ✓    -          OK       masked    SELECT array_agg(ssn) FROM cus
+V01    mask         1 changed    ✓    -          OK       broken    SELECT ssn FROM v_cust WHERE c
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+V02    mask         1 changed    ✓    -          OK       broken    WITH x AS (SELECT ssn FROM cus
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+V03    mask         1 changed    ✓    -          OK       broken    WITH x AS MATERIALIZED (SELECT
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+V04    mask         2 changed    ✓    -          OK       broken    SELECT ssn FROM cust WHERE ci 
+         └─ 행 수 20000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+V05    mask         1 changed    ✓    -          OK       broken    SELECT * FROM (SELECT ssn AS a
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+V06    mask         1 changed    ✓    -          OK       broken    SELECT c.ssn FROM cust c, LATE
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+V07    mask         2 distorted  !    -          DISTORT  broken    SELECT ssn FROM v_cust UNION S
+         └─ 마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         └─ 값은 가려졌으나 행 수가 달라졌다(조용한 오답)
+         └─ 행 수 10000→1 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+V08    mask         1 changed    ✓    -          OK       broken    WITH RECURSIVE r(n, s) AS (SEL
+         └─ 행 수 30000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+F01    pass         0 changed    !    -          OK       -         SELECT f_ssn(id) FROM cust WHE
+         └─ 정적 판정은 pass, 실측은 변경 -- 함수 본문 등 별도 계획 경로에서 집행됨(집행이 정적 판정보다 넓다)
+F02    pass         0 unchanged  ✓    -          LEAK     -         SELECT * FROM f_srf()
+         └─ 마스킹되어야 하는데 값이 그대로 나갔다
+F03    pass         0 changed    !    -          OK       -         SELECT f_dyn('ssn')
+         └─ 정적 판정은 pass, 실측은 변경 -- 함수 본문 등 별도 계획 경로에서 집행됨(집행이 정적 판정보다 넓다)
+F04    mask         7 changed    ✓    -          OK       broken    SELECT row_to_json(c) FROM cus
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+F05    mask         7 changed    ✓    -          OK       broken    SELECT c FROM cust c WHERE c.c
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+F06    mask         7 changed    ✓    -          OK       broken    SELECT to_jsonb(c) FROM cust c
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+F07    mask         1 changed    ✓    -          OK       broken    SELECT (c).ssn FROM cust c WHE
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+F08    mask         7 changed    ✓    -          OK       masked    SELECT json_agg(c) FROM cust c
+S01    pass         0 unchanged  ✓    -          OK       -         SELECT count(*) FROM cust WHER
+S02    pass         0 unchanged  ✓    -          OK       -         SELECT 1 FROM cust WHERE ssn =
+S03    pass         0 unchanged  ✓    -          OK       -         SELECT id FROM cust ORDER BY s
+S04    pass         0 unchanged  ✓    -          OK       -         SELECT id FROM cust WHERE ssn 
+S05    pass         0 unchanged  ✓    -          OK       -         SELECT grade, count(*) FROM cu
+C01    utility      0 -          ·    -          -        -         COPY cust TO STDOUT
+         └─ 실행 불가(부작용/결과셋 없음)
+C02    utility      0 -          ·    -          -        -         COPY (SELECT ssn FROM cust WHE
+         └─ 실행 불가(부작용/결과셋 없음)
+C03    utility      0 -          ·    -          -        -         COPY cust (id, ssn, name) TO S
+         └─ 실행 불가(부작용/결과셋 없음)
+C04    utility      0 -          ·    -          -        -         COPY (SELECT substr(ssn,1,6) F
+         └─ 실행 불가(부작용/결과셋 없음)
+B01    mask         1 changed    ✓    -          OK       broken    SELECT birth FROM cust WHERE c
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+B02    pass         0 unchanged  ✓    -          OK       -         SELECT id, balance FROM cust W
+B03    mask         1 changed    ✓    -          OK       broken    SELECT name FROM cust WHERE ci
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+B04    mask         1 changed    ✓    -          OK       broken    SELECT addr FROM cust WHERE ci
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+B05    mask         3 changed    ✓    -          OK       broken    SELECT ssn, birth, acct_no, ba
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+X01    pass         0 -          ·    -          -        -         BEGIN
+         └─ 실행 불가(부작용/결과셋 없음)
+X02    pass         0 -          ·    -          -        -         COMMIT
+         └─ 실행 불가(부작용/결과셋 없음)
+X03    pass         0 -          ·    -          -        -         ROLLBACK
+         └─ 실행 불가(부작용/결과셋 없음)
+X04    pass         0 -          ·    -          -        -         SAVEPOINT sp1
+         └─ 실행 불가(부작용/결과셋 없음)
+X05    pass         0 -          ·    -          -        -         SET application_name = 'x'
+         └─ 실행 불가(부작용/결과셋 없음)
+X06    pass         0 unchanged  ✓    -          OK       -         SELECT 1
+X07    mask         1 ERR(off)   ·    -          -        -         SELECT ssn FROM cust; SELECT 1
+         └─ enforce=off 에서도 실패: syntax error at or near ";"
+P01    mask         2 changed    ✓    -          OK       broken    SELECT name, ssn FROM cust WHE
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+P02    mask         2 changed    ✓    -          OK       broken    SELECT name, ssn FROM cust WHE
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+P03    mask         2 ERR(off)   ·    -          -        -         SELECT name, ssn FROM cust WHE
+         └─ enforce=off 에서도 실패: operator does not exist: bigint = text
+P04    mask         2 changed    ✓    -          OK       masked    SELECT name, ssn FROM cust WHE
+P05    mask         2 ERR(off)   ·    -          -        -         SELECT name, ssn FROM cust WHE
+         └─ enforce=off 에서도 실패: op ANY/ALL (array) requires array on right side
+R01    mask         1 -          ·    must       -        -         UPDATE cust_w SET grade = 'A' 
+         └─ 실행 불가(부작용/결과셋 없음)
+R02    mask         1 -          ·    must       -        -         UPDATE cust_w SET grade = 'A' 
+         └─ 실행 불가(부작용/결과셋 없음)
+R03    mask         2 -          ·    must       -        -         DELETE FROM cust_w WHERE ci = 
+         └─ 실행 불가(부작용/결과셋 없음)
+R04    mask         1 -          ·    must       -        -         INSERT INTO cust_w SELECT * FR
+         └─ 실행 불가(부작용/결과셋 없음)
+R05    pass         0 -          ·    policy     -        -         UPDATE cust_w SET grade = (SEL
+         └─ 실행 불가(부작용/결과셋 없음)
+R06    mask         1 -          ·    must       -        -         WITH d AS (DELETE FROM cust_w 
+         └─ 실행 불가(부작용/결과셋 없음)
+N01    mask         1 changed    ✓    must       OK       masked    SELECT a FROM (SELECT a FROM (
+N02    mask         1 changed    ✓    must       OK       masked    SELECT a FROM (SELECT a FROM (
+N03    refuse       0 refused    ✓    must       REFUSED  -         SELECT a FROM (SELECT a FROM (
+         └─ ipguard: 쿼리 구조가 분석 한계를 초과했습니다
+         └─ 마스킹 대상인데 거부됨 (안전하지만 과거부)
+N04    refuse       0 refused    ✓    must       REFUSED  -         SELECT a FROM (SELECT a FROM (
+         └─ ipguard: 쿼리 구조가 분석 한계를 초과했습니다
+         └─ 마스킹 대상인데 거부됨 (안전하지만 과거부)
+N05    mask         1 changed    ✓    must       OK       broken    WITH RECURSIVE r(n,s) AS (SELE
+         └─ 행 수 400000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+H01    mask         1 changed    ✓    must       OK       broken    SELECT acct_no FROM acct WHERE
+         └─ 행 수 9999→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+H02    mask         1 changed    ✓    must       OK       broken    SELECT acct_no FROM acct_p1 WH
+         └─ 행 수 4999→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+H03    mask         1 changed    ✓    must       OK       masked    SELECT ssn FROM base_cust
+H04    mask         1 changed    ✓    must       OK       masked    SELECT ssn FROM child_cust
+H05    mask         1 changed    ✓    must       OK       broken    SELECT ssn FROM ONLY base_cust
+         └─ 행 수 1→2 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+W01    mask         1 changed    ✓    must       OK       masked    SELECT x FROM decoy
+W02    mask         1 changed    ✓    must       OK       masked    SELECT substr(x,1,6) FROM deco
+W03    mask         1 changed    ✓    must       OK       broken    SELECT ssn FROM v_barrier WHER
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+T01    mask         1 changed    ✓    must       OK       masked    SELECT s FROM dom_t
+T02    mask         1 changed    ✓    must       OK       masked    SELECT s::text FROM dom_t
+T03    pass         0 unchanged  ✓    must       OK       -         SELECT v FROM (VALUES ('x'),('
+T04    pass         0 unchanged  ✓    policy     GAP      -         SELECT * FROM f_inline()
+         └─ 알려진 범위 밖 -- 라벨 없는 사본/계획 시점 전개라 평문 그대로 나간다
+T05    pass         0 unchanged  ✓    must       OK       -         SELECT g FROM generate_series(
+L01    mask         1 changed    ✓    must       OK       broken    SELECT (SELECT c2.ssn FROM cus
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+L02    pass         0 unchanged  ✓    must       OK       -         SELECT c1.id FROM cust c1 WHER
+L03    mask         1 changed    ✓    must       OK       broken    SELECT c.id, l.v FROM cust c, 
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+G01    mask         1 distorted  !    must       DISTORT  broken    SELECT grade, ssn, count(*) FR
+         └─ 마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         └─ 값은 가려졌으나 행 수가 달라졌다(조용한 오답)
+         └─ 행 수 10003→4 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+G02    mask         1 changed    ✓    must       OK       masked    SELECT max(ssn) FROM cust WHER
+G03    pass         0 unchanged  ✓    must       OK       -         SELECT grade FROM cust GROUP B
+G04    mask         1 changed    ✓    must       OK       broken    SELECT ssn, row_number() OVER 
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+M01    pass         0 unchanged  ✓    policy     GAP      -         SELECT ssn FROM mv_cust
+         └─ 알려진 범위 밖 -- 라벨 없는 사본/계획 시점 전개라 평문 그대로 나간다
+M02    pass         0 unchanged  ✓    policy     GAP      -         SELECT substr(ssn,1,6) FROM mv
+         └─ 알려진 범위 밖 -- 라벨 없는 사본/계획 시점 전개라 평문 그대로 나간다
+M03    pass         0 unchanged  ✓    policy     GAP      -         SELECT ssn FROM ctas_cust
+         └─ 알려진 범위 밖 -- 라벨 없는 사본/계획 시점 전개라 평문 그대로 나간다
+M04    pass         0 unchanged  ✓    policy     GAP      -         SELECT ssn6 FROM gen_t
+         └─ 알려진 범위 밖 -- 라벨 없는 사본/계획 시점 전개라 평문 그대로 나간다
+M05    pass         0 unchanged  ✓    policy     GAP      -         SELECT ssn_rev FROM gen_t
+         └─ 알려진 범위 밖 -- 라벨 없는 사본/계획 시점 전개라 평문 그대로 나간다
+M06    pass         0 -          ·    write      -        -         INSERT INTO sink_t SELECT id, 
+         └─ 실행 불가(부작용/결과셋 없음)
+M07    pass         0 -          ·    write      -        -         CREATE TABLE t_new AS SELECT s
+         └─ 실행 불가(부작용/결과셋 없음)
+M08    pass         0 unchanged  ✓    must       OK       -         SELECT id, grade FROM mv_cust
+Z01    mask        10 changed    ✓    must       OK       masked    SELECT c1,c2,c3,c4,c5,c6,c7,c8
+Z02    mask         1 changed    ✓    must       OK       broken    SELECT coalesce(coalesce(coale
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+Z03    mask         1 changed    ✓    must       OK       broken    SELECT ssn, 0 AS n0, 1 AS n1, 
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+Z04    mask       100 changed    ✓    must       OK       masked    SELECT ssn FROM cust WHERE id 
+J01    mask         1 changed    ✓    must       OK       broken    SELECT jsonb_build_object('s',
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+J02    mask         1 changed    ✓    must       OK       broken    SELECT unnest(ARRAY[ssn]) FROM
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+J03    mask         1 changed    ✓    must       OK       broken    SELECT (ARRAY[ssn])[1] FROM cu
+         └─ 행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+J04    error        0 ERR(off)   ·    must       -        -         SELECT xmlelement(name s, ssn)
+         └─ enforce=off 에서도 실패: unsupported XML feature
+J05    mask         1 changed    ✓    must       OK       masked    SELECT json_agg(t) FROM (SELEC
+A01    refuse       1 refused    ✓    refuse     OK       broken    SELECT t.id, t.ssn FROM (SELEC
+         └─ ipguard: masking would change query results
+         └─ 행 수 1→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+A02    refuse       1 refused    ✓    refuse     OK       broken    SELECT t.s FROM (SELECT id, ss
+         └─ ipguard: masking would change query results
+         └─ 행 수 9900→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+A03    refuse       1 refused    ✓    refuse     OK       broken    WITH t AS (SELECT id, ssn FROM
+         └─ ipguard: masking would change query results
+         └─ 행 수 1→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+A04    refuse       1 refused    ✓    refuse     OK       masked    SELECT count(*), max(a.ssn) FR
+         └─ ipguard: masking would change query results
+A05    refuse       1 refused    ✓    refuse_overOK       masked    SELECT t.ssn FROM (SELECT ssn 
+         └─ ipguard: masking would change query results
+         └─ 알려진 과거부
+A06    refuse       1 refused    ✓    refuse_overOK       masked    SELECT t.ssn FROM (SELECT id, 
+         └─ ipguard: masking would change query results
+         └─ 알려진 과거부
+A07    mask         1 distorted  !    intrinsic  DISTORT  broken    SELECT t.ssn FROM (SELECT ssn 
+         └─ 마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         └─ 행 수가 달라졌다 -- '불가피'로 넘기기엔 큰 변화
+         └─ 행 수 10000→1 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+A08    mask         1 changed    ✓    masked_ok  OK       broken    SELECT c.ssn FROM cust c WHERE
+         └─ 행 수 1→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+S06    pass         0 unchanged  ✓    scoped     OK       -         SELECT count(*) FROM (SELECT i
+I01    mask         1 distorted  !    intrinsic  DISTORT  broken    SELECT DISTINCT ssn FROM cust
+         └─ 마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         └─ 행 수가 달라졌다 -- '불가피'로 넘기기엔 큰 변화
+         └─ 행 수 10000→1 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+I02    mask         1 distorted  !    intrinsic  DISTORT  broken    SELECT ssn, count(*) FROM cust
+         └─ 마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         └─ 행 수가 달라졌다 -- '불가피'로 넘기기엔 큰 변화
+         └─ 행 수 10000→1 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+I03    mask         1 changed    ✓    intrinsic  OK       masked    SELECT count(DISTINCT ssn) FRO
+         └─ 마스킹 정의상 불가피한 결과 변화
+I04    pass         0 unchanged  ✓    intrinsic  OK       -         SELECT id FROM cust ORDER BY s
+         └─ 마스킹 정의상 불가피한 결과 변화
+I05    mask         2 distorted  !    intrinsic  DISTORT  broken    SELECT ssn FROM cust UNION SEL
+         └─ 마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         └─ 행 수가 달라졌다 -- '불가피'로 넘기기엔 큰 변화
+         └─ 행 수 10000→1 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+I06    mask         2 changed    ✓    intrinsic  OK       masked    SELECT max(ssn), min(ssn) FROM
+         └─ 마스킹 정의상 불가피한 결과 변화
+N06    pass         0 unchanged  ✓    none       OK       -         SELECT count(*) FROM cust c JO
+N07    pass         0 unchanged  ✓    none       OK       -         SELECT count(*) FROM cust WHER
+Q1     pass         0 unchanged  ✓    no-refuse  OK       -         select l_returnflag, l_linesta
+Q2     mask         4 changed    ✓    no-refuse  OK       -         select s_acctbal, s_name, n_na
+Q3     pass         0 unchanged  ✓    no-refuse  OK       -         select l_orderkey, sum(l_exten
+Q4     pass         0 unchanged  ✓    no-refuse  OK       -         select o_orderpriority, count(
+Q5     pass         0 unchanged  ✓    no-refuse  OK       -         select n_name, sum(l_extendedp
+Q6     pass         0 unchanged  ✓    no-refuse  OK       -         select sum(l_extendedprice*l_d
+Q7     pass         0 unchanged  ✓    no-refuse  OK       -         select supp_nation, cust_natio
+Q8     pass         0 unchanged  ✓    no-refuse  OK       -         select o_year, sum(case when n
+Q9     pass         0 unchanged  ✓    no-refuse  OK       -         select nation, o_year, sum(amo
+Q10    mask         4 changed    ✓    no-refuse  OK       -         select c_custkey, c_name, sum(
+Q11    pass         0 unchanged  ✓    no-refuse  OK       -         select ps_partkey, sum(ps_supp
+Q12    pass         0 unchanged  ✓    no-refuse  OK       -         select l_shipmode, sum(case wh
+Q13    pass         0 unchanged  ✓    no-refuse  OK       -         select c_count, count(*) as cu
+Q14    pass         0 unchanged  ✓    no-refuse  OK       -         select 100.00 * sum(case when 
+Q15    mask         3 changed    ✓    no-refuse  OK       -         select s_suppkey, s_name, s_ad
+Q16    pass         0 unchanged  ✓    no-refuse  OK       -         select p_brand, p_type, p_size
+Q17    pass         0 unchanged  ✓    no-refuse  OK       -         select sum(l_extendedprice) / 
+Q18    mask         1 changed    ✓    no-refuse  OK       -         select c_name, c_custkey, o_or
+Q19    pass         0 unchanged  ✓    no-refuse  OK       -         select sum(l_extendedprice * (
+Q20    mask         2 changed    ✓    no-refuse  OK       -         select s_name, s_address from 
+Q21    mask         1 changed    ✓    no-refuse  OK       -         select s_name, count(*) as num
+Q22    mask         2 changed    ✓    no-refuse  OK       -         select cntrycode, count(*) as 
+
+================================================================================================================
+항목 159    예측 분포: error=1  mask=95  pass=51  refuse=8  utility=4
+----------------------------------------------------------------------------------------------------------------
+① 자기일관성 — 예측이 실제 집행과 같은가
+   일치 ✓ 129   불일치 ✗ 0 (0 이어야 함)   확인필요 ! 8   보류 · 22
+② 보안 — 실측이 코퍼스 정답과 같은가
+   OK 122   ★LEAK 1 (0 이어야 함)   GAP 6 (알려진 범위 밖)   OVER 0   REFUSED 2   ★DISTORT 6
+③ 마스킹 뷰 대조군 — 같은 SQL, 같은 마스크 함수, 메커니즘만 다름
+   PII 출력 쿼리 85건 중: broken=64  masked=21
+   ipguard 는 **필터** 파손 0 — 술어를 건드리지 않기 때문. 다만
+   카디널리티 왜곡은 6건 있다(②의 DISTORT) -- DISTINCT/GROUP BY/
+   UNION 이 마스크값 위에서 일어나 행이 무너지는 경우다. 뷰의 파손과
+   원인은 다르지만 **조용히 틀린다는 점은 같다.** 숨기지 않는다.
+   ※ bypassed 0 은 이 코퍼스에 스키마 수식(h5.cust) 쿼리가 없어서다.
+      뷰는 search_path 로만 유도되므로 h5.cust 를 직접 쓰면 뚫린다 --
+      score_view_baseline.py 의 별도 우회 시험에서 3/3 우회됨.
+
+뷰 broken — 마스킹 뷰가 쿼리를 깨뜨린 것 (행 수가 달라짐):
+  D01    예측=mask      실측=changed    행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+         SELECT ssn FROM cust WHERE ci = $1
+  D02    예측=mask      실측=changed    행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+         SELECT * FROM cust WHERE ci = $1
+  D03    예측=mask      실측=changed    행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+         SELECT c.name, c.ssn FROM cust c WHERE c.ci = $1
+  D04    예측=mask      실측=changed    행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+         SELECT ssn AS x, name AS y FROM cust WHERE ci = $1
+  D05    예측=mask      실측=changed    행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+         SELECT acct_no, grade, name, balance, ssn FROM cust WHERE ci = $1
+  D06    예측=mask      실측=changed    행 수 50000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+         SELECT c.ssn, t.amount FROM cust c JOIN tx t ON t.cust_id = c.id WHERE c.ci = $1
+  E01    예측=mask      실측=changed    행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+         SELECT substr(ssn, 1, 6) FROM cust WHERE ci = $1
+  E02    예측=mask      실측=changed    행 수 10000→0 — 술어가 마스크값과 비교되어 결과가 조용히 틀어졌다
+         SELECT ssn || '' FROM cust WHERE ci = $1
+  ... 외 56건 (전체는 표 본문 참조)
+
+★ DISTORT — 마스킹이 행 수를 바꾼 것 (우리도 조용히 틀리는 경우):
+  V07    예측=mask      실측=distorted  마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         SELECT ssn FROM v_cust UNION SELECT ssn FROM cust WHERE ci = $1
+  G01    예측=mask      실측=distorted  마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         SELECT grade, ssn, count(*) FROM cust GROUP BY GROUPING SETS ((grade),(ssn))
+  A07    예측=mask      실측=distorted  마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         SELECT t.ssn FROM (SELECT ssn FROM cust) t GROUP BY t.ssn
+  I01    예측=mask      실측=distorted  마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         SELECT DISTINCT ssn FROM cust
+  I02    예측=mask      실측=distorted  마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         SELECT ssn, count(*) FROM cust GROUP BY ssn
+  I05    예측=mask      실측=distorted  마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         SELECT ssn FROM cust UNION SELECT ssn FROM cust
+
+★ LEAK — 마스킹되어야 하는데 안 된 것:
+  F02    예측=pass      실측=unchanged  마스킹되어야 하는데 값이 그대로 나갔다
+         SELECT * FROM f_srf()
+
+GAP — 메커니즘 범위 밖(라벨 없는 사본 등):
+  T04    예측=pass      실측=unchanged  알려진 범위 밖 -- 라벨 없는 사본/계획 시점 전개라 평문 그대로 나간다
+         SELECT * FROM f_inline()
+  M01    예측=pass      실측=unchanged  알려진 범위 밖 -- 라벨 없는 사본/계획 시점 전개라 평문 그대로 나간다
+         SELECT ssn FROM mv_cust
+  M02    예측=pass      실측=unchanged  알려진 범위 밖 -- 라벨 없는 사본/계획 시점 전개라 평문 그대로 나간다
+         SELECT substr(ssn,1,6) FROM mv_cust
+  M03    예측=pass      실측=unchanged  알려진 범위 밖 -- 라벨 없는 사본/계획 시점 전개라 평문 그대로 나간다
+         SELECT ssn FROM ctas_cust
+  M04    예측=pass      실측=unchanged  알려진 범위 밖 -- 라벨 없는 사본/계획 시점 전개라 평문 그대로 나간다
+         SELECT ssn6 FROM gen_t
+  M05    예측=pass      실측=unchanged  알려진 범위 밖 -- 라벨 없는 사본/계획 시점 전개라 평문 그대로 나간다
+         SELECT ssn_rev FROM gen_t
+
+확인필요 ! — 집행 경로가 정적 판정보다 넓은 것:
+  V07    예측=mask      실측=distorted  마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         SELECT ssn FROM v_cust UNION SELECT ssn FROM cust WHERE ci = $1
+  F01    예측=pass      실측=changed    정적 판정은 pass, 실측은 변경 -- 함수 본문 등 별도 계획 경로에서 집행됨(집행이 정적 판정보다 넓다)
+         SELECT f_ssn(id) FROM cust WHERE ci = $1
+  F03    예측=pass      실측=changed    정적 판정은 pass, 실측은 변경 -- 함수 본문 등 별도 계획 경로에서 집행됨(집행이 정적 판정보다 넓다)
+         SELECT f_dyn('ssn')
+  G01    예측=mask      실측=distorted  마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         SELECT grade, ssn, count(*) FROM cust GROUP BY GROUPING SETS ((grade),(ssn))
+  A07    예측=mask      실측=distorted  마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         SELECT t.ssn FROM (SELECT ssn FROM cust) t GROUP BY t.ssn
+  I01    예측=mask      실측=distorted  마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         SELECT DISTINCT ssn FROM cust
+  I02    예측=mask      실측=distorted  마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         SELECT ssn, count(*) FROM cust GROUP BY ssn
+  I05    예측=mask      실측=distorted  마스킹은 됐으나 행 수가 달라졌다 -- 카디널리티 왜곡
+         SELECT ssn FROM cust UNION SELECT ssn FROM cust

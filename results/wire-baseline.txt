@@ -1,0 +1,135 @@
+==============================================================================
+와이어 레벨 탐지기 (RowDescription resorigtbl/resorigcol) 실측 채점
+==============================================================================
+ID    cat  기대                           탐지                     판정
+------------------------------------------------------------------------------
+  D01  D    ssn                          ssn                    PASS
+  D02  D    acct,addr,birth,ci,name,pho  acct,addr,birth,ci,na  PASS
+  D03  D    name,ssn                     name,ssn               PASS
+  D04  D    name,ssn                     name,ssn               PASS
+  D05  D    acct,name,ssn                acct,name,ssn          PASS
+  D06  D    ssn                          ssn                    PASS
+  D07  D    -                            -                      PASS
+  D08  D    -                            -                      PASS
+  D09  D    -                            -                      PASS
+! E01  E    ssn                          -                      FN  provenance 소실 컬럼 1개
+! E02  E    ssn                          -                      FN  provenance 소실 컬럼 1개
+! E03  E    name,ssn                     -                      FN  provenance 소실 컬럼 1개
+! E04  E    name                         -                      FN  provenance 소실 컬럼 1개
+  E05  E    ssn                          ssn                    PASS
+! E06  E    ssn                          -                      FN  provenance 소실 컬럼 1개
+! E07  E    ssn                          -                      FN  provenance 소실 컬럼 1개
+! E08  E    ssn                          -                      FN  provenance 소실 컬럼 1개
+! E09  E    ssn                          -                      FN  provenance 소실 컬럼 1개
+! E10  E    ssn                          -                      FN  provenance 소실 컬럼 1개
+! E11  E    ssn                          -                      FN  provenance 소실 컬럼 1개
+! E12  E    ssn                          -                      FN  provenance 소실 컬럼 1개
+! E13  E    ssn                          -                      FN  provenance 소실 컬럼 1개
+! E14  E    ssn                          -                      FN  provenance 소실 컬럼 1개
+! E15  E    ssn                          -                      FN  provenance 소실 컬럼 1개
+! E16  E    birth                        -                      FN  provenance 소실 컬럼 1개
+  E17  E    -                            -                      PASS  provenance 소실 컬럼 1개
+  E18  E    -                            -                      PASS  provenance 소실 컬럼 1개
+! E19  E    name                         -                      FN  provenance 소실 컬럼 1개
+! E20  E    ssn                          -                      FN  provenance 소실 컬럼 1개
+! E21  E    ssn                          -                      FN  provenance 소실 컬럼 1개
+! V01  V    ssn                          -                      FN
+  V02  V    ssn                          ssn                    PASS
+  V03  V    ssn                          ssn                    PASS
+! V04  V    ssn                          -                      FN  provenance 소실 컬럼 1개
+  V05  V    ssn                          ssn                    PASS
+  V06  V    ssn                          ssn                    PASS
+! V07  V    ssn                          -                      FN  provenance 소실 컬럼 1개
+! V08  V    ssn                          -                      FN  provenance 소실 컬럼 1개
+! F01  F    ssn                          -                      FN  provenance 소실 컬럼 1개
+! F02  F    acct,addr,birth,ci,name,pho  -                      FN  provenance 소실 컬럼 12개
+! F03  F    ssn                          -                      FN  provenance 소실 컬럼 1개
+! F04  F    acct,addr,birth,ci,name,pho  -                      FN  provenance 소실 컬럼 1개
+! F05  F    acct,addr,birth,ci,name,pho  -                      FN  provenance 소실 컬럼 1개
+! F06  F    acct,addr,birth,ci,name,pho  -                      FN  provenance 소실 컬럼 1개
+  F07  F    ssn                          ssn                    PASS
+! F08  F    acct,addr,birth,ci,name,pho  -                      FN  provenance 소실 컬럼 1개
+  S01  S    -                            -                      PASS  provenance 소실 컬럼 1개
+  S02  S    -                            -                      PASS  provenance 소실 컬럼 1개
+  S03  S    -                            -                      PASS
+  S04  S    -                            -                      PASS
+  S05  S    -                            -                      PASS  provenance 소실 컬럼 1개
+! C01  C    acct,addr,birth,ci,name,pho  -                      FN
+! C02  C    ssn                          -                      FN
+! C03  C    name,ssn                     -                      FN
+! C04  C    ssn                          -                      FN
+  B01  B    birth                        birth                  PASS
+  B02  B    -                            -                      PASS
+  B03  B    name                         name                   PASS
+  B04  B    addr                         addr                   PASS
+  B05  B    acct,birth,ssn               acct,birth,ssn         PASS
+  X01  X    -                            -                      PASS
+  X02  X    -                            -                      PASS
+  X03  X    -                            -                      PASS
+  X04  X    -                            -                      PASS
+  X05  X    -                            -                      PASS
+  X06  X    -                            -                      PASS  provenance 소실 컬럼 1개
+! X07  X    ssn                          n/a                    PREPARE_FAIL  ERROR:  cannot insert multiple commands into a prepared statement
+  P01  P    name,ssn                     name,ssn               PASS
+  P02  P    name,ssn                     name,ssn               PASS
+  P03  P    name,ssn                     name,ssn               PASS
+  P04  P    name,ssn                     name,ssn               PASS
+  P05  P    name,ssn                     name,ssn               PASS
+
+==============================================================================
+카테고리                     항목    통과    미탐    오탐  prepare실패
+------------------------------------------------------------------------------
+직접참조                      9     9     0     0          0
+표현식래핑                    21     3    18     0          0
+뷰/CTE/집합연산                8     4     4     0          0
+함수/동적SQL                  8     1     7     0          0
+부채널                       5     5     0     0          0
+COPY                      4     0     4     0          0
+바이너리/인코딩                  5     5     0     0          0
+제어문                       7     6     0     0          1
+파라미터결속                    5     5     0     0          0
+------------------------------------------------------------------------------
+합계                       72    38    33     0          1
+
+==============================================================================
+헤드라인
+------------------------------------------------------------------------------
+PII를 노출하는 항목            : 55
+와이어 훅이 완전히 잡은 항목   : 21  (38%)
+AST 순회가 회수해야 할 항목    : 34
+
+회수 대상 목록:
+  E01 [E] FN     기대=ssn
+  E02 [E] FN     기대=ssn
+  E03 [E] FN     기대=name,ssn
+  E04 [E] FN     기대=name
+  E06 [E] FN     기대=ssn
+  E07 [E] FN     기대=ssn
+  E08 [E] FN     기대=ssn
+  E09 [E] FN     기대=ssn
+  E10 [E] FN     기대=ssn
+  E11 [E] FN     기대=ssn
+  E12 [E] FN     기대=ssn
+  E13 [E] FN     기대=ssn
+  E14 [E] FN     기대=ssn
+  E15 [E] FN     기대=ssn
+  E16 [E] FN     기대=birth
+  E19 [E] FN     기대=name
+  E20 [E] FN     기대=ssn
+  E21 [E] FN     기대=ssn
+  V01 [V] FN     기대=ssn
+  V04 [V] FN     기대=ssn
+  V07 [V] FN     기대=ssn
+  V08 [V] FN     기대=ssn
+  F01 [F] FN     기대=ssn
+  F02 [F] FN     기대=acct,addr,birth,ci,name,phone,ssn
+  F03 [F] FN     기대=ssn
+  F04 [F] FN     기대=acct,addr,birth,ci,name,phone,ssn
+  F05 [F] FN     기대=acct,addr,birth,ci,name,phone,ssn
+  F06 [F] FN     기대=acct,addr,birth,ci,name,phone,ssn
+  F08 [F] FN     기대=acct,addr,birth,ci,name,phone,ssn
+  C01 [C] FN     기대=acct,addr,birth,ci,name,phone,ssn
+  C02 [C] FN     기대=ssn
+  C03 [C] FN     기대=name,ssn
+  C04 [C] FN     기대=ssn
+  X07 [X] PREPARE_FAIL 기대=ssn

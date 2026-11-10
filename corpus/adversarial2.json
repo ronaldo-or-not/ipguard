@@ -1,0 +1,39 @@
+{
+ "version": 1,
+ "purpose": "적대적 시험 2라운드. 1라운드는 순회기 로직을 쳤다. 이번엔 라벨 자체를 겨냥한다 — PII를 라벨 없는 릴레이션으로 물질화하면 순회기가 아무리 정교해도 무의미하다. 그리고 탐지기 자체에 대한 자원 공격을 포함한다.",
+ "schema": ["corpus/schema.sql", "corpus/adversarial-schema.sql", "corpus/adversarial2-schema.sql"],
+ "field_semantics": {
+  "cat": "M=물질화(라벨 전파)  P=정책/재작성(RLS/RULE)  X=실행컨텍스트(트리거/MERGE/SECDEF)  Z=탐지기 자원공격  J=JSON/배열/SRF",
+  "expect": "must=탐지되어야 함 | policy=탐지 불가가 정당하나 정책 필요 | write=출력이 아니라 write 축으로 잡혀야 함",
+  "note": "무엇을 노리는지"
+ },
+ "entries": [
+  {"id":"M01","cat":"M","sql":"SELECT ssn FROM mv_cust","exposes":["ssn"],"expect":"policy","note":"★ 구체화 뷰는 *릴레이션*이다. 뷰와 달리 재작성 전개가 없으므로 mv_cust.ssn 은 라벨 없는 별개 컬럼이다. 순회기 문제가 아니라 라벨 전파 문제 — 이 클래스는 walker 를 아무리 고쳐도 안 잡힌다."},
+  {"id":"M02","cat":"M","sql":"SELECT substr(ssn,1,6) FROM mv_cust","exposes":["ssn"],"expect":"policy","note":"구체화 뷰 + 표현식."},
+  {"id":"M03","cat":"M","sql":"SELECT ssn FROM ctas_cust","exposes":["ssn"],"expect":"policy","note":"★ CREATE TABLE AS 로 복사된 사본. M01 과 같은 클래스."},
+  {"id":"M04","cat":"M","sql":"SELECT ssn6 FROM gen_t","exposes":["ssn"],"expect":"policy","note":"★ 생성 컬럼 GENERATED ALWAYS AS (substr(ssn,1,6)) STORED. 쓰기 시점에 PII 파생값이 라벨 없는 컬럼으로 물질화된다. 생성식이 카탈로그(pg_attrdef)에 있으므로 라벨 전파가 원리적으로 가능한 유일한 물질화 케이스."},
+  {"id":"M05","cat":"M","sql":"SELECT ssn_rev FROM gen_t","exposes":["ssn"],"expect":"policy","note":"reverse() 생성 컬럼. 완전 가역."},
+  {"id":"M06","cat":"M","sql":"INSERT INTO sink_t SELECT id, ssn FROM cust WHERE ci = $1","exposes":[],"expect":"write","note":"★ PII를 라벨 없는 테이블로 유출. 출력은 없지만 write 축이 잡아야 한다. 이걸 잡으면 M01~M05 를 만드는 행위 자체를 차단할 수 있다."},
+  {"id":"M07","cat":"M","sql":"CREATE TABLE t_new AS SELECT ssn FROM cust","exposes":[],"expect":"write","note":"CTAS 자체. utility 문장이라 Query 트리 형태가 다르다."},
+  {"id":"M08","cat":"M","sql":"SELECT id, grade FROM mv_cust","exposes":[],"expect":"must","note":"구체화 뷰 음성 대조군. 오탐 확인용."},
+
+  {"id":"P01","cat":"P","sql":"SELECT ssn FROM rls_t","exposes":["ssn"],"expect":"must","note":"RLS 활성 테이블. 재작성이 qual 을 붙이고 구조를 바꾼다(security_barrier 서브쿼리)."},
+  {"id":"P02","cat":"P","sql":"SELECT substr(ssn,1,6) FROM rls_t WHERE owner = $1","exposes":["ssn"],"expect":"must","note":"RLS + 표현식 래핑."},
+  {"id":"P03","cat":"P","sql":"INSERT INTO rule_src VALUES (1, 'x')","exposes":[],"expect":"write","note":"★ DO INSTEAD 룰이 INSERT 를 다른 테이블로 redirect 하면서 cust.ssn 을 읽어 넣는다. 원문에는 cust 가 없다 — 재작성 후에만 드러난다."},
+
+  {"id":"X01","cat":"X","sql":"INSERT INTO gen_t (id, ssn) SELECT id, ssn FROM cust LIMIT 1","exposes":[],"expect":"write","note":"★ 이 INSERT 는 AFTER STATEMENT 트리거를 발화시켜 전이 테이블(new_rows)을 통해 sink_t 로 PII 를 흘린다. 트리거 본문은 호출부 트리에 없다 — 함수 미탐과 같은 클래스지만 부작용이 있다."},
+  {"id":"X02","cat":"X","sql":"MERGE INTO merge_t m USING cust c ON m.id = c.id WHEN MATCHED THEN UPDATE SET note = c.ssn","exposes":[],"expect":"write","note":"MERGE 로 PII 를 non-PII 컬럼에 써넣는다. PG16 은 MERGE RETURNING 미지원이라 출력 경로는 없다."},
+  {"id":"X03","cat":"X","sql":"SELECT f_sd(id) FROM cust WHERE ci = $1","exposes":["ssn"],"expect":"policy","note":"SECURITY DEFINER 함수. 본문 미탐 + 권한 상승. F01 과 같은 클래스이나 위험도가 다르다."},
+
+  {"id":"Z01","cat":"Z","sql":"SELECT c1,c2,c3,c4,c5,c6,c7,c8,c9,c10 FROM wide_t","exposes":["ssn"],"expect":"must","note":"라벨 10개 × 컬럼 10개. label_of 가 선형 탐색이므로 곱으로 늘어난다. 정확성 확인 + 복잡도 관찰."},
+  {"id":"Z02","cat":"Z","sql":"__DEEPEXPR_200__","exposes":["ssn"],"expect":"must","note":"★ 표현식 중첩 200단(coalesce 로 감싸기). 서브쿼리 깊이가 아니라 *표현식* 깊이 — MAX_DEPTH 는 이걸 세지 않는다. check_stack_depth() 가 막는지, 아니면 순회기가 터지는지."},
+  {"id":"Z03","cat":"Z","sql":"__WIDETL_500__","exposes":["ssn"],"expect":"must","note":"targetList 500개 컬럼. 시간 복잡도 관찰."},
+  {"id":"Z04","cat":"Z","sql":"__UNION_100__","exposes":["ssn"],"expect":"must","note":"UNION ALL arm 100개. walk_setop 재귀 깊이."},
+
+  {"id":"J01","cat":"J","sql":"SELECT jsonb_build_object('s', ssn) FROM cust WHERE ci = $1","exposes":["ssn"],"expect":"must","note":"JSON 조립."},
+  {"id":"J02","cat":"J","sql":"SELECT unnest(ARRAY[ssn]) FROM cust WHERE ci = $1","exposes":["ssn"],"expect":"must","note":"targetList 안의 SRF."},
+  {"id":"J03","cat":"J","sql":"SELECT (ARRAY[ssn])[1] FROM cust WHERE ci = $1","exposes":["ssn"],"expect":"must","note":"배열 생성 후 첨자 접근(SubscriptingRef)."},
+  {"id":"J04","cat":"J","sql":"SELECT xmlelement(name s, ssn) FROM cust WHERE ci = $1","exposes":["ssn"],"expect":"must","note":"XML 조립. --without-libxml 빌드라 실행은 실패할 수 있으나 분석은 가능해야 한다."},
+  {"id":"J05","cat":"J","sql":"SELECT json_agg(t) FROM (SELECT ssn FROM cust WHERE ci = $1) t","exposes":["ssn"],"expect":"must","note":"서브쿼리 전체 행을 JSON 집계."}
+ ]
+}
