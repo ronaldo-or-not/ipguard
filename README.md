@@ -17,6 +17,18 @@ ipguard는 `planner_hook`에서 계획 전에 Query 트리의 PII `Var`를 `ipgu
 2. **집행** — `planner_hook`에서 PII `Var`를 `ipguard_mask(var, kind)`로 치환.
 3. **거부** — release-factorization gate: 원본 비교가 공개된 정보(release)로부터 재구성 가능한지 판정하고, 불가하면 `unknown → reject`.
 
+```mermaid
+flowchart TD
+    Q["SQL 쿼리"] --> T["파스·재작성 후 Query 트리"]
+    T --> W["모든 Var를 base 컬럼까지 해석<br/>(표현식·서브쿼리·CTE 관통)"]
+    W --> M["planner_hook: 계획 전에<br/>PII Var 를 ipguard_mask(var, kind) 로 치환"]
+    M --> G{"release-factorization gate:<br/>원본이 공개 정보로 재구성 가능?"}
+    G -- "예 / 안전" --> P["계획·실행 → 마스킹된 결과"]
+    G -- "unknown" --> R["거부 (fail-closed)"]
+```
+
+*표현식으로 감싸도 마스킹된 값 위에서 계산되므로 우회가 구조적으로 막힌다. 판정 불가한 쿼리는 열화가 아니라 거부한다.*
+
 ## 결과
 
 | 측정 | 결과 |
