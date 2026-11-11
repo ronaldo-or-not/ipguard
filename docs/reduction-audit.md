@@ -14,7 +14,7 @@
 Mascara 공개 전문:
 <https://npregional.dnb.de/objekte?idn=1362066206&iln=63>
 
-직전 판단에서 저지른 오류를 기록해 둔다: 요약 모델이 생성한 문장
+직전 판단에서 저지른 오류를 기록해 둔다: 선행연구 요약 과정에서 원문에 없는 문장
 ("row count remains outside its threat model")을 논문의 진술처럼 인용했다.
 그 문장은 원문에 없다. set 결과의 행 수는 set equality 에 포함되므로
 빠지는 것은 **duplicate multiplicity 와 order** 다.
