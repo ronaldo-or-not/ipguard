@@ -17,7 +17,7 @@ ipguard는 `planner_hook`에서 계획 전에 Query 트리의 PII `Var`를 `ipgu
 2. **집행** — `planner_hook`에서 PII `Var`를 `ipguard_mask(var, kind)`로 치환.
 3. **거부** — release-factorization gate: 원본 비교가 공개된 정보(release)로부터 재구성 가능한지 판정하고, 불가하면 `unknown → reject`.
 
-![ipguard method](figs/method.svg)
+![ipguard method](figs/method.png)
 
 *같은 쿼리라도 출력 바이트 마스킹은 `length(ssn)`으로 우회되지만, ipguard는 Var를 base 컬럼까지 해석해 계획 전에 치환하므로 우회가 구조적으로 막힌다.*
 
