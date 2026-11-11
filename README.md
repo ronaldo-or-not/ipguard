@@ -6,6 +6,10 @@ PostgreSQL 쿼리 트리 수준에서 동적 PII 마스킹을 집행하고, 안�
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-336791)
 ![status](https://img.shields.io/badge/status-research%20prototype-orange)
 
+## 한눈에
+
+데이터베이스에서 주민번호 같은 민감정보를 가려서 보여주는 기능이 흔하다. 그런데 `substr(ssn,1,6)` 한 줄이면 가린 값을 되돌려 생년월일 앞자리를 빼낼 수 있다 — 가리는 시점이 '출력 맨 끝'이라 이미 늦기 때문이다. ipguard는 마스킹을 DB 엔진 안쪽(쿼리 계획 전)으로 옮겨, 어떤 표현식으로 감싸도 **이미 가려진 값 위에서** 계산되게 한다. 안전하게 가릴 수 있는지 확신 못 하는 쿼리는 틀린 값을 흘리느니 아예 거부(fail-closed)한다.
+
 출력 바이트를 마스킹하는 방식은 `substr(ssn,1,6)`·`length(ssn)`처럼 표현식 한 번이면 우회된다.
 와이어 레벨 탐지기(`resorigtbl/resorigcol`만 보는 방식)로 재현하면 PII 노출 55건 중 21건(38%)만 잡힌다.
 ipguard는 `planner_hook`에서 계획 전에 Query 트리의 PII `Var`를 `ipguard_mask()`로 치환하므로, 표현식으로 감싸도 마스킹된 값 위에서 계산이 일어나 우회가 구조적으로 막힌다.
