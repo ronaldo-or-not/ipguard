@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # 타겟 호스트 조사. 읽기 전용 — 설치·설정 변경·서비스 재시작을 하지 않는다.
 # 사용:  ssh db.example.internal 'bash -s' < tools/survey-host.sh
-#        (~/.ssh/config 에 Host db.example.internal / Port 6689 / User rinomaru 등록됨)
+#        (~/.ssh/config 의 Host db.example.internal 항목에 포트·계정 등록)
 #   또는 서버에 복사해서  bash survey-host.sh
 set -u
 

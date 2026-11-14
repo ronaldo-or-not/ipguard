@@ -53,7 +53,7 @@ def psql(sql):
 def remote(sql):
     """서버에서 psql 을 돌린다. 측정 환경이 그쪽이므로 거기 값이 정본이다."""
     esc = sql.replace("'", "'\"'\"'")
-    return sh("ssh rinomaru@db.example.internal "
+    return sh("ssh db.example.internal "
               "'export PATH=$HOME/pg/bin:$PATH PGHOST=$HOME/.pgsock "
               f"PGPORT=55432; psql -d ipdev -qAt -c \"{esc}\"'")
 

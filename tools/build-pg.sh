@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # 홈 디렉터리에 PostgreSQL을 소스 빌드하고 기동한다. sudo 불필요.
 #
-# 이 서버(db.example.internal)는 공유 서버이고 rinomaru에게 sudo가 없다.
+# 이 서버(db.example.internal)는 공유 서버이고 실행 계정에 sudo가 없다.
 # 따라서 시스템 패키지 설치도, 시스템 PostgreSQL 사용도 불가능하다.
 # 대신 자기 홈에 자기 소유의 인스턴스를 세우면 shared_preload_libraries
 # 등록과 재시작이 전부 자유롭다 -- C 확장 개발에 필요한 것은 그게 전부다.

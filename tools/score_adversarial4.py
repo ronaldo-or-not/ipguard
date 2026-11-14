@@ -149,9 +149,9 @@ SCENARIOS = [
          note="외부 테이블은 다른 relid 를 갖는다. 라벨이 붙을 자리가 없다",
          setup=["CREATE EXTENSION IF NOT EXISTS postgres_fdw",
                 "CREATE SERVER IF NOT EXISTS r4_srv FOREIGN DATA WRAPPER postgres_fdw "
-                "OPTIONS (host '/home/rinomaru/.pgsock', port '55432', dbname 'ipdev')",
+                "OPTIONS (host '/home/user/.pgsock', port '55432', dbname 'ipdev')",
                 "CREATE USER MAPPING IF NOT EXISTS FOR CURRENT_USER SERVER r4_srv "
-                "OPTIONS (user 'rinomaru')",
+                "OPTIONS (user 'user')",
                 "CREATE FOREIGN TABLE h5.r4_f (id bigint, ssn text) "
                 "SERVER r4_srv OPTIONS (schema_name 'h5', table_name 'cust')"],
          probe="SELECT ssn FROM h5.r4_f LIMIT 1",
@@ -165,9 +165,9 @@ SCENARIOS = [
               "아니라 커버리지 문제다 -- 원격 원본의 라벨은 전파되지 않는다",
          setup=["CREATE EXTENSION IF NOT EXISTS postgres_fdw",
                 "CREATE SERVER IF NOT EXISTS r4_srv2 FOREIGN DATA WRAPPER postgres_fdw "
-                "OPTIONS (host '/home/rinomaru/.pgsock', port '55432', dbname 'ipdev')",
+                "OPTIONS (host '/home/user/.pgsock', port '55432', dbname 'ipdev')",
                 "CREATE USER MAPPING IF NOT EXISTS FOR CURRENT_USER SERVER r4_srv2 "
-                "OPTIONS (user 'rinomaru')",
+                "OPTIONS (user 'user')",
                 "CREATE FOREIGN TABLE h5.r4_g (id bigint, ssn text) "
                 "SERVER r4_srv2 OPTIONS (schema_name 'h5', table_name 'cust')",
                 "SELECT h5.r4_label('r4_g','ssn','ssn')"],

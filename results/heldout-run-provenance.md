@@ -44,7 +44,7 @@ timeout 3000 python3 tools/run_heldout.py corpus/heldout.json out/
 
 | 항목 | 값 |
 |---|---|
-| host | `CAU-CPSS-Server` (`db.example.internal`), 계정 `rinomaru` |
+| host | 연구실 공유 서버 (`db.example.internal`로 표기), 일반 사용자 계정 |
 | kernel | Linux 6.17.0-35-generic x86_64 |
 | Python | 3.12.3 |
 | psql / postgres | PostgreSQL 16.10 (`$HOME/pg`, 소스 빌드) |

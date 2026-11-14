@@ -139,9 +139,9 @@ m4조차 없다.
 <details><summary>(구) 환경 조사 기록</summary>
 
 **빌드/측정 환경이 아직 없다.** 개발 머신은 macOS / arm64라 eBPF를 실행할 수
-없고 컨테이너 런타임도 설치되어 있지 않다. 타겟은 **`db.example.internal`
-(port 6689, user `rinomaru`)** 이나 OS·커널·PostgreSQL·권한을 아직 조사하지
-못했다 — SSH가 키가 아닌 비밀번호 인증이라 자동 접속이 불가능하다.
+없고 컨테이너 런타임도 설치되어 있지 않다. 타겟은 **연구실 공유 서버(`db.example.internal`로 표기)**
+이나 OS·커널·PostgreSQL·권한을 아직 조사하지
+못했다 — 자동 접속이 아직 설정되지 않았다.
 `tools/survey-host.sh`를 직접 실행해 결과를 아래에 채울 것.
 
 ```bash
